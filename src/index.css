@@ -639,6 +639,17 @@ a:hover {
   border-color: var(--color-primary);
 }
 
+.session-item__resource--pending {
+  color: var(--color-text-light);
+  border-style: dashed;
+  cursor: default;
+}
+
+.session-item__resource--pending:hover {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
 .session-item__resource-icon {
   font-size: 13px;
 }
