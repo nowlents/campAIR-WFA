@@ -20,19 +20,13 @@ export interface Workstream {
 
 export const workstreams: Workstream[] = [
   {
-    id: 'three-week-experience',
-    title: 'Structured 3-Week Experience',
-    shortTitle: '3-Week Experience',
+    id: 'non-engineers',
+    title: 'Camp AIR for Non-Engineers',
+    shortTitle: 'Camp AIR for Non-Engineers',
     description:
-      'A structured 3-week learning journey for both engineering and non-engineering audiences, with clear solution overviews, intended outcomes, and progressive skill building.',
-    icon: '📅',
+      'A structured 3-week learning journey for non-engineering audiences, including labs, Train-the-Trainer enablement, and agentic content management.',
+    icon: '💡',
     deliverables: [
-      {
-        id: 'eng-week-agenda',
-        title: 'Engineering Track — Week-by-Week Agenda',
-        description: 'Detailed weekly agenda for the engineering audience covering tools, hands-on labs, and progressive complexity.',
-        status: 'planned',
-      },
       {
         id: 'non-eng-week-agenda',
         title: 'Non-Engineering Track — Week-by-Week Agenda',
@@ -40,27 +34,11 @@ export const workstreams: Workstream[] = [
         status: 'ready',
       },
       {
-        id: 'eng-solution-overview',
-        title: 'Engineering Solution Overview (EDS Template)',
-        description: 'One-page solution overview using EDS template showing structure, outcomes, learning progression, and cross-week build.',
-        status: 'planned',
-      },
-      {
         id: 'non-eng-solution-overview',
         title: 'Non-Engineering Solution Overview (EDS Template)',
         description: 'EDS-formatted solution overview for the non-engineering track with clear structure and intended outcomes.',
         status: 'ready',
       },
-    ],
-  },
-  {
-    id: 'lab-design',
-    title: 'Non-Engineering Lab Design',
-    shortTitle: 'Lab Design',
-    description:
-      'Rigorous instructional design for 3-4 non-engineering labs that are repeatable, scalable, and consistently high quality across facilitators.',
-    icon: '🧪',
-    deliverables: [
       {
         id: 'lab1-lesson-plan',
         title: 'Lab 1 — Facilitator Lesson Plan',
@@ -181,16 +159,6 @@ export const workstreams: Workstream[] = [
         description: 'Expected outcomes for Lab 4.',
         status: 'planned',
       },
-    ],
-  },
-  {
-    id: 'train-the-trainer',
-    title: 'Train-the-Trainer Enablement',
-    shortTitle: 'Train-the-Trainer',
-    description:
-      'A structured enablement approach that prepares facilitators to consistently deliver Camp AIR at the expected quality bar.',
-    icon: '🎓',
-    deliverables: [
       {
         id: 'ttt-onboarding-flow',
         title: 'Facilitator Onboarding & Enablement Flow',
@@ -215,11 +183,57 @@ export const workstreams: Workstream[] = [
         description: 'Template and criteria for identifying and assessing qualified Camp AIR facilitators.',
         status: 'ready',
       },
+      {
+        id: 'agent-assessment-design',
+        title: 'Content Assessment Agent — Design Document',
+        description: 'Architecture and approach for an AI agent that scans lab content to identify outdated, misaligned, or impacted materials.',
+        status: 'in-progress',
+      },
+      {
+        id: 'agent-tool-monitoring',
+        title: 'Tool/Platform Evolution Monitoring',
+        description: 'How the agent tracks changes in tools and platforms (e.g., Copilot updates, VS Code changes) relevant to Camp AIR labs.',
+        status: 'planned',
+      },
+      {
+        id: 'agent-impact-analysis',
+        title: 'Impact Analysis & Flagging',
+        description: 'Logic and criteria for determining when a tool change impacts specific lab content and how it surfaces alerts.',
+        status: 'planned',
+      },
+      {
+        id: 'agent-future-vision',
+        title: 'Future State Vision — Recommend & Execute',
+        description: 'Long-term roadmap for Phase 2 (AI recommends updates) and Phase 3 (AI executes updates with human approval).',
+        status: 'planned',
+      },
     ],
   },
   {
-    id: 'content-repository',
-    title: 'Content Repository & Governance',
+    id: 'engineers',
+    title: 'Camp AIR for Engineers',
+    shortTitle: 'Camp AIR for Engineers',
+    description:
+      'A structured 3-week learning journey for engineering audiences, with hands-on labs, progressive tool mastery, and developer-focused outcomes.',
+    icon: '⚙️',
+    deliverables: [
+      {
+        id: 'eng-week-agenda',
+        title: 'Engineering Track — Week-by-Week Agenda',
+        description: 'Detailed weekly agenda for the engineering audience covering tools, hands-on labs, and progressive complexity.',
+        status: 'planned',
+      },
+      {
+        id: 'eng-solution-overview',
+        title: 'Engineering Solution Overview (EDS Template)',
+        description: 'One-page solution overview using EDS template showing structure, outcomes, learning progression, and cross-week build.',
+        status: 'planned',
+      },
+    ],
+  },
+  {
+    id: 'repository',
+    title: 'Content Repository',
     shortTitle: 'Content Repository',
     description:
       'A centralized, well-governed location for Camp AIR materials with clear operating model for sustainability.',
@@ -259,40 +273,6 @@ export const workstreams: Workstream[] = [
         id: 'repo-quality',
         title: 'Quality & Consistency Standards',
         description: 'Ongoing quality checks, peer review cadence, and consistency maintenance over time.',
-        status: 'planned',
-      },
-    ],
-  },
-  {
-    id: 'agentic-approaches',
-    title: 'Agentic Content Management',
-    shortTitle: 'Agentic Approaches',
-    description:
-      'AI-driven approaches to continuously assess Camp AIR materials against changes in tooling, platform capabilities, and best practices.',
-    icon: '🤖',
-    deliverables: [
-      {
-        id: 'agent-assessment-design',
-        title: 'Content Assessment Agent — Design Document',
-        description: 'Architecture and approach for an AI agent that scans lab content to identify outdated, misaligned, or impacted materials.',
-        status: 'in-progress',
-      },
-      {
-        id: 'agent-tool-monitoring',
-        title: 'Tool/Platform Evolution Monitoring',
-        description: 'How the agent tracks changes in tools and platforms (e.g., Copilot updates, VS Code changes) relevant to Camp AIR labs.',
-        status: 'planned',
-      },
-      {
-        id: 'agent-impact-analysis',
-        title: 'Impact Analysis & Flagging',
-        description: 'Logic and criteria for determining when a tool change impacts specific lab content and how it surfaces alerts.',
-        status: 'planned',
-      },
-      {
-        id: 'agent-future-vision',
-        title: 'Future State Vision — Recommend & Execute',
-        description: 'Long-term roadmap for Phase 2 (AI recommends updates) and Phase 3 (AI executes updates with human approval).',
         status: 'planned',
       },
     ],
