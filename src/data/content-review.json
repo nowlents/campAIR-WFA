@@ -1,0 +1,330 @@
+{
+  "lastReviewDate": "2026-06-11T00:00:00-07:00",
+  "nextReviewDate": "2026-06-15T00:00:00-07:00",
+  "overallStatus": "current",
+  "summary": "Initial baseline scan complete. All materials reviewed against publicly available information.",
+  "sessions": [
+    {
+      "sessionId": "w0-prep",
+      "sessionTitle": "Manager Preparation & Mindset Reset",
+      "track": "shared",
+      "materials": [
+        {
+          "id": "w0-prep-deck",
+          "type": "deck",
+          "title": "Presentation Deck",
+          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQq3ZK3YiGCHS7baPJeELOkPEgUCMCQubysuhDYPKYOY5UtAbg",
+          "status": "current",
+          "severity": "info",
+          "finding": "Content aligns with current Microsoft AI-first leadership messaging.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w0-prep-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQr5facebSiXR5fvnxbhFqKcEgUC0ovwmIirr-JeOV9V6mep6A",
+          "status": "current",
+          "severity": "info",
+          "finding": "Facilitation flow and talking points remain accurate and relevant.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day1-s1",
+      "sessionTitle": "Icebreaker & AI-First Mindset",
+      "track": "shared",
+      "materials": [
+        {
+          "id": "w1-d1s1-deck",
+          "type": "deck",
+          "title": "Presentation Deck",
+          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrXMZD136KjS7t3-E0wow2oEgUCMHnLlOKVSRZDMuOk4KcYgw",
+          "status": "current",
+          "severity": "info",
+          "finding": "AI-first mindset positioning is consistent with Microsoft's current public messaging.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d1s1-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpQikdLyN70QKB_5KPWhLePEgUCMeMCe-SqHubgnLJZqmNRmA",
+          "status": "current",
+          "severity": "info",
+          "finding": "Facilitation prompts and structure remain current.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d1s1-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpU33ODHbPvQ4WcG341N-ECEgUCKMxzvEhCemgeF7peLQyViA",
+          "status": "current",
+          "severity": "info",
+          "finding": "Talk track references align with current state.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day1-s2",
+      "sessionTitle": "M365 Copilot: From Overwhelmed to In-Command",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d1s2-deck",
+          "type": "deck",
+          "title": "Presentation Deck",
+          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoRe2BNjLniRKbBQfYL8LFBEgUCUJkb_LIanRKRN1_VtjgQ2Q",
+          "status": "current",
+          "severity": "info",
+          "finding": "M365 Copilot UI and feature references match current public documentation.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d1s2-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoYS9XcHcsnQ5QguLv6ah8dEgUCbFzAx5RWDMrf7e_obbrrkg",
+          "status": "current",
+          "severity": "info",
+          "finding": "Facilitation guidance accurately reflects current M365 Copilot workflows.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d1s2-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoxQTJ38151RYChAEutciyxEgUCyi1aoLvyy2yOjEmQugZS8w",
+          "status": "current",
+          "severity": "info",
+          "finding": "Video talk track content is consistent with current capabilities.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day1-pm",
+      "sessionTitle": "Day 1 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d1pm-lab",
+          "type": "lab",
+          "title": "Afternoon Practice Lab",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoJPWy8ALWERrU6NGvLO8soEgUCYymDGyRwVFd3lZqBCGXViQ",
+          "status": "current",
+          "severity": "info",
+          "finding": "Lab exercises reference current M365 Copilot interface and features.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day2-am",
+      "sessionTitle": "Copilot Cowork: Delegate, Don't Dictate",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d2am-deck",
+          "type": "deck",
+          "title": "Presentation Deck",
+          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQpgg4m2ChONRZ-QXcUfoyNbEgUC-vEhQ9qQhCvd8DwquvHCgg",
+          "status": "current",
+          "severity": "info",
+          "finding": "Copilot Cowork functionality described matches current public documentation.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d2am-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrxpe31Er-MTpe4GT7SK7ZbEgUCO_TakTwBZ3788cPoAmot-g",
+          "status": "current",
+          "severity": "info",
+          "finding": "Facilitation flow is accurate for current Copilot Cowork experience.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d2am-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpbAtLnDkghQ6Mt0GO6OxG_EgUCbNPHbygyzdqcvWXkhYfbtg",
+          "status": "current",
+          "severity": "info",
+          "finding": "Talk track references are consistent with current state.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day2-pm",
+      "sessionTitle": "Day 2 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d2pm-lab",
+          "type": "lab",
+          "title": "Afternoon Practice Lab",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoBC010R1BnSbXC24cz2tD5EgUC1zHIsYp313iTtgFOG8WsBw",
+          "status": "current",
+          "severity": "info",
+          "finding": "Lab exercises align with current Copilot Cowork capabilities.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day3-am",
+      "sessionTitle": "Build Your Own Copilot: No Code Required",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d3am-deck",
+          "type": "deck",
+          "title": "Presentation Deck",
+          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrf9wjnnDcQRps_GYt4Z1HzEgUCI3epXtc5EUH0Nd1zg7xGmA",
+          "status": "current",
+          "severity": "info",
+          "finding": "Copilot Studio / no-code builder references match current public documentation.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d3am-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQovYE0e2jDcSbqUgULccmjxEgUCBJe568Uow37KxT7jSrvcgg",
+          "status": "current",
+          "severity": "info",
+          "finding": "Facilitation guidance accurately reflects current Copilot Studio experience.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d3am-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQp6M_ryJE3kSLjVuJ7vTr1HEgUCoKh23ObDrzrFlk7OUNxbLQ",
+          "status": "current",
+          "severity": "info",
+          "finding": "Talk track is consistent with current Copilot Studio capabilities.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day3-pm",
+      "sessionTitle": "Day 3 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d3pm-lab",
+          "type": "lab",
+          "title": "Afternoon Practice Lab",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqrlL4ca_GPQZDILlS_aYbzEgUCNWhhms1IM8N9izzgDM7WyA",
+          "status": "current",
+          "severity": "info",
+          "finding": "Lab exercises reference current no-code builder interface and workflows.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day4-am",
+      "sessionTitle": "Work Redesign: Rethinking the Work Itself",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d4am-deck",
+          "type": "deck",
+          "title": "Presentation Deck",
+          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrG4INUJmIaTpFuGIGMtNy4EgUCw78q2Oqffir1WaFFgdDhNQ",
+          "status": "current",
+          "severity": "info",
+          "finding": "Work redesign frameworks align with current industry thinking and Microsoft positioning.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d4am-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqUdR3HyhfhQq60nkYsPZuhEgUCx-A7s4qH7Z4cDgAiTQTm5Q",
+          "status": "current",
+          "severity": "info",
+          "finding": "Facilitation approach remains relevant and well-structured.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        },
+        {
+          "id": "w1-d4am-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoGatFzWXpGTphnVJ3n9X9wEgUCaK4NdYooMwDano_Kirixuw",
+          "status": "current",
+          "severity": "info",
+          "finding": "Talk track references are current.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day4-pm",
+      "sessionTitle": "Day 4 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d4pm-lab",
+          "type": "lab",
+          "title": "Afternoon Practice Lab",
+          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrVYhmryGRtSrFt70JWlrq9EgUCml6hCk4Gy2NgyXx704Hjaw",
+          "status": "current",
+          "severity": "info",
+          "finding": "Lab content aligns with current work redesign practices and tooling.",
+          "suggestedAction": null,
+          "sources": [],
+          "detectedDate": "2026-06-11T00:00:00-07:00"
+        }
+      ]
+    }
+  ]
+}
