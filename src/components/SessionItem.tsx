@@ -13,11 +13,20 @@ interface SessionItemProps {
   title: string;
   description: string;
   resources: Resource[];
+  placeholder?: boolean;
 }
 
-export function SessionItem({ title, description, resources }: SessionItemProps) {
+export function SessionItem({ title, description, resources, placeholder }: SessionItemProps) {
   return (
-    <div className="session-item">
+    <div className={`session-item${placeholder ? ' session-item--placeholder' : ''}`}>
+      {placeholder && (
+        <div className="session-item__placeholder-banner">
+          <span className="session-item__placeholder-icon">🎯</span>
+          <span className="session-item__placeholder-text">
+            This session will be custom-tailored to your engineering audience during consultation.
+          </span>
+        </div>
+      )}
       <h4 className="session-item__title">{title}</h4>
       <p className="session-item__description">{description}</p>
       {resources.length > 0 && (

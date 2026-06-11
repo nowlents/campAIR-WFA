@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import { workstreams } from '../data/deliverables';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,7 +8,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="header__brand">
             <span className="header__logo">✈️</span>
             <h1 className="header__title">Camp AIR</h1>
-            <span className="header__subtitle">Deliverables Portal</span>
+            <span className="header__subtitle">Workforce Acceleration</span>
           </div>
         </div>
       </header>
@@ -18,11 +17,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <NavLink to="/" end className="sidebar__link">
             🏠 Overview
           </NavLink>
-          {workstreams.map((ws) => (
-            <NavLink key={ws.id} to={`/${ws.id}`} className="sidebar__link">
-              {ws.icon} {ws.shortTitle}
-            </NavLink>
-          ))}
+          <NavLink to="/non-engineers" className="sidebar__link">
+            💡 Camp AIR for Non-Engineers
+          </NavLink>
+          <NavLink to="/engineers" className="sidebar__link">
+            ⚙️ Camp AIR for Engineers
+          </NavLink>
+          <NavLink to="/repository" className="sidebar__link">
+            📚 Content Repository
+          </NavLink>
         </nav>
         <main className="main-content">{children}</main>
       </div>

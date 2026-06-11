@@ -9,6 +9,8 @@ export interface Session {
   id: string;
   title: string;
   description: string;
+  day?: number;
+  placeholder?: boolean;
   resources: Resource[];
 }
 
@@ -33,9 +35,8 @@ export const nonEngAgenda: Week[] = [
         title: 'Manager Orientation & Expectations Setting',
         description: 'Deck and talking points for managers to align on Camp AIR goals, time commitment, and team support during the program.',
         resources: [
-          { id: 'w0-mgr-ppt', title: 'Manager Orientation Deck', type: 'deck', url: '' },
-          { id: 'w0-mgr-doc', title: 'Manager Preparation Guide', type: 'guide', url: '' },
-          { id: 'w0-mgr-video', title: 'Manager Orientation Video', type: 'video', url: '' },
+          { id: 'w0-mgr-ppt', title: 'Manager Kickoff Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQq3ZK3YiGCHS7baPJeELOkPEgUCMCQubysuhDYPKYOY5UtAbg' },
+          { id: 'w0-mgr-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQr5facebSiXR5fvnxbhFqKcEgUC0ovwmIirr-JeOV9V6mep6A' },
         ],
       },
     ],
@@ -48,93 +49,94 @@ export const nonEngAgenda: Week[] = [
       'The core immersion week. Participants are introduced to AI-first principles, engage in morning presentations, and apply concepts through structured afternoon practice labs.',
     sessions: [
       {
-        id: 'w1-day1-am',
-        title: 'Day 1 AM — AI-First Mindset & Orientation',
+        id: 'w1-day1-s1',
+        title: 'Day 1 — Icebreaker & AI-First Mindset',
         description: 'Opening session establishing the AI-first operating model, program structure, and cohort norms.',
+        day: 1,
         resources: [
-          { id: 'w1-d1am-ppt', title: 'Presentation Deck', type: 'deck', url: '' },
-          { id: 'w1-d1am-doc', title: 'Facilitator Guide', type: 'guide', url: '' },
-          { id: 'w1-d1am-video', title: 'Session Recording', type: 'video', url: '' },
+          { id: 'w1-d1s1-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrXMZD136KjS7t3-E0wow2oEgUCMHnLlOKVSRZDMuOk4KcYgw' },
+          { id: 'w1-d1s1-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpQikdLyN70QKB_5KPWhLePEgUCMeMCe-SqHubgnLJZqmNRmA' },
+          { id: 'w1-d1s1-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpU33ODHbPvQ4WcG341N-ECEgUCKMxzvEhCemgeF7peLQyViA' },
+        ],
+      },
+      {
+        id: 'w1-day1-s2',
+        title: 'Day 1 — M365 Copilot: From Overwhelmed to In-Command',
+        description: 'Second morning session building on orientation foundations.',
+        day: 1,
+        resources: [
+          { id: 'w1-d1s2-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoRe2BNjLniRKbBQfYL8LFBEgUCUJkb_LIanRKRN1_VtjgQ2Q' },
+          { id: 'w1-d1s2-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoYS9XcHcsnQ5QguLv6ah8dEgUCbFzAx5RWDMrf7e_obbrrkg' },
+          { id: 'w1-d1s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoxQTJ38151RYChAEutciyxEgUCyi1aoLvyy2yOjEmQugZS8w' },
         ],
       },
       {
         id: 'w1-day1-pm',
-        title: 'Day 1 PM — Afternoon Practice Lab',
+        title: 'Day 1 — Afternoon Practice',
         description: 'Hands-on lab where participants begin experimenting with AI tools on real workflow scenarios.',
+        day: 1,
         resources: [
-          { id: 'w1-d1pm-ppt', title: 'Lab Deck', type: 'deck', url: '' },
-          { id: 'w1-d1pm-doc', title: 'Lab Instructions & Learner Guide', type: 'guide', url: '' },
-          { id: 'w1-d1pm-video', title: 'Lab Walkthrough', type: 'video', url: '' },
+          { id: 'w1-d1pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoJPWy8ALWERrU6NGvLO8soEgUCYymDGyRwVFd3lZqBCGXViQ' },
         ],
       },
       {
         id: 'w1-day2-am',
-        title: 'Day 2 AM — Workflow Redesign Principles',
-        description: 'Deep dive into identifying high-impact workflows and redesigning them with AI-first principles.',
+        title: 'Day 2 — Copilot Cowork: Delegate, Don\'t Dictate',
+        description: 'Morning session content.',
+        day: 2,
         resources: [
-          { id: 'w1-d2am-ppt', title: 'Presentation Deck', type: 'deck', url: '' },
-          { id: 'w1-d2am-doc', title: 'Facilitator Guide', type: 'guide', url: '' },
-          { id: 'w1-d2am-video', title: 'Session Recording', type: 'video', url: '' },
+          { id: 'w1-d2am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQpgg4m2ChONRZ-QXcUfoyNbEgUC-vEhQ9qQhCvd8DwquvHCgg' },
+          { id: 'w1-d2am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrxpe31Er-MTpe4GT7SK7ZbEgUCO_TakTwBZ3788cPoAmot-g' },
+          { id: 'w1-d2am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpbAtLnDkghQ6Mt0GO6OxG_EgUCbNPHbygyzdqcvWXkhYfbtg' },
         ],
       },
       {
         id: 'w1-day2-pm',
-        title: 'Day 2 PM — Afternoon Practice Lab',
-        description: 'Teams identify their target workflows and begin applying AI-first redesign frameworks.',
+        title: 'Day 2 — Afternoon Practice',
+        description: 'Afternoon hands-on practice lab.',
+        day: 2,
         resources: [
-          { id: 'w1-d2pm-ppt', title: 'Lab Deck', type: 'deck', url: '' },
-          { id: 'w1-d2pm-doc', title: 'Lab Instructions & Learner Guide', type: 'guide', url: '' },
-          { id: 'w1-d2pm-video', title: 'Lab Walkthrough', type: 'video', url: '' },
+          { id: 'w1-d2pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoBC010R1BnSbXC24cz2tD5EgUC1zHIsYp313iTtgFOG8WsBw' },
         ],
       },
       {
         id: 'w1-day3-am',
-        title: 'Day 3 AM — Building & Iterating',
-        description: 'Session focused on rapid experimentation, measuring impact, and iterating on AI-powered solutions.',
+        title: 'Day 3 — Build Your Own Copilot: No Code Required',
+        description: 'Morning session content.',
+        day: 3,
         resources: [
-          { id: 'w1-d3am-ppt', title: 'Presentation Deck', type: 'deck', url: '' },
-          { id: 'w1-d3am-doc', title: 'Facilitator Guide', type: 'guide', url: '' },
-          { id: 'w1-d3am-video', title: 'Session Recording', type: 'video', url: '' },
+          { id: 'w1-d3am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrf9wjnnDcQRps_GYt4Z1HzEgUCI3epXtc5EUH0Nd1zg7xGmA' },
+          { id: 'w1-d3am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQovYE0e2jDcSbqUgULccmjxEgUCBJe568Uow37KxT7jSrvcgg' },
+          { id: 'w1-d3am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQp6M_ryJE3kSLjVuJ7vTr1HEgUCoKh23ObDrzrFlk7OUNxbLQ' },
         ],
       },
       {
         id: 'w1-day3-pm',
-        title: 'Day 3 PM — Afternoon Practice Lab',
-        description: 'Teams build their first AI-powered workflow prototypes and test them in real scenarios.',
+        title: 'Day 3 — Afternoon Practice',
+        description: 'Afternoon hands-on practice lab.',
+        day: 3,
         resources: [
-          { id: 'w1-d3pm-ppt', title: 'Lab Deck', type: 'deck', url: '' },
-          { id: 'w1-d3pm-doc', title: 'Lab Instructions & Learner Guide', type: 'guide', url: '' },
-          { id: 'w1-d3pm-video', title: 'Lab Walkthrough', type: 'video', url: '' },
+          { id: 'w1-d3pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqrlL4ca_GPQZDILlS_aYbzEgUCNWhhms1IM8N9izzgDM7WyA' },
         ],
       },
       {
         id: 'w1-day4-am',
-        title: 'Day 4 AM — Integration & Scaling',
-        description: 'Connecting individual solutions into team-level workflows and planning for scale.',
+        title: 'Day 4 — Work Redesign: Rethinking the Work Itself — Not Just Making It Faster',
+        description: 'Morning session content.',
+        day: 4,
         resources: [
-          { id: 'w1-d4am-ppt', title: 'Presentation Deck', type: 'deck', url: '' },
-          { id: 'w1-d4am-doc', title: 'Facilitator Guide', type: 'guide', url: '' },
-          { id: 'w1-d4am-video', title: 'Session Recording', type: 'video', url: '' },
+          { id: 'w1-d4am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrG4INUJmIaTpFuGIGMtNy4EgUCw78q2Oqffir1WaFFgdDhNQ' },
+          { id: 'w1-d4am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqUdR3HyhfhQq60nkYsPZuhEgUCx-A7s4qH7Z4cDgAiTQTm5Q' },
+          { id: 'w1-d4am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoGatFzWXpGTphnVJ3n9X9wEgUCaK4NdYooMwDano_Kirixuw' },
         ],
       },
       {
         id: 'w1-day4-pm',
-        title: 'Day 4 PM — Afternoon Practice Lab',
-        description: 'Teams refine solutions and prepare for Week 2 applied practice.',
+        title: 'Day 4 — Afternoon Practice',
+        description: 'Afternoon hands-on practice lab.',
+        day: 4,
         resources: [
-          { id: 'w1-d4pm-ppt', title: 'Lab Deck', type: 'deck', url: '' },
-          { id: 'w1-d4pm-doc', title: 'Lab Instructions & Learner Guide', type: 'guide', url: '' },
-          { id: 'w1-d4pm-video', title: 'Lab Walkthrough', type: 'video', url: '' },
-        ],
-      },
-      {
-        id: 'w1-day5-am',
-        title: 'Day 5 AM — Reflection & Week 1 Close',
-        description: 'Cohort reflection, share-outs, and setting intentions for the applied practice weeks ahead.',
-        resources: [
-          { id: 'w1-d5am-ppt', title: 'Presentation Deck', type: 'deck', url: '' },
-          { id: 'w1-d5am-doc', title: 'Facilitator Guide', type: 'guide', url: '' },
-          { id: 'w1-d5am-video', title: 'Session Recording', type: 'video', url: '' },
+          { id: 'w1-d4pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrVYhmryGRtSrFt70JWlrq9EgUCml6hCk4Gy2NgyXx704Hjaw' },
         ],
       },
     ],
