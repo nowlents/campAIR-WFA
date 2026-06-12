@@ -6,6 +6,7 @@ interface NonEngExample {
   title: string;
   description: string;
   videoUrl: string;
+  thumbnail?: string;
 }
 
 const nonEngExamples: NonEngExample[] = [
@@ -14,18 +15,21 @@ const nonEngExamples: NonEngExample[] = [
     title: 'GitHub Copilot App',
     description: 'James Clancey presents on the GitHub Copilot App.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQr6RpKlpRdcT4fQ2P1Qa5CcEgUCdxGCO0g2DgPU9Fms3kCl6w',
+    thumbnail: '/images/thumb-ghcp-app.png',
   },
   {
     id: 'ne-example-2',
     title: 'Microsoft Scout (formerly Clawpilot)',
     description: 'Jakob Werner presents on Microsoft Scout.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQryGQGSN4OuS7t12NxqoFrGEgUCLgPFY90Y7NCLroCfI71MVQ',
+    thumbnail: '/images/thumb-scout.png',
   },
   {
     id: 'ne-example-3',
     title: 'Vibe Coding',
     description: 'Jen Weigel presents on Vibe Coding.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpdjuzTnc2eTJYsSU-98nmcEgUC-gsMkNYMrjrt8vFcL6C0gw',
+    thumbnail: '/images/thumb-vibe-coding.png',
   },
 ];
 
@@ -64,7 +68,19 @@ export function NonEngineers() {
           {nonEngExamples.map((example) => (
             <div key={example.id} className="example-card">
               <div className="example-card__video">
-                {example.videoUrl && !example.videoUrl.startsWith('http') ? (
+                {example.thumbnail && example.videoUrl ? (
+                  <a
+                    href={example.videoUrl}
+                    className="example-card__thumbnail-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={example.thumbnail} alt={example.title} className="example-card__thumbnail" />
+                    <div className="example-card__play-overlay">
+                      <span className="example-card__play-btn">▶</span>
+                    </div>
+                  </a>
+                ) : example.videoUrl && !example.videoUrl.startsWith('http') ? (
                   <video controls preload="metadata" className="example-card__player">
                     <source src={example.videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.

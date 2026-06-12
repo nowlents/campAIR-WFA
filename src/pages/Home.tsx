@@ -5,6 +5,9 @@ export function Home() {
   return (
     <div className="home">
       <section className="hero">
+        <div className="hero__banner">
+          <img src="/images/hero-meeting.jpg" alt="Team collaborating in a modern meeting space" className="hero__banner-img" />
+        </div>
         <h2 className="hero__title">Camp AIR</h2>
         <div className="hero__body">
           <p className="hero__lead">

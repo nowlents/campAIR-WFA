@@ -6,6 +6,7 @@ interface EngExample {
   title: string;
   description: string;
   videoUrl: string;
+  thumbnail?: string;
 }
 
 const engExamples: EngExample[] = [
@@ -14,18 +15,21 @@ const engExamples: EngExample[] = [
     title: 'GitHub CLI',
     description: 'Scott Hanselman presents on GitHub CLI.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQqQdFXfrWhtS4GsXRmQGAW0EgUCeFISrsXwsuzQN9hTKVxkmA',
+    thumbnail: '/images/thumb-github-cli.png',
   },
   {
     id: 'example-2',
     title: 'MCP Servers',
     description: 'Nicholas Hauenstein presents on MCP Servers.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoUD9U8g457TIZ6gKjrPPSWEgUCSnp9a_z1Iq8jVtBeMlVE4Q',
+    thumbnail: '/images/thumb-mcp-servers.png',
   },
   {
     id: 'example-3',
     title: 'Agency',
     description: 'Preston McDonald & Kyle Rader present on Agency.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQrY54Q9S9w4Q6q6-k4JHzm6EgUCJer7bXDR5IJ10B8VE0KVWg',
+    thumbnail: '/images/thumb-agency.png',
   },
 ];
 
@@ -77,7 +81,19 @@ export function Engineers() {
           {engExamples.map((example) => (
             <div key={example.id} className="example-card">
               <div className="example-card__video">
-                {example.videoUrl && !example.videoUrl.startsWith('http') ? (
+                {example.thumbnail && example.videoUrl ? (
+                  <a
+                    href={example.videoUrl}
+                    className="example-card__thumbnail-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={example.thumbnail} alt={example.title} className="example-card__thumbnail" />
+                    <div className="example-card__play-overlay">
+                      <span className="example-card__play-btn">▶</span>
+                    </div>
+                  </a>
+                ) : example.videoUrl && !example.videoUrl.startsWith('http') ? (
                   <video controls preload="metadata" className="example-card__player">
                     <source src={example.videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
