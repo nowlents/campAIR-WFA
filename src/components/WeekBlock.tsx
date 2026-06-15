@@ -11,6 +11,13 @@ export function WeekBlock({ week, defaultOpen = false }: WeekBlockProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const hasSessions = week.sessions && week.sessions.length > 0;
 
+  const dayThemes: Record<number, string> = {
+    1: 'USE',
+    2: 'DELEGATE',
+    3: 'BUILD',
+    4: 'REDESIGN',
+  };
+
   // Group sessions by day
   const groupedByDay = hasSessions
     ? week.sessions!.reduce<Record<number, typeof week.sessions>>((acc, session) => {
@@ -48,7 +55,9 @@ export function WeekBlock({ week, defaultOpen = false }: WeekBlockProps) {
               {dayNumbers.map((dayNum) => (
                 <div key={dayNum} className="day-group">
                   <div className="day-group__header">
-                    <span className="day-group__badge">Day {dayNum}</span>
+                    <span className="day-group__badge">
+                      Day {dayNum}{dayThemes[dayNum] && ` — ${dayThemes[dayNum]}`}
+                    </span>
                     <div className="day-group__line" />
                   </div>
                   <div className="day-group__sessions">
