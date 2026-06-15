@@ -1,7 +1,7 @@
 export interface Resource {
   id: string;
   title: string;
-  type: 'deck' | 'guide' | 'lab' | 'document' | 'video' | 'link';
+  type: 'deck' | 'guide' | 'lab' | 'document' | 'video' | 'link' | 'preview';
   url?: string;
 }
 

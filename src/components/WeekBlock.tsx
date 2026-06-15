@@ -18,6 +18,13 @@ export function WeekBlock({ week, defaultOpen = false }: WeekBlockProps) {
     4: 'REDESIGN',
   };
 
+  const dayUseCases: Record<number, string> = {
+    1: 'Everyday AI fluency in existing workflows',
+    2: 'Automating repetitive tasks & handoffs',
+    3: 'Creating custom solutions & agents',
+    4: 'Rethinking processes from the ground up',
+  };
+
   // Group sessions by day
   const groupedByDay = hasSessions
     ? week.sessions!.reduce<Record<number, typeof week.sessions>>((acc, session) => {
@@ -58,6 +65,9 @@ export function WeekBlock({ week, defaultOpen = false }: WeekBlockProps) {
                     <span className="day-group__badge">
                       Day {dayNum}{dayThemes[dayNum] && ` — ${dayThemes[dayNum]}`}
                     </span>
+                    {dayUseCases[dayNum] && (
+                      <span className="day-group__use-case">{dayUseCases[dayNum]}</span>
+                    )}
                     <div className="day-group__line" />
                   </div>
                   <div className="day-group__sessions">
