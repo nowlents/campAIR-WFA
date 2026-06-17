@@ -6,7 +6,7 @@ export function Home() {
     <div className="home">
       <section className="hero">
         <div className="hero__banner">
-          <img src="/images/hero-meeting.jpg" alt="Team collaborating in a modern meeting space" className="hero__banner-img" />
+          <img src={`${import.meta.env.BASE_URL}images/hero-meeting.jpg`} alt="Team collaborating in a modern meeting space" className="hero__banner-img" />
         </div>
         <h2 className="hero__title">Camp AIR</h2>
 

@@ -15,21 +15,21 @@ const nonEngExamples: NonEngExample[] = [
     title: 'GitHub Copilot App',
     description: 'James Clancey presents on the GitHub Copilot App.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQr6RpKlpRdcT4fQ2P1Qa5CcEgUCdxGCO0g2DgPU9Fms3kCl6w',
-    thumbnail: '/images/thumb-ghcp-app.png',
+    thumbnail: `${import.meta.env.BASE_URL}images/thumb-ghcp-app.png`,
   },
   {
     id: 'ne-example-2',
     title: 'Microsoft Scout (formerly Clawpilot)',
     description: 'Jakob Werner presents on Microsoft Scout.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQryGQGSN4OuS7t12NxqoFrGEgUCLgPFY90Y7NCLroCfI71MVQ',
-    thumbnail: '/images/thumb-scout.png',
+    thumbnail: `${import.meta.env.BASE_URL}images/thumb-scout.png`,
   },
   {
     id: 'ne-example-3',
     title: 'Vibe Coding',
     description: 'Jen Weigel presents on Vibe Coding.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpdjuzTnc2eTJYsSU-98nmcEgUC-gsMkNYMrjrt8vFcL6C0gw',
-    thumbnail: '/images/thumb-vibe-coding.png',
+    thumbnail: `${import.meta.env.BASE_URL}images/thumb-vibe-coding.png`,
   },
 ];
 

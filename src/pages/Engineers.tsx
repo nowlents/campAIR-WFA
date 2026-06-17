@@ -15,21 +15,21 @@ const engExamples: EngExample[] = [
     title: 'GitHub CLI',
     description: 'Scott Hanselman presents on GitHub CLI.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQqQdFXfrWhtS4GsXRmQGAW0EgUCeFISrsXwsuzQN9hTKVxkmA',
-    thumbnail: '/images/thumb-github-cli.png',
+    thumbnail: `${import.meta.env.BASE_URL}images/thumb-github-cli.png`,
   },
   {
     id: 'example-2',
     title: 'MCP Servers',
     description: 'Nicholas Hauenstein presents on MCP Servers.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoUD9U8g457TIZ6gKjrPPSWEgUCSnp9a_z1Iq8jVtBeMlVE4Q',
-    thumbnail: '/images/thumb-mcp-servers.png',
+    thumbnail: `${import.meta.env.BASE_URL}images/thumb-mcp-servers.png`,
   },
   {
     id: 'example-3',
     title: 'Agency',
     description: 'Preston McDonald & Kyle Rader present on Agency.',
     videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQrY54Q9S9w4Q6q6-k4JHzm6EgUCJer7bXDR5IJ10B8VE0KVWg',
-    thumbnail: '/images/thumb-agency.png',
+    thumbnail: `${import.meta.env.BASE_URL}images/thumb-agency.png`,
   },
 ];
 
