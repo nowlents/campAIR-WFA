@@ -15,8 +15,9 @@ export const engAgenda: Week[] = [
         title: 'Manager Orientation & Expectations Setting',
         description: 'Deck and talking points for managers to align on Camp AIR goals, time commitment, and team support during the program.',
         resources: [
-          { id: 'w0-mgr-ppt', title: 'Manager Kickoff Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQq3ZK3YiGCHS7baPJeELOkPEgUCMCQubysuhDYPKYOY5UtAbg' },
-          { id: 'w0-mgr-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQr5facebSiXR5fvnxbhFqKcEgUC0ovwmIirr-JeOV9V6mep6A' },
+          { id: 'w0-mgr-ppt', title: 'Manager Kickoff Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoF9DQTZem2Ta1V4yOV8nlTEgUCr42cvjDvHv1FfRv05J6Wcw' },
+          { id: 'w0-mgr-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoqUnYxTM72QrVsgLW7SoY3EgUCXl2b-4dZD_53qDmNCNxsAA' },
+          { id: 'w0-mgr-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%200%20%2D%20Manager%20Kickoff%2FCampAIR%2DManager%2DKickoff%2DDeck%2Emp4&share=cQrbtEBJyBouSY4XRZbVjIrHEgUCdwlqu7U3XuZORWoKKAJxbg' },
         ],
       },
     ],
@@ -34,9 +35,9 @@ export const engAgenda: Week[] = [
         description: 'Opening session establishing the AI-first operating model, program structure, and cohort norms.',
         day: 1,
         resources: [
-          { id: 'w1-d1s1-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrXMZD136KjS7t3-E0wow2oEgUCMHnLlOKVSRZDMuOk4KcYgw' },
-          { id: 'w1-d1s1-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpQikdLyN70QKB_5KPWhLePEgUCMeMCe-SqHubgnLJZqmNRmA' },
-          { id: 'w1-d1s1-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpU33ODHbPvQ4WcG341N-ECEgUCKMxzvEhCemgeF7peLQyViA' },
+          { id: 'w1-d1s1-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQowprbeYuvBS7v7Ll_VN8mvEgUCGU_L4Xc9DiJC-9klDF7n6Q' },
+          { id: 'w1-d1s1-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpyFVxUHQnOS7MLj8Xq9fAKEgUCy7WS1JY7HUPpIC9Omve1_w' },
+          { id: 'w1-d1s1-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%201%2FIcebreakerAndAI%2DFirstMindset%2Emp4&share=cQqkL82ITmRcRa7ci7SpXUEWEgUCc72BvwT6C0OYdAsqv3Zz4A' },
         ],
       },
       {
