@@ -35,8 +35,8 @@ export const nonEngAgenda: Week[] = [
         title: 'Manager Orientation & Expectations Setting',
         description: 'Deck and talking points for managers to align on Camp AIR goals, time commitment, and team support during the program.',
         resources: [
-          { id: 'w0-mgr-ppt', title: 'Manager Kickoff Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQq3ZK3YiGCHS7baPJeELOkPEgUCMCQubysuhDYPKYOY5UtAbg' },
-          { id: 'w0-mgr-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQr5facebSiXR5fvnxbhFqKcEgUC0ovwmIirr-JeOV9V6mep6A' },
+          { id: 'w0-mgr-ppt', title: 'Manager Kickoff Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoF9DQTZem2Ta1V4yOV8nlTEgUCr42cvjDvHv1FfRv05J6Wcw' },
+          { id: 'w0-mgr-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoqUnYxTM72QrVsgLW7SoY3EgUCXl2b-4dZD_53qDmNCNxsAA' },
         ],
       },
     ],
@@ -54,9 +54,9 @@ export const nonEngAgenda: Week[] = [
         description: 'Opening session establishing the AI-first operating model, program structure, and cohort norms.',
         day: 1,
         resources: [
-          { id: 'w1-d1s1-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrXMZD136KjS7t3-E0wow2oEgUCMHnLlOKVSRZDMuOk4KcYgw' },
-          { id: 'w1-d1s1-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpQikdLyN70QKB_5KPWhLePEgUCMeMCe-SqHubgnLJZqmNRmA' },
-          { id: 'w1-d1s1-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpU33ODHbPvQ4WcG341N-ECEgUCKMxzvEhCemgeF7peLQyViA' },
+          { id: 'w1-d1s1-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQowprbeYuvBS7v7Ll_VN8mvEgUCGU_L4Xc9DiJC-9klDF7n6Q' },
+          { id: 'w1-d1s1-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpyFVxUHQnOS7MLj8Xq9fAKEgUCy7WS1JY7HUPpIC9Omve1_w' },
+          { id: 'w1-d1s1-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%201%2FIcebreakerAndAI%2DFirstMindset%2Emp4&share=cQpU33ODHbPvQ4WcG341N%2DECEgUCKMxzvEhCemgeF7peLQyViA' },
         ],
       },
       {
@@ -65,9 +65,9 @@ export const nonEngAgenda: Week[] = [
         description: 'Second morning session building on orientation foundations.',
         day: 1,
         resources: [
-          { id: 'w1-d1s2-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoRe2BNjLniRKbBQfYL8LFBEgUCUJkb_LIanRKRN1_VtjgQ2Q' },
-          { id: 'w1-d1s2-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoYS9XcHcsnQ5QguLv6ah8dEgUCbFzAx5RWDMrf7e_obbrrkg' },
-          { id: 'w1-d1s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoxQTJ38151RYChAEutciyxEgUCyi1aoLvyy2yOjEmQugZS8w' },
+          { id: 'w1-d1s2-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQpuBeJhstixRKw8yt17vdmaEgUCX3ZRORRVmf1UYAmzx1umqg' },
+          { id: 'w1-d1s2-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoDw8_63Au-Q4NaonzjOXA4EgUCvnua5yFEN15HVxKahhU_Gg' },
+          { id: 'w1-d1s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%201%2FM365%2DCopilot%2DWorkshop%2DDeck%2Emp4&share=cQoxQTJ38151RYChAEutciyxEgUCyi1aoLvyy2yOjEmQugZS8w' },
         ],
       },
       {
@@ -76,7 +76,7 @@ export const nonEngAgenda: Week[] = [
         description: 'Hands-on lab where participants begin experimenting with AI tools on real workflow scenarios.',
         day: 1,
         resources: [
-          { id: 'w1-d1pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoJPWy8ALWERrU6NGvLO8soEgUCYymDGyRwVFd3lZqBCGXViQ' },
+          { id: 'w1-d1pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQp_HDTJjgRsQaA4te1ofbcJEgUCrjp27KPV1YTNj4dCYHRt5Q' },
         ],
       },
       {
@@ -85,9 +85,9 @@ export const nonEngAgenda: Week[] = [
         description: 'Morning session content.',
         day: 2,
         resources: [
-          { id: 'w1-d2am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQpgg4m2ChONRZ-QXcUfoyNbEgUC-vEhQ9qQhCvd8DwquvHCgg' },
-          { id: 'w1-d2am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrxpe31Er-MTpe4GT7SK7ZbEgUCO_TakTwBZ3788cPoAmot-g' },
-          { id: 'w1-d2am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpbAtLnDkghQ6Mt0GO6OxG_EgUCbNPHbygyzdqcvWXkhYfbtg' },
+          { id: 'w1-d2am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQr4aWHBYnx8Q4_6Zbmb6yoAEgUC_G9Jb3M5QdgL-2Te9gAsjg' },
+          { id: 'w1-d2am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpsF88ZxluHQILq0gAmcFRPEgUCAUkUVa7iYv3yyALl6VQKZg' },
+          { id: 'w1-d2am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%202%2FCowork%2DDeck%2Emp4&share=cQpbAtLnDkghQ6Mt0GO6OxG%5FEgUCbNPHbygyzdqcvWXkhYfbtg' },
         ],
       },
       {
@@ -96,7 +96,7 @@ export const nonEngAgenda: Week[] = [
         description: 'Afternoon hands-on practice lab.',
         day: 2,
         resources: [
-          { id: 'w1-d2pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoBC010R1BnSbXC24cz2tD5EgUC1zHIsYp313iTtgFOG8WsBw' },
+          { id: 'w1-d2pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqAh4MPtfvFRpsBZTtKhLfTEgUCULbs-0MgWaHPgNE6UosjCw' },
         ],
       },
       {
@@ -105,9 +105,9 @@ export const nonEngAgenda: Week[] = [
         description: 'Morning session content.',
         day: 3,
         resources: [
-          { id: 'w1-d3am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrf9wjnnDcQRps_GYt4Z1HzEgUCI3epXtc5EUH0Nd1zg7xGmA' },
-          { id: 'w1-d3am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQovYE0e2jDcSbqUgULccmjxEgUCBJe568Uow37KxT7jSrvcgg' },
-          { id: 'w1-d3am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQp6M_ryJE3kSLjVuJ7vTr1HEgUCoKh23ObDrzrFlk7OUNxbLQ' },
+          { id: 'w1-d3am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQqK83F_XpnITZbJN59AfadtEgUCCp2eKNLNQ2Uv9qacYbJ5hQ' },
+          { id: 'w1-d3am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpPBuQt6kBgRL98IIrjYWgzEgUCQgrAcpKQLS40AmYMb-3XSQ' },
+          { id: 'w1-d3am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%203%2FBuildYourOwnCopilot%2DDeck%2Emp4&share=cQp6M%5FryJE3kSLjVuJ7vTr1HEgUCoKh23ObDrzrFlk7OUNxbLQ' },
         ],
       },
       {
@@ -116,7 +116,7 @@ export const nonEngAgenda: Week[] = [
         description: 'Afternoon hands-on practice lab.',
         day: 3,
         resources: [
-          { id: 'w1-d3pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqrlL4ca_GPQZDILlS_aYbzEgUCNWhhms1IM8N9izzgDM7WyA' },
+          { id: 'w1-d3pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrgu5wzpf63Tqf1Q8xnR--nEgUCpy0ruNzhTn-fQn0_W10d7w' },
         ],
       },
       {
@@ -125,9 +125,9 @@ export const nonEngAgenda: Week[] = [
         description: 'Morning session content.',
         day: 4,
         resources: [
-          { id: 'w1-d4am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrG4INUJmIaTpFuGIGMtNy4EgUCw78q2Oqffir1WaFFgdDhNQ' },
-          { id: 'w1-d4am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqUdR3HyhfhQq60nkYsPZuhEgUCx-A7s4qH7Z4cDgAiTQTm5Q' },
-          { id: 'w1-d4am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoGatFzWXpGTphnVJ3n9X9wEgUCaK4NdYooMwDano_Kirixuw' },
+          { id: 'w1-d4am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrlJlsG_oVuRp7fKYxh_4OdEgUCIS-5b1NOxrKFbe5fwruQIg' },
+          { id: 'w1-d4am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQo3tXDguXFdQLyssDAuFkMLEgUCnoA1rKzOBHbBMnE9aaKNaA' },
+          { id: 'w1-d4am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%204%2FWorkRedesign%2DDeck%2Emp4&share=cQoGatFzWXpGTphnVJ3n9X9wEgUCaK4NdYooMwDano%5FKirixuw' },
         ],
       },
       {
@@ -136,7 +136,7 @@ export const nonEngAgenda: Week[] = [
         description: 'Afternoon hands-on practice lab.',
         day: 4,
         resources: [
-          { id: 'w1-d4pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrVYhmryGRtSrFt70JWlrq9EgUCml6hCk4Gy2NgyXx704Hjaw' },
+          { id: 'w1-d4pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQq0YlMsGZmYRqkyYh0SCEgXEgUC4usmTxkJOesXDoS2Mql3ZQ' },
         ],
       },
     ],

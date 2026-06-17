@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { type Resource } from '../data/nonEngAgenda';
 
 const typeIcons: Record<Resource['type'], string> = {
@@ -29,11 +28,7 @@ interface SessionItemProps {
 }
 
 export function SessionItem({ title, description, resources, placeholder }: SessionItemProps) {
-  const [showAll, setShowAll] = useState(false);
-
   const sorted = [...resources].sort((a, b) => typePriority[a.type] - typePriority[b.type]);
-  const primary = sorted.slice(0, 2);
-  const secondary = sorted.slice(2);
 
   const renderResource = (r: Resource) => {
     const hasUrl = r.url && r.url.length > 0;
@@ -70,16 +65,7 @@ export function SessionItem({ title, description, resources, placeholder }: Sess
       <p className="session-item__description">{description}</p>
       {resources.length > 0 && (
         <div className="session-item__resources">
-          {primary.map(renderResource)}
-          {secondary.length > 0 && !showAll && (
-            <button
-              className="session-item__show-more"
-              onClick={() => setShowAll(true)}
-            >
-              +{secondary.length} more materials
-            </button>
-          )}
-          {showAll && secondary.map(renderResource)}
+          {sorted.map(renderResource)}
         </div>
       )}
     </div>

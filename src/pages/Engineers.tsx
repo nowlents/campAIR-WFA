@@ -67,7 +67,7 @@ export function Engineers() {
         <h3 className="agenda__title">4-Week Agenda</h3>
         <div className="agenda__weeks">
           {engAgenda.map((week, i) => (
-            <WeekBlock key={week.id} week={week} defaultOpen={i === 0} />
+            <WeekBlock key={week.id} week={week} defaultOpen={i === 0} showDayThemes={false} />
           ))}
         </div>
       </section>

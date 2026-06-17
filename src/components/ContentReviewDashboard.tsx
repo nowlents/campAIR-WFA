@@ -78,7 +78,14 @@ export function ContentReviewDashboard() {
     month: 'long',
     day: 'numeric',
   });
-  const nextReview = new Date(data.nextReviewDate).toLocaleDateString('en-US', {
+
+  // Compute next Monday at 7AM UTC (midnight PT) dynamically
+  const now = new Date();
+  const nextMonday = new Date(now);
+  const dayOfWeek = now.getDay();
+  const daysUntilMonday = dayOfWeek === 0 ? 1 : dayOfWeek === 1 ? 7 : 8 - dayOfWeek;
+  nextMonday.setDate(now.getDate() + daysUntilMonday);
+  const nextReview = nextMonday.toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',

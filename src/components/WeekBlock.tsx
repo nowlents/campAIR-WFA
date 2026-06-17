@@ -5,9 +5,10 @@ import { SessionItem } from './SessionItem';
 interface WeekBlockProps {
   week: Week;
   defaultOpen?: boolean;
+  showDayThemes?: boolean;
 }
 
-export function WeekBlock({ week, defaultOpen = false }: WeekBlockProps) {
+export function WeekBlock({ week, defaultOpen = false, showDayThemes = true }: WeekBlockProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const hasSessions = week.sessions && week.sessions.length > 0;
 
@@ -63,9 +64,9 @@ export function WeekBlock({ week, defaultOpen = false }: WeekBlockProps) {
                 <div key={dayNum} className="day-group">
                   <div className="day-group__header">
                     <span className="day-group__badge">
-                      Day {dayNum}{dayThemes[dayNum] && ` — ${dayThemes[dayNum]}`}
+                      Day {dayNum}{showDayThemes && dayThemes[dayNum] && ` — ${dayThemes[dayNum]}`}
                     </span>
-                    {dayUseCases[dayNum] && (
+                    {showDayThemes && dayUseCases[dayNum] && (
                       <span className="day-group__use-case">{dayUseCases[dayNum]}</span>
                     )}
                     <div className="day-group__line" />
