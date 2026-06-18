@@ -4,32 +4,90 @@ import reviewData from '../data/content-review.json';
 type Severity = 'info' | 'warning' | 'critical';
 type FindingStatus = 'current' | 'review-suggested' | 'outdated';
 type MaterialType = 'deck' | 'guide' | 'lab' | 'video' | 'document';
-type DismissAction = 'implemented' | 'rejected';
+type ResolutionAction = 'implemented' | 'rejected';
 
-interface DismissedItem {
-  action: DismissAction;
-  dismissedAt: string;
+/* ── History tracking ─────────────────────────────────────────────── */
+
+interface HistoryEntry {
   scanDate: string;
+  status: FindingStatus;
+  finding: string;
+  suggestedAction: string | null;
+  resolution: ResolutionAction | null;
+  resolvedAt: string | null;
 }
 
-function getDismissals(): Record<string, DismissedItem> {
+const HISTORY_KEY = 'campair-review-history';
+
+function getHistory(): Record<string, HistoryEntry[]> {
   try {
-    return JSON.parse(localStorage.getItem('campair-review-dismissals') || '{}');
+    return JSON.parse(localStorage.getItem(HISTORY_KEY) || '{}');
   } catch { return {}; }
 }
 
-function setDismissal(materialId: string, action: DismissAction, scanDate: string) {
-  const dismissals = getDismissals();
-  dismissals[materialId] = { action, dismissedAt: new Date().toISOString(), scanDate };
-  localStorage.setItem('campair-review-dismissals', JSON.stringify(dismissals));
+function saveHistory(history: Record<string, HistoryEntry[]>) {
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
 }
 
-function isDismissed(materialId: string, scanDate: string): boolean {
-  const dismissals = getDismissals();
-  const entry = dismissals[materialId];
-  // Only counts if dismissed for the current scan's data
-  return !!entry && entry.scanDate === scanDate;
+/** Ensure the current scan's finding is recorded in history. */
+function ensureCurrentEntry(materialId: string, material: Material, scanDate: string) {
+  const history = getHistory();
+  const entries = history[materialId] || [];
+  const alreadyLogged = entries.some((e) => e.scanDate === scanDate);
+  if (!alreadyLogged && material.status !== 'current') {
+    entries.push({
+      scanDate,
+      status: material.status,
+      finding: material.finding,
+      suggestedAction: material.suggestedAction,
+      resolution: null,
+      resolvedAt: null,
+    });
+    history[materialId] = entries;
+    saveHistory(history);
+  }
+  // Also log "current" scans so the timeline shows clean weeks
+  if (!alreadyLogged && material.status === 'current') {
+    entries.push({
+      scanDate,
+      status: 'current',
+      finding: material.finding,
+      suggestedAction: null,
+      resolution: null,
+      resolvedAt: null,
+    });
+    history[materialId] = entries;
+    saveHistory(history);
+  }
 }
+
+function resolveEntry(materialId: string, scanDate: string, action: ResolutionAction) {
+  const history = getHistory();
+  const entries = history[materialId] || [];
+  const entry = entries.find((e) => e.scanDate === scanDate && !e.resolution);
+  if (entry) {
+    entry.resolution = action;
+    entry.resolvedAt = new Date().toISOString();
+  }
+  history[materialId] = entries;
+  saveHistory(history);
+}
+
+function isResolved(materialId: string, scanDate: string): ResolutionAction | null {
+  const history = getHistory();
+  const entries = history[materialId] || [];
+  const entry = entries.find((e) => e.scanDate === scanDate);
+  return entry?.resolution || null;
+}
+
+function getMaterialHistory(materialId: string): HistoryEntry[] {
+  const history = getHistory();
+  return (history[materialId] || []).slice().sort(
+    (a, b) => new Date(b.scanDate).getTime() - new Date(a.scanDate).getTime()
+  );
+}
+
+/* ── Data types ───────────────────────────────────────────────────── */
 
 interface Material {
   id: string;
@@ -99,13 +157,25 @@ function groupSessionsByDay(sessions: SessionReview[]): Record<string, SessionRe
 }
 
 export function ContentReviewDashboard() {
-  const [, setDismissedVersion] = useState(0);
+  const [, setVersion] = useState(0);
+  const [expandedMaterial, setExpandedMaterial] = useState<string | null>(null);
   const scanDate = data.lastReviewDate;
 
-  const handleDismiss = useCallback((materialId: string, action: DismissAction) => {
-    setDismissal(materialId, action, scanDate);
-    setDismissedVersion((v) => v + 1);
+  // Seed history entries for current scan on first render
+  for (const session of data.sessions) {
+    for (const material of session.materials) {
+      ensureCurrentEntry(material.id, material, scanDate);
+    }
+  }
+
+  const handleResolve = useCallback((materialId: string, action: ResolutionAction) => {
+    resolveEntry(materialId, scanDate, action);
+    setVersion((v) => v + 1);
   }, [scanDate]);
+
+  const toggleHistory = useCallback((materialId: string) => {
+    setExpandedMaterial((prev) => (prev === materialId ? null : materialId));
+  }, []);
 
   const lastReview = new Date(data.lastReviewDate).toLocaleDateString('en-US', {
     weekday: 'long',
@@ -114,7 +184,7 @@ export function ContentReviewDashboard() {
     day: 'numeric',
   });
 
-  // Compute next Monday at 7AM UTC (midnight PT) dynamically
+  // Compute next Monday dynamically
   const now = new Date();
   const nextMonday = new Date(now);
   const dayOfWeek = now.getDay();
@@ -128,11 +198,13 @@ export function ContentReviewDashboard() {
   });
 
   const allMaterials = data.sessions.flatMap((s) => s.materials);
-  const currentCount = allMaterials.filter((m) => m.status === 'current' || isDismissed(m.id, scanDate)).length;
-  const warningCount = allMaterials.filter((m) => m.status === 'review-suggested' && !isDismissed(m.id, scanDate)).length;
-  const outdatedCount = allMaterials.filter((m) => m.status === 'outdated' && !isDismissed(m.id, scanDate)).length;
-
+  const currentCount = allMaterials.filter((m) => m.status === 'current' || isResolved(m.id, scanDate) !== null).length;
+  const warningCount = allMaterials.filter((m) => m.status === 'review-suggested' && isResolved(m.id, scanDate) === null).length;
+  const outdatedCount = allMaterials.filter((m) => m.status === 'outdated' && isResolved(m.id, scanDate) === null).length;
   const effectiveOverallStatus = outdatedCount > 0 ? 'critical' : warningCount > 0 ? 'warning' : 'current';
+
+  const formatDate = (iso: string) =>
+    new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
   return (
     <div className="review-dashboard">
@@ -187,7 +259,8 @@ export function ContentReviewDashboard() {
                     </span>
                     <span className="review-session__status-dots">
                       {session.materials.map((m) => {
-                        const effectiveStatus = isDismissed(m.id, scanDate) ? 'current' : m.status;
+                        const resolved = isResolved(m.id, scanDate) !== null;
+                        const effectiveStatus: FindingStatus = resolved ? 'current' : m.status;
                         return (
                           <span key={m.id} className={`review-session__dot review-session__dot--${effectiveStatus}`} title={`${m.title}: ${statusConfig[effectiveStatus].label}`} />
                         );
@@ -196,31 +269,41 @@ export function ContentReviewDashboard() {
                   </summary>
                   <div className="review-session__materials">
                     {session.materials.map((material) => {
-                      const dismissed = isDismissed(material.id, scanDate);
-                      const effectiveStatus: FindingStatus = dismissed ? 'current' : material.status;
+                      const resolution = isResolved(material.id, scanDate);
+                      const effectiveStatus: FindingStatus = resolution ? 'current' : material.status;
                       const config = statusConfig[effectiveStatus];
+                      const history = getMaterialHistory(material.id);
+                      const isHistoryOpen = expandedMaterial === material.id;
+                      const hasHistory = history.length > 0;
+
                       return (
                         <div key={material.id} className={`review-material review-material--${effectiveStatus}`}>
                           <div className="review-material__header">
                             <span className="review-material__type-icon">{typeIcons[material.type]}</span>
                             <span className="review-material__title">{material.title}</span>
                             {material.url && (
-                              <a
-                                href={material.url}
-                                className="review-material__download"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
+                              <a href={material.url} className="review-material__download" target="_blank" rel="noopener noreferrer">
                                 ↗ Open
                               </a>
+                            )}
+                            {hasHistory && (
+                              <button
+                                className={`review-material__history-toggle ${isHistoryOpen ? 'review-material__history-toggle--open' : ''}`}
+                                onClick={() => toggleHistory(material.id)}
+                                title="View version history"
+                              >
+                                🕒 History ({history.length})
+                              </button>
                             )}
                             <span className="review-material__status">
                               {config.icon} {config.label}
                             </span>
                           </div>
-                          {dismissed ? (
+
+                          {/* Current finding or resolved notice */}
+                          {resolution ? (
                             <p className="review-material__finding review-material__finding--dismissed">
-                              ✓ Resolved — {getDismissals()[material.id]?.action === 'implemented' ? 'Update implemented' : 'Finding rejected'}
+                              ✓ Resolved — {resolution === 'implemented' ? 'Update implemented' : 'Finding rejected'}
                             </p>
                           ) : (
                             <>
@@ -242,19 +325,53 @@ export function ContentReviewDashboard() {
                                 <div className="review-material__actions">
                                   <button
                                     className="review-material__btn review-material__btn--implemented"
-                                    onClick={() => handleDismiss(material.id, 'implemented')}
+                                    onClick={() => handleResolve(material.id, 'implemented')}
                                   >
                                     ✓ Implemented
                                   </button>
                                   <button
                                     className="review-material__btn review-material__btn--rejected"
-                                    onClick={() => handleDismiss(material.id, 'rejected')}
+                                    onClick={() => handleResolve(material.id, 'rejected')}
                                   >
                                     ✗ Rejected
                                   </button>
                                 </div>
                               )}
                             </>
+                          )}
+
+                          {/* Version history timeline */}
+                          {isHistoryOpen && (
+                            <div className="review-material__timeline">
+                              <div className="timeline__header">Version History</div>
+                              <div className="timeline__entries">
+                                {history.map((entry, i) => (
+                                  <div key={i} className={`timeline__entry timeline__entry--${entry.status}`}>
+                                    <div className="timeline__marker" />
+                                    <div className="timeline__content">
+                                      <div className="timeline__date">
+                                        <span className="timeline__scan-date">{formatDate(entry.scanDate)}</span>
+                                        <span className={`timeline__status-badge timeline__status-badge--${entry.status}`}>
+                                          {statusConfig[entry.status]?.icon} {statusConfig[entry.status]?.label || entry.status}
+                                        </span>
+                                        {entry.resolution && (
+                                          <span className={`timeline__resolution timeline__resolution--${entry.resolution}`}>
+                                            {entry.resolution === 'implemented' ? '✓ Implemented' : '✗ Rejected'}
+                                            {entry.resolvedAt && ` · ${formatDate(entry.resolvedAt)}`}
+                                          </span>
+                                        )}
+                                      </div>
+                                      <p className="timeline__finding">{entry.finding}</p>
+                                      {entry.suggestedAction && (
+                                        <p className="timeline__suggestion">
+                                          <strong>Suggestion:</strong> {entry.suggestedAction}
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
                           )}
                         </div>
                       );
