@@ -1124,6 +1124,50 @@ a:hover {
   word-break: break-all;
 }
 
+.review-material__finding--dismissed {
+  font-style: italic;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+.review-material__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.review-material__btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid;
+  transition: all 0.15s ease;
+}
+
+.review-material__btn--implemented {
+  background: rgba(16, 124, 16, 0.08);
+  border-color: rgba(16, 124, 16, 0.4);
+  color: #107c10;
+}
+
+.review-material__btn--implemented:hover {
+  background: rgba(16, 124, 16, 0.15);
+  border-color: #107c10;
+}
+
+.review-material__btn--rejected {
+  background: rgba(110, 110, 110, 0.06);
+  border-color: rgba(110, 110, 110, 0.3);
+  color: var(--color-text-secondary);
+}
+
+.review-material__btn--rejected:hover {
+  background: rgba(110, 110, 110, 0.12);
+  border-color: rgba(110, 110, 110, 0.5);
+}
+
 /* === Submission CTA === */
 .submission-cta {
   border: 2px solid var(--color-accent);

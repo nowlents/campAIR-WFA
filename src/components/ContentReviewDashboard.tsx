@@ -1,8 +1,35 @@
+import { useState, useCallback } from 'react';
 import reviewData from '../data/content-review.json';
 
 type Severity = 'info' | 'warning' | 'critical';
 type FindingStatus = 'current' | 'review-suggested' | 'outdated';
 type MaterialType = 'deck' | 'guide' | 'lab' | 'video' | 'document';
+type DismissAction = 'implemented' | 'rejected';
+
+interface DismissedItem {
+  action: DismissAction;
+  dismissedAt: string;
+  scanDate: string;
+}
+
+function getDismissals(): Record<string, DismissedItem> {
+  try {
+    return JSON.parse(localStorage.getItem('campair-review-dismissals') || '{}');
+  } catch { return {}; }
+}
+
+function setDismissal(materialId: string, action: DismissAction, scanDate: string) {
+  const dismissals = getDismissals();
+  dismissals[materialId] = { action, dismissedAt: new Date().toISOString(), scanDate };
+  localStorage.setItem('campair-review-dismissals', JSON.stringify(dismissals));
+}
+
+function isDismissed(materialId: string, scanDate: string): boolean {
+  const dismissals = getDismissals();
+  const entry = dismissals[materialId];
+  // Only counts if dismissed for the current scan's data
+  return !!entry && entry.scanDate === scanDate;
+}
 
 interface Material {
   id: string;
@@ -72,6 +99,14 @@ function groupSessionsByDay(sessions: SessionReview[]): Record<string, SessionRe
 }
 
 export function ContentReviewDashboard() {
+  const [, setDismissedVersion] = useState(0);
+  const scanDate = data.lastReviewDate;
+
+  const handleDismiss = useCallback((materialId: string, action: DismissAction) => {
+    setDismissal(materialId, action, scanDate);
+    setDismissedVersion((v) => v + 1);
+  }, [scanDate]);
+
   const lastReview = new Date(data.lastReviewDate).toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -93,20 +128,22 @@ export function ContentReviewDashboard() {
   });
 
   const allMaterials = data.sessions.flatMap((s) => s.materials);
-  const currentCount = allMaterials.filter((m) => m.status === 'current').length;
-  const warningCount = allMaterials.filter((m) => m.status === 'review-suggested').length;
-  const outdatedCount = allMaterials.filter((m) => m.status === 'outdated').length;
+  const currentCount = allMaterials.filter((m) => m.status === 'current' || isDismissed(m.id, scanDate)).length;
+  const warningCount = allMaterials.filter((m) => m.status === 'review-suggested' && !isDismissed(m.id, scanDate)).length;
+  const outdatedCount = allMaterials.filter((m) => m.status === 'outdated' && !isDismissed(m.id, scanDate)).length;
+
+  const effectiveOverallStatus = outdatedCount > 0 ? 'critical' : warningCount > 0 ? 'warning' : 'current';
 
   return (
     <div className="review-dashboard">
       <div className="review-dashboard__header">
         <div className="review-dashboard__status-bar">
-          <div className="review-dashboard__status-indicator" data-status={data.overallStatus}>
+          <div className="review-dashboard__status-indicator" data-status={effectiveOverallStatus}>
             <span className="review-dashboard__status-dot" />
             <span className="review-dashboard__status-label">
-              {data.overallStatus === 'current' && 'All Clear'}
-              {data.overallStatus === 'warning' && 'Review Needed'}
-              {data.overallStatus === 'critical' && 'Action Required'}
+              {effectiveOverallStatus === 'current' && 'All Clear'}
+              {effectiveOverallStatus === 'warning' && 'Review Needed'}
+              {effectiveOverallStatus === 'critical' && 'Action Required'}
             </span>
           </div>
           <div className="review-dashboard__dates">
@@ -149,16 +186,21 @@ export function ContentReviewDashboard() {
                       {session.materials.length} material{session.materials.length !== 1 ? 's' : ''}
                     </span>
                     <span className="review-session__status-dots">
-                      {session.materials.map((m) => (
-                        <span key={m.id} className={`review-session__dot review-session__dot--${m.status}`} title={`${m.title}: ${statusConfig[m.status].label}`} />
-                      ))}
+                      {session.materials.map((m) => {
+                        const effectiveStatus = isDismissed(m.id, scanDate) ? 'current' : m.status;
+                        return (
+                          <span key={m.id} className={`review-session__dot review-session__dot--${effectiveStatus}`} title={`${m.title}: ${statusConfig[effectiveStatus].label}`} />
+                        );
+                      })}
                     </span>
                   </summary>
                   <div className="review-session__materials">
                     {session.materials.map((material) => {
-                      const config = statusConfig[material.status];
+                      const dismissed = isDismissed(material.id, scanDate);
+                      const effectiveStatus: FindingStatus = dismissed ? 'current' : material.status;
+                      const config = statusConfig[effectiveStatus];
                       return (
-                        <div key={material.id} className={`review-material review-material--${material.status}`}>
+                        <div key={material.id} className={`review-material review-material--${effectiveStatus}`}>
                           <div className="review-material__header">
                             <span className="review-material__type-icon">{typeIcons[material.type]}</span>
                             <span className="review-material__title">{material.title}</span>
@@ -176,19 +218,43 @@ export function ContentReviewDashboard() {
                               {config.icon} {config.label}
                             </span>
                           </div>
-                          <p className="review-material__finding">{material.finding}</p>
-                          {material.suggestedAction && (
-                            <div className="review-material__action">
-                              <strong>Suggested Action:</strong> {material.suggestedAction}
-                            </div>
-                          )}
-                          {material.sources.length > 0 && (
-                            <div className="review-material__sources">
-                              <strong>Sources:</strong>
-                              {material.sources.map((src, i) => (
-                                <a key={i} href={src} target="_blank" rel="noopener noreferrer">{src}</a>
-                              ))}
-                            </div>
+                          {dismissed ? (
+                            <p className="review-material__finding review-material__finding--dismissed">
+                              ✓ Resolved — {getDismissals()[material.id]?.action === 'implemented' ? 'Update implemented' : 'Finding rejected'}
+                            </p>
+                          ) : (
+                            <>
+                              <p className="review-material__finding">{material.finding}</p>
+                              {material.suggestedAction && (
+                                <div className="review-material__action">
+                                  <strong>Suggested Action:</strong> {material.suggestedAction}
+                                </div>
+                              )}
+                              {material.sources.length > 0 && (
+                                <div className="review-material__sources">
+                                  <strong>Sources:</strong>
+                                  {material.sources.map((src, i) => (
+                                    <a key={i} href={src} target="_blank" rel="noopener noreferrer">{src}</a>
+                                  ))}
+                                </div>
+                              )}
+                              {material.status !== 'current' && (
+                                <div className="review-material__actions">
+                                  <button
+                                    className="review-material__btn review-material__btn--implemented"
+                                    onClick={() => handleDismiss(material.id, 'implemented')}
+                                  >
+                                    ✓ Implemented
+                                  </button>
+                                  <button
+                                    className="review-material__btn review-material__btn--rejected"
+                                    onClick={() => handleDismiss(material.id, 'rejected')}
+                                  >
+                                    ✗ Rejected
+                                  </button>
+                                </div>
+                              )}
+                            </>
                           )}
                         </div>
                       );
