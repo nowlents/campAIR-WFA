@@ -1,37 +1,41 @@
 {
-  "lastReviewDate": "2026-06-11T00:00:00-07:00",
-  "nextReviewDate": "2026-06-15T00:00:00-07:00",
-  "overallStatus": "current",
-  "summary": "Initial baseline scan complete. All materials reviewed against publicly available information.",
+  "lastReviewDate": "2026-06-18T08:58:00-07:00",
+  "nextReviewDate": "2026-06-22T00:00:00-07:00",
+  "overallStatus": "critical",
+  "summary": "Copilot Cowork GA launch (June 16) introduces major pricing/capability changes impacting Day 2 materials; Copilot Studio redesigned authoring canvas impacts Day 3 materials; M365 Copilot UI refresh and model additions affect Day 1 Session 2.",
   "sessions": [
     {
-      "sessionId": "w0-prep",
-      "sessionTitle": "Manager Preparation & Mindset Reset",
+      "sessionId": "w0-manager-orientation",
+      "sessionTitle": "Manager Orientation & Expectations Setting",
       "track": "shared",
       "materials": [
         {
-          "id": "w0-prep-deck",
+          "id": "w0-mgr-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
-          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQq3ZK3YiGCHS7baPJeELOkPEgUCMCQubysuhDYPKYOY5UtAbg",
-          "status": "current",
-          "severity": "info",
-          "finding": "Content aligns with current Microsoft AI-first leadership messaging.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "title": "Manager Kickoff Presentation",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Microsoft Build 2026 shifted public messaging from 'AI-first' to 'agent-first' framing. If the deck references 'AI assistants' as the paradigm, it may feel dated given the June announcements about autonomous agents, Microsoft Scout, and Agent Framework 1.0.",
+          "suggestedAction": "Review slides for 'AI assistant' framing and consider updating to reflect 'agent-first' positioning and autonomous delegation as the new norm.",
+          "sources": [
+            "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/",
+            "https://github.com/microsoft/Build26-news/blob/main/news.md"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
-          "id": "w0-prep-guide",
+          "id": "w0-mgr-guide",
           "type": "guide",
           "title": "Facilitator Guide",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQr5facebSiXR5fvnxbhFqKcEgUC0ovwmIirr-JeOV9V6mep6A",
-          "status": "current",
-          "severity": "info",
-          "finding": "Facilitation flow and talking points remain accurate and relevant.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Talking points about program expectations should reflect that Copilot Cowork is now GA with usage-based billing (Copilot Credits). Managers need to understand cost implications and admin enablement steps.",
+          "suggestedAction": "Add context about Copilot Credits billing model and the July 1 transition from free preview so managers can set accurate expectations about tool availability.",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://www.aguidetocloud.com/blog/microsoft-copilot-cowork-pricing-cost-management/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -41,40 +45,42 @@
       "track": "shared",
       "materials": [
         {
-          "id": "w1-d1s1-deck",
+          "id": "w1-d1s1-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
-          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrXMZD136KjS7t3-E0wow2oEgUCMHnLlOKVSRZDMuOk4KcYgw",
-          "status": "current",
-          "severity": "info",
-          "finding": "AI-first mindset positioning is consistent with Microsoft's current public messaging.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "title": "Presentation",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Microsoft's public positioning has evolved from 'AI-first' to 'agent-first' at Build 2026. The deck's framing of the AI-first mindset should be validated against the new language around autonomous agents, delegation, and the Agent Framework 1.0 GA.",
+          "suggestedAction": "Verify that the 'AI-first mindset' framing acknowledges the shift toward agentic AI. Consider referencing Microsoft Scout, Copilot Cowork GA, and the concept of delegating multi-step work to agents as the new mental model.",
+          "sources": [
+            "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/",
+            "https://www.theneuron.ai/explainer-articles/everything-microsoft-announced-at-microsoft-build-2026-explained/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d1s1-guide",
           "type": "guide",
           "title": "Facilitator Guide",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpQikdLyN70QKB_5KPWhLePEgUCMeMCe-SqHubgnLJZqmNRmA",
-          "status": "current",
-          "severity": "info",
-          "finding": "Facilitation prompts and structure remain current.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Facilitator talking points about the AI landscape should incorporate the Build 2026 announcements (Agent Framework, MAI models, Microsoft Scout) to sound current when participants ask questions.",
+          "suggestedAction": "Add a 'recent context' callout box with key Build 2026 announcements facilitators can reference if participants bring up the latest news.",
+          "sources": [
+            "https://github.com/microsoft/Build26-news/blob/main/news.md"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d1s1-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpU33ODHbPvQ4WcG341N-ECEgUCKMxzvEhCemgeF7peLQyViA",
           "status": "current",
           "severity": "info",
-          "finding": "Talk track references align with current state.",
+          "finding": "Video talk track covers foundational mindset concepts that remain valid. The core message of adopting AI as a default operating mode is reinforced by recent announcements.",
           "suggestedAction": null,
           "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -84,40 +90,42 @@
       "track": "non-engineering",
       "materials": [
         {
-          "id": "w1-d1s2-deck",
+          "id": "w1-d1s2-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
-          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoRe2BNjLniRKbBQfYL8LFBEgUCUJkb_LIanRKRN1_VtjgQ2Q",
-          "status": "current",
-          "severity": "info",
-          "finding": "M365 Copilot UI and feature references match current public documentation.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "title": "Presentation",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "June 2026 brought significant M365 Copilot changes: Anthropic Claude now available as a model option, Copilot Notebooks broadly available, modernized Edge interface, and new licensing requirements for Copilot in Word/Excel/PPT/OneNote. Deck screenshots and feature descriptions may not reflect these additions.",
+          "suggestedAction": "Review screenshots for UI accuracy (Edge modernization). Verify feature descriptions mention model choice (Claude). Update any licensing discussion to reflect that Copilot in Word/Excel/PPT/OneNote now requires M365 Copilot license.",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+            "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/what%E2%80%99s-new-in-notebooks--june-2026/4525625"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d1s2-guide",
           "type": "guide",
           "title": "Facilitator Guide",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoYS9XcHcsnQ5QguLv6ah8dEgUCbFzAx5RWDMrf7e_obbrrkg",
-          "status": "current",
-          "severity": "info",
-          "finding": "Facilitation guidance accurately reflects current M365 Copilot workflows.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Guide should reference new capabilities participants may ask about: Claude model selection, Copilot Notebooks for collaborative querying, and the new Teams features (recap deletion, meeting chat section).",
+          "suggestedAction": "Add facilitator notes covering Claude model option, Notebooks availability, and Teams meeting recap changes so facilitators can address participant questions confidently.",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d1s2-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoxQTJ38151RYChAEutciyxEgUCyi1aoLvyy2yOjEmQugZS8w",
           "status": "current",
           "severity": "info",
-          "finding": "Video talk track content is consistent with current capabilities.",
+          "finding": "Video covers conceptual workflows for using M365 Copilot effectively. Core messaging about moving from overwhelmed to in-command remains valid regardless of new features.",
           "suggestedAction": null,
           "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -128,15 +136,16 @@
       "materials": [
         {
           "id": "w1-d1pm-lab",
-          "type": "lab",
-          "title": "Afternoon Practice Lab",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoJPWy8ALWERrU6NGvLO8soEgUCYymDGyRwVFd3lZqBCGXViQ",
-          "status": "current",
-          "severity": "info",
-          "finding": "Lab exercises reference current M365 Copilot interface and features.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "If lab exercises include Copilot Chat demonstrations, the UI has been refreshed (infinite scroll, modernized Edge look). Screenshots or step-by-step instructions referencing the old interface may confuse participants.",
+          "suggestedAction": "Verify lab screenshots against the current Copilot Chat interface. Update any references to chat history navigation (now infinite scroll instead of manual loading).",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -146,40 +155,47 @@
       "track": "non-engineering",
       "materials": [
         {
-          "id": "w1-d2am-deck",
+          "id": "w1-d2am-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
-          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQpgg4m2ChONRZ-QXcUfoyNbEgUC-vEhQ9qQhCvd8DwquvHCgg",
-          "status": "current",
-          "severity": "info",
-          "finding": "Copilot Cowork functionality described matches current public documentation.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "title": "Presentation",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Copilot Cowork reached General Availability on June 16, 2026 — just 2 days ago. The GA release introduces: usage-based billing via Copilot Credits, model choice (Claude Opus 4.8, GPT 5.5, etc.), Browser Use capability, Goals skill (/goal), Guided Skill Builder, Brand Templates, and expanded plugin catalog. The deck was likely created during preview and will not reflect the GA pricing model, new capabilities, or updated UI.",
+          "suggestedAction": "URGENT: Update deck to reflect GA state. Key changes: (1) Add usage-based billing/Copilot Credits explanation, (2) Update capability slides with model choice, Browser Use, Goals skill, (3) Replace any preview-era screenshots with GA interface, (4) Note the July 1 billing transition deadline.",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new",
+            "https://www.aguidetocloud.com/blog/microsoft-copilot-cowork-pricing-cost-management/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d2am-guide",
           "type": "guide",
           "title": "Facilitator Guide",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrxpe31Er-MTpe4GT7SK7ZbEgUCO_TakTwBZ3788cPoAmot-g",
-          "status": "current",
-          "severity": "info",
-          "finding": "Facilitation flow is accurate for current Copilot Cowork experience.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Facilitator guide references preview-era Copilot Cowork experience. GA introduces fundamentally different operational model: usage-based billing, admin enablement requirements, model selection, and new features (Goals, Browser Use, Skill Builder). Facilitators need accurate talking points about cost, governance, and new capabilities.",
+          "suggestedAction": "URGENT: Rewrite Cowork-specific facilitation notes to cover: (1) GA status and what changed from preview, (2) Copilot Credits billing model and cost tiers (light/medium/heavy), (3) Admin prerequisites for participants to access Cowork, (4) New demo-worthy features: /goal command, Browser Use, model selection. Include FAQ answers about the July 1 billing cutover.",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://www.aguidetocloud.com/blog/microsoft-copilot-cowork-admin-and-governance/",
+            "https://robquickenden.blog/2026/06/goal-skill-cowork/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d2am-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQpbAtLnDkghQ6Mt0GO6OxG_EgUCbNPHbygyzdqcvWXkhYfbtg",
-          "status": "current",
-          "severity": "info",
-          "finding": "Talk track references are consistent with current state.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Video talk track was recorded during Cowork preview period. Core concepts of delegation remain valid, but specific references to features, interface, and access model are now outdated. The GA version has new UI elements, model picker, Goals skill, and fundamentally different access/billing model.",
+          "suggestedAction": "Re-record or supplement video with updated talk track covering GA capabilities. At minimum, add facilitator notes indicating where the video diverges from current GA experience so facilitators can narrate corrections live.",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -190,15 +206,17 @@
       "materials": [
         {
           "id": "w1-d2pm-lab",
-          "type": "lab",
-          "title": "Afternoon Practice Lab",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoBC010R1BnSbXC24cz2tD5EgUC1zHIsYp313iTtgFOG8WsBw",
-          "status": "current",
-          "severity": "info",
-          "finding": "Lab exercises align with current Copilot Cowork capabilities.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Lab exercises for Copilot Cowork will reference preview-era UI and capabilities. GA introduces model selection, Goals skill, Browser Use, and Skill Builder — all of which are natural lab exercises. Existing step-by-step instructions likely show outdated screenshots and may reference features that have changed or workflows that now require billing enablement.",
+          "suggestedAction": "URGENT: Rebuild lab exercises for GA experience. Include: (1) Model selection exercise, (2) Goals skill (/goal) hands-on, (3) Skill Builder walkthrough, (4) Ensure admin has enabled usage-based billing before lab day. Update all screenshots to GA interface.",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new",
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -208,40 +226,46 @@
       "track": "non-engineering",
       "materials": [
         {
-          "id": "w1-d3am-deck",
+          "id": "w1-d3am-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
-          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrf9wjnnDcQRps_GYt4Z1HzEgUCI3epXtc5EUH0Nd1zg7xGmA",
-          "status": "current",
-          "severity": "info",
-          "finding": "Copilot Studio / no-code builder references match current public documentation.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "title": "Presentation",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Copilot Studio has undergone a major redesign: unified visual canvas replaces multi-tab authoring, new next-gen orchestrator eliminates 'topic sprawl' in favor of LLM-driven orchestration with reusable skills in markdown, and Computer-Using Agents are now GA. The deck's screenshots and conceptual model of how to build agents are likely outdated.",
+          "suggestedAction": "URGENT: Update deck to reflect redesigned Copilot Studio. Key changes: (1) Replace old multi-tab interface screenshots with unified drag-and-drop canvas, (2) Update conceptual model from 'topics/dialogs' to 'skills + LLM orchestration', (3) Add Computer-Using Agents as a new capability, (4) Show new inline test panel with chain-of-thought visibility.",
+          "sources": [
+            "https://ontargit.com/microsoft-copilot-studio-2026-rebuilt/",
+            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/",
+            "https://redmondmag.com/blogs/generationai/2026/05/whats-new-in-microsoft-copilot-studio.aspx"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d3am-guide",
           "type": "guide",
           "title": "Facilitator Guide",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQovYE0e2jDcSbqUgULccmjxEgUCBJe568Uow37KxT7jSrvcgg",
-          "status": "current",
-          "severity": "info",
-          "finding": "Facilitation guidance accurately reflects current Copilot Studio experience.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Facilitator instructions for guiding participants through agent building now reference an outdated interface. The new unified canvas, skill-based authoring (markdown), and next-gen orchestrator require completely different facilitation steps and demo flows.",
+          "suggestedAction": "URGENT: Rewrite facilitation steps for the new Copilot Studio experience. Update demo script to use unified canvas, show skill creation in markdown, demonstrate the inline test panel, and cover the Analytics Viewer role for governance-minded participants.",
+          "sources": [
+            "https://ontargit.com/microsoft-copilot-studio-2026-rebuilt/",
+            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d3am-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQp6M_ryJE3kSLjVuJ7vTr1HEgUCoKh23ObDrzrFlk7OUNxbLQ",
-          "status": "current",
-          "severity": "info",
-          "finding": "Talk track is consistent with current Copilot Studio capabilities.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Video demonstrates building an agent using the old Copilot Studio interface (multi-tab, topic-based authoring). The completely redesigned unified canvas means the video walkthrough no longer matches what participants will see.",
+          "suggestedAction": "Re-record video using the new unified Copilot Studio canvas. Demonstrate skill-based authoring, LLM-driven orchestration, and the inline test panel. If re-recording is not feasible, create a supplemental 'what changed' guide for facilitators.",
+          "sources": [
+            "https://ontargit.com/microsoft-copilot-studio-2026-rebuilt/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -252,58 +276,62 @@
       "materials": [
         {
           "id": "w1-d3pm-lab",
-          "type": "lab",
-          "title": "Afternoon Practice Lab",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqrlL4ca_GPQZDILlS_aYbzEgUCNWhhms1IM8N9izzgDM7WyA",
-          "status": "current",
-          "severity": "info",
-          "finding": "Lab exercises reference current no-code builder interface and workflows.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Lab exercises walk participants through building a no-code agent using the old Copilot Studio interface. The redesigned unified canvas, markdown-based skills, and new orchestrator mean step-by-step instructions and screenshots are no longer accurate.",
+          "suggestedAction": "URGENT: Rebuild lab from scratch using the new Copilot Studio unified canvas. Replace topic-based exercises with skill-based authoring. Include: (1) Creating a skill in markdown, (2) Using the drag-and-drop workflow canvas, (3) Testing with the inline chain-of-thought panel, (4) Optional: Computer-Using Agents exercise for advanced participants.",
+          "sources": [
+            "https://ontargit.com/microsoft-copilot-studio-2026-rebuilt/",
+            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
     {
       "sessionId": "w1-day4-am",
-      "sessionTitle": "Work Redesign: Rethinking the Work Itself",
+      "sessionTitle": "Work Redesign: Rethinking the Work Itself — Not Just Making It Faster",
       "track": "non-engineering",
       "materials": [
         {
-          "id": "w1-d4am-deck",
+          "id": "w1-d4am-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
-          "url": "https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrG4INUJmIaTpFuGIGMtNy4EgUCw78q2Oqffir1WaFFgdDhNQ",
-          "status": "current",
-          "severity": "info",
-          "finding": "Work redesign frameworks align with current industry thinking and Microsoft positioning.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "title": "Presentation",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Build 2026 announcements strongly reinforce work redesign concepts but push further into agent delegation (Microsoft Scout, Goals skill in Cowork, Agent Framework). The deck's examples of 'rethinking work' should be validated to ensure they reflect the current state of autonomous agent capabilities now available.",
+          "suggestedAction": "Review work redesign examples and update to include agentic delegation scenarios (e.g., Cowork Goals for multi-step automation, Microsoft Scout for routine work). Ensure the session doesn't just teach 'prompting better' but covers true task delegation to autonomous agents.",
+          "sources": [
+            "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/",
+            "https://robquickenden.blog/2026/06/goal-skill-cowork/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d4am-guide",
           "type": "guide",
           "title": "Facilitator Guide",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqUdR3HyhfhQq60nkYsPZuhEgUCx-A7s4qH7Z4cDgAiTQTm5Q",
-          "status": "current",
-          "severity": "info",
-          "finding": "Facilitation approach remains relevant and well-structured.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Facilitator guide should incorporate the latest examples of work redesign enabled by GA tools (Cowork Goals, Copilot Studio unified agents, Microsoft Scout). Participants will have experienced these tools in Days 1-3 and the guide should reference them.",
+          "suggestedAction": "Add references to Cowork Goals and Microsoft Scout as concrete examples of redesigned work. Update any 'before/after' scenarios to show agent delegation rather than just chat-based assistance.",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         },
         {
           "id": "w1-d4am-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "url": "https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQoGatFzWXpGTphnVJ3n9X9wEgUCaK4NdYooMwDano_Kirixuw",
           "status": "current",
           "severity": "info",
-          "finding": "Talk track references are current.",
+          "finding": "Video covers conceptual work redesign frameworks that remain valid. The principles of rethinking work (not just accelerating it) are strengthened by recent announcements.",
           "suggestedAction": null,
           "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     },
@@ -314,15 +342,17 @@
       "materials": [
         {
           "id": "w1-d4pm-lab",
-          "type": "lab",
-          "title": "Afternoon Practice Lab",
-          "url": "https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQrVYhmryGRtSrFt70JWlrq9EgUCml6hCk4Gy2NgyXx704Hjaw",
-          "status": "current",
-          "severity": "info",
-          "finding": "Lab content aligns with current work redesign practices and tooling.",
-          "suggestedAction": null,
-          "sources": [],
-          "detectedDate": "2026-06-11T00:00:00-07:00"
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Work redesign lab exercises should leverage the now-GA Cowork Goals feature as a practical tool for participants to redesign a real workflow. If the lab only covers chat-based prompting, it misses the most powerful new redesign capability.",
+          "suggestedAction": "Consider adding a Cowork Goals exercise where participants set a persistent goal for a multi-step workflow they want to redesign, letting them experience true autonomous delegation rather than just prompt engineering.",
+          "sources": [
+            "https://robquickenden.blog/2026/06/goal-skill-cowork/",
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new"
+          ],
+          "detectedDate": "2026-06-18T08:58:00-07:00"
         }
       ]
     }
