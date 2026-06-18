@@ -1,6 +1,6 @@
 import { ContentReviewDashboard } from '../components/ContentReviewDashboard';
 
-const SUBMISSION_FOLDER_URL = 'https://microsoft.sharepoint.com/:f:/r/teams/WorkforceAccelerationWFATeam/Shared%20Documents/Forms/AllItems.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FUser%20Presentation%20Submissions&p=true&share=cgpGJpOYJ8qwR74ZSNcBM3PYEgUCdDjGSsS2w56t6enrSoRP1g';
+const SUBMISSION_FOLDER_URL = 'https://forms.microsoft.com/r/cmPU5hzcYD';
 
 export function ContentRepository() {
   return (
