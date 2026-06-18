@@ -114,7 +114,7 @@ export function NonEngineers() {
         <p className="alt-options-section__description">
           We know one size doesn't fit all—even within non-engineering audiences. If your team is looking for something slightly more technical, more industry-specific, or tailored to unique workflows, we're can help. Reach out to Workforce Acceleration for a consultation to explore how we can customize elements of the Camp AIR experience to better fit your team's needs.
         </p>
-        <a href="mailto:wfa@microsoft.com" className="cta-block__button">
+        <a href="https://forms.microsoft.com/r/VJimsxSzvQ" className="cta-block__button" target="_blank" rel="noopener noreferrer">
           Contact Workforce Acceleration →
         </a>
         <div className="examples-section__grid" style={{ marginTop: '24px' }}>

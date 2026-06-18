@@ -57,7 +57,7 @@ export function Engineers() {
           <p className="cta-block__description">
             Contact Workforce Acceleration for a consultation. We'll work with you to identify the right subject matter experts, surface the latest platform capabilities relevant to your team, and prepare a custom-tailored Week 1 specifically for your engineering audience.
           </p>
-          <a href="mailto:wfa@microsoft.com" className="cta-block__button">
+          <a href="https://forms.microsoft.com/r/VJimsxSzvQ" className="cta-block__button" target="_blank" rel="noopener noreferrer">
             Contact Workforce Acceleration →
           </a>
         </div>
