@@ -1,6 +1,3 @@
-import { workstreams } from '../data/deliverables';
-import { WorkstreamCard } from '../components/WorkstreamCard';
-
 export function Home() {
   return (
     <div className="home">
@@ -40,11 +37,6 @@ export function Home() {
         </div>
       </section>
 
-      <section className="workstream-grid">
-        {workstreams.map((ws) => (
-          <WorkstreamCard key={ws.id} workstream={ws} />
-        ))}
-      </section>
     </div>
   );
 }
