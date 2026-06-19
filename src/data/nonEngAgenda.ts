@@ -35,9 +35,9 @@ export const nonEngAgenda: Week[] = [
         title: 'Manager Orientation & Expectations Setting',
         description: 'Deck and talking points for managers to align on Camp AIR goals, time commitment, and team support during the program.',
         resources: [
-          { id: 'w0-mgr-ppt', title: 'Manager Kickoff Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoF9DQTZem2Ta1V4yOV8nlTEgUCr42cvjDvHv1FfRv05J6Wcw' },
-          { id: 'w0-mgr-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoqUnYxTM72QrVsgLW7SoY3EgUCXl2b-4dZD_53qDmNCNxsAA' },
-          { id: 'w0-mgr-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%200%20%2D%20Manager%20Kickoff%2FCampAIR%2DManager%2DKickoff%2DDeck%2Emp4&share=cQrbtEBJyBouSY4XRZbVjIrHEgUCdwlqu7U3XuZORWoKKAJxbg' },
+          { id: 'w0-mgr-ppt', title: 'Manager Kickoff Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQoxXgqcBqBYRops7nw1f04mEgUC3L-Kvt2dP20KgeFwO3tx5Q' },
+          { id: 'w0-mgr-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQppVI4ZH8E9QrN3tPKoDPG9EgUCe9sDmuF8cbhB3qCIxU-waw' },
+          { id: 'w0-mgr-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%200%20%2D%20Manager%20Kickoff%2FCampAIR%2DManager%2DKickoff%2DDeck%2Emp4&share=cQp63YAYdXiRRa0gsVaLYI9fEgUCAr8Oye9tp1yWrEB%2DRovvkQ' },
         ],
       },
     ],
