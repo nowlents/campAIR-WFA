@@ -28,7 +28,7 @@ interface SessionItemProps {
 }
 
 export function SessionItem({ title, description, resources, placeholder }: SessionItemProps) {
-  const sorted = [...resources].sort((a, b) => typePriority[a.type] - typePriority[b.type]);
+  const sorted = resources;
 
   const renderResource = (r: Resource) => {
     const hasUrl = r.url && r.url.length > 0;
