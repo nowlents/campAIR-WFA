@@ -10,15 +10,6 @@ const typeIcons: Record<Resource['type'], string> = {
   preview: '▶️',
 };
 
-const typePriority: Record<Resource['type'], number> = {
-  deck: 1,
-  preview: 2,
-  video: 3,
-  lab: 4,
-  link: 5,
-  document: 6,
-  guide: 7,
-};
 
 interface SessionItemProps {
   title: string;
