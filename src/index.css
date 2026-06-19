@@ -1389,7 +1389,7 @@ a:hover {
   align-items: center;
   gap: 6px;
   padding: 12px 24px;
-  background: #0a4a8a;
+  background: var(--color-primary);
   color: #fff;
   border-radius: 8px;
   font-size: 15px;
@@ -1399,7 +1399,7 @@ a:hover {
 }
 
 .submission-cta__button:hover {
-  background: #063a6e;
+  background: var(--color-primary-dark);
   transform: translateY(-1px);
 }
 
