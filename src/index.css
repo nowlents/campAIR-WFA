@@ -1338,9 +1338,9 @@ a:hover {
 
 /* === Submission CTA === */
 .submission-cta {
-  border: 2px solid var(--color-accent);
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(0, 120, 212, 0.03) 0%, rgba(0, 120, 212, 0.07) 100%);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-light);
   overflow: hidden;
 }
 

@@ -110,13 +110,15 @@ export function NonEngineers() {
       </section>
 
       <section className="alt-options-section">
-        <h3 className="alt-options-section__title">Looking for Something a Little Different?</h3>
-        <p className="alt-options-section__description">
-          We know one size doesn't fit all—even within non-engineering audiences. If your team is looking for something slightly more technical, more industry-specific, or tailored to unique workflows, we're can help. Reach out to Workforce Acceleration for a consultation to explore how we can customize elements of the Camp AIR experience to better fit your team's needs.
-        </p>
-        <a href="https://forms.microsoft.com/r/VJimsxSzvQ" className="cta-block__button" target="_blank" rel="noopener noreferrer">
-          Contact Workforce Acceleration →
-        </a>
+        <div className="cta-block">
+          <h3 className="alt-options-section__title">Looking for Something a Little Different?</h3>
+          <p className="alt-options-section__description">
+            We know one size doesn't fit all—even within non-engineering audiences. If your team is looking for something slightly more technical, more industry-specific, or tailored to unique workflows, we're can help. Reach out to Workforce Acceleration for a consultation to explore how we can customize elements of the Camp AIR experience to better fit your team's needs.
+          </p>
+          <a href="https://forms.microsoft.com/r/VJimsxSzvQ" className="cta-block__button" target="_blank" rel="noopener noreferrer">
+            Contact Workforce Acceleration →
+          </a>
+        </div>
         <div className="examples-section__grid" style={{ marginTop: '24px' }}>
           <h4 className="examples-section__subtitle">Alternative Presentation Samples</h4>
           {nonEngExamples.map((example) => (
