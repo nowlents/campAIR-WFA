@@ -96,12 +96,25 @@ export const nonEngAgenda: Week[] = [
         ],
       },
       {
+        id: 'w1-day2-s2',
+        title: 'Day 2 — Microsoft Scout: Autonomous Delegation',
+        description: 'Second morning session introducing Microsoft Scout for autonomous task delegation and agentic workflows.',
+        day: 2,
+        resources: [
+          { id: 'w1-d2s2-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%202%2FScout%5FTeaser%2Emp4&share=cQp%5F5RU8c8wxSpqD33tue6LYEgUC6V3sIfrzzyBStM%5FEe387AA' },
+          { id: 'w1-d2s2-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQq8YAe1cdd3TqktT5_WgYhGEgUC2cRu8sc0ZVRfdUjVfzQmOQ' },
+          { id: 'w1-d2s2-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQphcPeVBV1BQZ5kgIVefjqnEgUCc98BwH7FO7iHeDzYJA84PQ' },
+          { id: 'w1-d2s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FWeek%201%20%2D%20Ignite%2FDay%202%2FScout%2DDeck%2Emp4&share=cQpRei8Lh3zjToFXGh8TCmh5EgUCk3BekPTq%5F0P3iDc54zoh5g' },
+        ],
+      },
+      {
         id: 'w1-day2-pm',
         title: 'Day 2 — Afternoon Practice',
         description: 'Afternoon hands-on practice lab.',
         day: 2,
         resources: [
-          { id: 'w1-d2pm-lab', title: 'Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqAh4MPtfvFRpsBZTtKhLfTEgUCULbs-0MgWaHPgNE6UosjCw' },
+          { id: 'w1-d2pm-lab', title: 'Cowork Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQqAh4MPtfvFRpsBZTtKhLfTEgUCULbs-0MgWaHPgNE6UosjCw' },
+          { id: 'w1-d2pm-lab2', title: 'Scout Lab Practice Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQr1tMgaLiZUTopUkO4eWqpdEgUCmVxNvBdjOXw-vffVKefUJw' },
         ],
       },
       {

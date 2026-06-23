@@ -6,7 +6,7 @@ export function ContentRepository() {
   return (
     <div className="repository-page">
       <section className="page-intro">
-        <h2 className="page-intro__title">Content Repository</h2>
+        <h2 className="page-intro__title">Admin Content Repository</h2>
         <div className="page-intro__body">
           <p>
             The Camp AIR Content Repository is the single source of truth for all program materials. It provides a centralized, well-governed location where the latest content is maintained, discoverable, and ready for facilitators to use with confidence. Every artifact—from facilitator guides to session decks—lives here with clear ownership, version history, and quality assurance.

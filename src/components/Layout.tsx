@@ -24,7 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             ⚙️ Camp AIR for Engineers
           </NavLink>
           <NavLink to="/repository" className="sidebar__link">
-            📚 Content Repository
+            📚 Admin Content Repository
           </NavLink>
         </nav>
         <main className="main-content">{children}</main>
