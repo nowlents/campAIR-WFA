@@ -1,0 +1,350 @@
+{
+  "lastReviewDate": "2026-06-22T06:49:24-07:00",
+  "nextReviewDate": "2026-06-29T00:00:00-07:00",
+  "overallStatus": "critical",
+  "summary": "Copilot Cowork reached GA on June 16 with new pricing model and capabilities impacting Day 2 materials; Copilot Studio Unified Canvas and Computer-Using Agents GA impact Day 3; M365 Copilot Claude model integration and licensing changes affect Day 1 Session 2.",
+  "sessions": [
+    {
+      "sessionId": "w0-manager-orientation",
+      "sessionTitle": "Manager Orientation & Expectations Setting",
+      "track": "shared",
+      "materials": [
+        {
+          "id": "w0-mgr-ppt",
+          "type": "deck",
+          "title": "Manager Kickoff Presentation",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://www.studioglobal.ai/discover/answers/what-are-the-key-announcements-and-themes-6a1cd2a7480450d27198b4e7"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w0-mgr-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.aguidetocloud.com/blog/microsoft-copilot-cowork-pricing-cost-management/",
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w0-mgr-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day1-s1",
+      "sessionTitle": "Day 1 — Icebreaker & AI-First Mindset",
+      "track": "shared",
+      "materials": [
+        {
+          "id": "w1-d1s1-ppt",
+          "type": "deck",
+          "title": "Presentation",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.studioglobal.ai/discover/answers/what-are-the-key-announcements-and-themes-6a1cd2a7480450d27198b4e7",
+            "https://aufaittechnologies.com/blog/microsoft-build-2026-enterprise-ai-announcements/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d1s1-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.microsoft.com/insidetrack/blog/accelerating-transformation-how-were-reshaping-microsoft-with-continuous-improvement-and-ai/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d1s1-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "status": "current",
+          "severity": "info",
+          "finding": "Video establishes foundational mindset concepts. Core message about embracing AI in workflows remains valid; specific product references are minimal in icebreaker content.",
+          "suggestedAction": null,
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day1-s2",
+      "sessionTitle": "Day 1 — M365 Copilot: From Overwhelmed to In-Command",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d1s2-ppt",
+          "type": "deck",
+          "title": "Presentation",
+          "status": "current",
+          "severity": "critical",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+            "https://www.shu.edu/technology/news/m365-june-2026-updates.html",
+            "https://alliancetech.com/microsoft-365-copilot-updates-whats-new-and-how-your-team-benefits/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d1s2-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "status": "current",
+          "severity": "critical",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+            "https://www.shu.edu/technology/news/m365-june-2026-updates.html"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d1s2-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "status": "current",
+          "severity": "critical",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day1-pm",
+      "sessionTitle": "Day 1 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d1pm-lab",
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day2-am",
+      "sessionTitle": "Day 2 — Copilot Cowork: Delegate, Don’t Dictate",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d2am-ppt",
+          "type": "deck",
+          "title": "Presentation",
+          "status": "current",
+          "severity": "critical",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new",
+            "https://www.sourcetrail.com/software/microsoft-copilot-cowork-hits-general-availability-what-you-need-to-know-about-the-new-agentic-system/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d2am-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "status": "current",
+          "severity": "critical",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://www.aguidetocloud.com/blog/microsoft-copilot-cowork-pricing-cost-management/",
+            "https://robquickenden.blog/2026/06/cowork-ga-usagebilling/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d2am-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "status": "current",
+          "severity": "critical",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day2-pm",
+      "sessionTitle": "Day 2 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d2pm-lab",
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "current",
+          "severity": "critical",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+            "https://www.aguidetocloud.com/blog/microsoft-copilot-cowork-pricing-cost-management/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day3-am",
+      "sessionTitle": "Day 3 — Build Your Own Copilot: No Code Required",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d3am-ppt",
+          "type": "deck",
+          "title": "Presentation",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Copilot Studio underwent major changes in June 2026: (1) Computer-Using Agents reached GA allowing agents to interact with application UIs directly, (2) new Unified Workflows Canvas replaces previous builder interface with drag-and-drop agent-first design, (3) multi-agent workflows with A2A protocol in preview, (4) generative actions allow dynamic plugin selection. Deck likely shows old authoring canvas and does not cover CUA or multi-agent capabilities.",
+          "suggestedAction": "Major revision needed: update all builder interface screenshots to Unified Canvas, add slides on Computer-Using Agents capability, update architecture diagrams to show multi-agent coordination, and refresh the no-code value proposition to include generative actions.",
+          "sources": [
+            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/",
+            "https://learn.microsoft.com/en-us/power-platform/release-plan/2026wave1/microsoft-copilot-studio/",
+            "https://redmondmag.com/blogs/generationai/2026/05/whats-new-in-microsoft-copilot-studio.aspx"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d3am-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Guide instructions reference the pre-Unified Canvas Copilot Studio interface. The authoring experience has been fundamentally redesigned with drag-and-drop agent-first workflow design. Step-by-step facilitator instructions will not match current UI. Additionally, Computer-Using Agents and generative actions expand what no-code means significantly.",
+          "suggestedAction": "Rewrite builder walkthrough sections to match Unified Canvas. Update facilitator demo scripts. Add talking points on CUA capabilities and how generative actions reduce manual topic creation. Update prerequisites/setup instructions.",
+          "sources": [
+            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/",
+            "https://learn.microsoft.com/en-us/power-platform/release-plan/2026wave1/microsoft-copilot-studio/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d3am-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Video demonstrates Copilot Studio with pre-Unified Canvas interface. The entire authoring UI has been redesigned. Video walkthroughs will show a builder experience that no longer exists, making it confusing for facilitators preparing to demonstrate live.",
+          "suggestedAction": "Re-record video using the new Unified Canvas interface. Include demonstration of Computer-Using Agents setup and generative actions. Update talk track to reflect agent-first workflow design paradigm.",
+          "sources": [
+            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/",
+            "https://learn.microsoft.com/en-us/power-platform/release-plan/2026wave1/microsoft-copilot-studio/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day3-pm",
+      "sessionTitle": "Day 3 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d3pm-lab",
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "outdated",
+          "severity": "critical",
+          "finding": "Lab exercises guide participants through building agents in Copilot Studio. The Unified Canvas redesign means all step-by-step UI instructions are outdated. Navigation paths, button locations, and workflow for creating agents have fundamentally changed.",
+          "suggestedAction": "Complete rewrite of lab steps required to match Unified Canvas. Consider adding exercises for Computer-Using Agents (no-API automation) and generative actions. Update all screenshots and navigation instructions.",
+          "sources": [
+            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/",
+            "https://learn.microsoft.com/en-us/power-platform/release-plan/2026wave1/microsoft-copilot-studio/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day4-am",
+      "sessionTitle": "Day 4 — Work Redesign: Rethinking the Work Itself",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d4am-ppt",
+          "type": "deck",
+          "title": "Presentation",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.microsoft.com/insidetrack/blog/accelerating-transformation-how-were-reshaping-microsoft-with-continuous-improvement-and-ai/",
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d4am-guide",
+          "type": "guide",
+          "title": "Facilitator Guide",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.microsoft.com/insidetrack/blog/accelerating-transformation-how-were-reshaping-microsoft-with-continuous-improvement-and-ai/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        },
+        {
+          "id": "w1-d4am-video",
+          "type": "video",
+          "title": "Video Talk Track Prep",
+          "status": "current",
+          "severity": "info",
+          "finding": "Video covers conceptual work redesign frameworks. Core principles of rethinking work (not just automating it) remain aligned with Microsoft current messaging. No product-specific demonstrations that would be outdated.",
+          "suggestedAction": null,
+          "sources": [
+            "https://www.microsoft.com/insidetrack/blog/accelerating-transformation-how-were-reshaping-microsoft-with-continuous-improvement-and-ai/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "w1-day4-pm",
+      "sessionTitle": "Day 4 — Afternoon Practice",
+      "track": "non-engineering",
+      "materials": [
+        {
+          "id": "w1-d4pm-lab",
+          "type": "guide",
+          "title": "Lab Practice Guide",
+          "status": "current",
+          "severity": "warning",
+          "sources": [
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+          ],
+          "detectedDate": "2026-06-22T06:49:24-07:00"
+        }
+      ]
+    }
+  ]
+}
