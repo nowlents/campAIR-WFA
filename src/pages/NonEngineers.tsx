@@ -18,13 +18,6 @@ const nonEngExamples: NonEngExample[] = [
     thumbnail: `${import.meta.env.BASE_URL}images/thumb-ghcp-app.png`,
   },
   {
-    id: 'ne-example-2',
-    title: 'Microsoft Scout (formerly Clawpilot)',
-    description: 'Jakob Werner presents on Microsoft Scout.',
-    videoUrl: 'https://microsoft.sharepoint.com/:v:/t/WorkforceAccelerationWFATeam/cQryGQGSN4OuS7t12NxqoFrGEgUCLgPFY90Y7NCLroCfI71MVQ',
-    thumbnail: `${import.meta.env.BASE_URL}images/thumb-scout.png`,
-  },
-  {
     id: 'ne-example-3',
     title: 'Vibe Coding',
     description: 'Jen Weigel presents on Vibe Coding.',
