@@ -1,51 +1,69 @@
-# Plan: Migrate Camp AIR Portal to Azure Static Web Apps
+# Plan: Migrate Camp AIR Platform to Azure Static Web Apps
 
 ## Problem
 
-The Camp AIR Deliverables Portal is currently a static React app deployed to GitHub Pages. This has two key limitations:
+The Camp AIR Platform currently consists of two static React apps deployed to GitHub Pages:
 
-1. **Content review resolutions are per-browser** — When a user clicks "Implement" or "Reject" on flagged materials, that state lives in localStorage. Other users (stakeholders, facilitators) see the raw unresolved scan data.
-2. **Scan updates require a rebuild + deploy** — The weekly automation commits a new `content-review.json` to the repo, requiring a GitHub Pages rebuild. There's no live data.
+1. **Stakeholder Portal** (`nowlents/campAIR-WFA`) — Session agendas, material links, program overview
+2. **Admin Content Repository** (`nowlents/Camp-AIR-WFA-Admin-Content-Repository`) — Content health dashboard, AI scanning, governance workflows
 
-The goal is to make the app dynamic: scan results and human review actions persist in a shared database, all users see the same state, and the app can be secured behind Azure AD authentication.
+GitHub Pages limitations:
+
+1. **Content review resolutions are per-browser** — When an admin clicks "Implement" or "Reject" on flagged materials, that state lives in localStorage. Other admins see the raw unresolved scan data.
+2. **Scan updates require a rebuild + deploy** — The weekly automation commits a new `content-review.json` to the repo, requiring a rebuild. There's no live data.
+3. **No access control** — Anyone with the URL can view either app. No role-based access.
+4. **No audit trail** — No way to see who resolved a material or when (beyond localStorage on one machine).
+
+## Goals
+
+- Shared, persistent state for content review actions across all admins
+- Azure AD authentication with role-based access (broader for stakeholder portal, restricted for admin)
+- Audit trail showing who resolved what and when
+- Live scan ingestion without manual rebuild
+- Enterprise-grade hosting with custom domain support
 
 ## Approach
 
-Migrate from GitHub Pages → **Azure Static Web Apps** with an **Azure Functions** API backend and **Azure Table Storage** for persistence. The frontend React code stays almost identical — we're replacing the data layer, not the UI.
+Migrate from GitHub Pages → **Azure Static Web Apps** (two apps) with a **shared Azure Functions** API backend and **Azure Table Storage** for persistence.
+
+**Key architectural decision:** The stakeholder portal is read-only (static content, SharePoint links) and needs only authentication — no backend. The admin content repository requires the full API + database stack.
 
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    Azure Static Web Apps                  │
-│                                                          │
-│  ┌──────────────────┐     ┌───────────────────────────┐ │
-│  │  React Frontend   │────▶│  /api (Azure Functions)   │ │
-│  │  (Vite build)     │◀────│                           │ │
-│  │                   │     │  GET  /api/scans/latest   │ │
-│  │  MSAL.js auth     │     │  POST /api/materials/:id  │ │
-│  │                   │     │       /resolve            │ │
-│  │                   │     │  GET  /api/materials/:id  │ │
-│  │                   │     │       /history            │ │
-│  │                   │     │  POST /api/scans          │ │
-│  └──────────────────┘     └───────────┬───────────────┘ │
-│                                       │                  │
-│         ┌─────────────────┐          │                  │
-│         │  MSAL / Azure AD │◀─────────┘                  │
-│         │  (built-in auth) │                             │
-│         └─────────────────┘                              │
-└───────────────────────────────────────┬─────────────────┘
-                                        │
-                              ┌─────────▼─────────┐
-                              │  Azure Table       │
-                              │  Storage           │
-                              │                    │
-                              │  Tables:           │
-                              │  • Scans           │
-                              │  • Materials       │
-                              │  • Resolutions     │
-                              │  • History         │
-                              └────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          Azure Resource Group                            │
+│                                                                          │
+│  ┌────────────────────────┐       ┌────────────────────────────────────┐│
+│  │  Azure Static Web App  │       │  Azure Static Web App              ││
+│  │  (Stakeholder Portal)  │       │  (Admin Content Repository)        ││
+│  │                        │       │                                    ││
+│  │  React Frontend        │       │  React Frontend    Azure Functions ││
+│  │  (Vite build)          │       │  (Vite build)  ──▶ /api backend    ││
+│  │                        │       │                                    ││
+│  │  MSAL.js auth          │       │  MSAL.js auth      API Endpoints: ││
+│  │  (read-only access)    │       │  (admin access)    • GET /scans    ││
+│  │                        │       │                    • POST /resolve ││
+│  │  No backend needed     │       │                    • GET /history  ││
+│  │                        │       │                    • POST /scans   ││
+│  └────────────────────────┘       └────────────────┬───────────────────┘│
+│                                                    │                     │
+│         ┌───────────────────────────┐             │                     │
+│         │  Entra ID App Registrations│◀────────────┘                     │
+│         │  • Stakeholder (broad)    │                                    │
+│         │  • Admin (restricted)     │                                    │
+│         └───────────────────────────┘                                    │
+│                                                                          │
+│                                   ┌────────────────────┐                │
+│                                   │  Azure Table       │                │
+│                                   │  Storage           │                │
+│                                   │                    │                │
+│                                   │  Tables:           │                │
+│                                   │  • Scans           │                │
+│                                   │  • Materials       │                │
+│                                   │  • Resolutions     │                │
+│                                   └────────────────────┘                │
+└─────────────────────────────────────────────────────────────────────────┘
 
 External:
 ┌──────────────────────┐
@@ -96,7 +114,7 @@ External:
 ### Table: History
 Composite view built by querying Materials + Resolutions for a given materialId across all scan dates. No separate table needed — it's a cross-partition query.
 
-## API Endpoints (Azure Functions)
+## API Endpoints (Azure Functions — Admin App Only)
 
 ### `GET /api/scans/latest`
 Returns the most recent scan with all materials and their resolution states.
@@ -107,11 +125,11 @@ Returns the most recent scan with all materials and their resolution states.
 - Returns the same shape as current `content-review.json` (drop-in replacement)
 
 ### `POST /api/materials/:materialId/resolve`
-Records a user's Implement/Reject action.
+Records an admin's Implement/Reject action.
 - Body: `{ "resolution": "implemented" | "rejected", "scanDate": "..." }`
-- Writes to Resolutions table
+- Writes to Resolutions table with user attribution
 - Returns updated material status
-- Requires authenticated user (MSAL)
+- Requires authenticated admin (MSAL)
 
 ### `GET /api/materials/:materialId/history`
 Returns version history timeline for a material.
@@ -126,91 +144,22 @@ Ingests a new scan result (called by the weekly automation).
 - Protected by API key (not user auth)
 - Returns 201 Created
 
-## Frontend Changes
-
-### New: `src/services/api.ts`
-Centralized API client that replaces static imports and localStorage:
-```typescript
-export async function getLatestScan(): Promise<ReviewData> { ... }
-export async function resolveMaterial(id: string, scanDate: string, resolution: string): Promise<void> { ... }
-export async function getMaterialHistory(id: string): Promise<HistoryEntry[]> { ... }
-```
-
-### New: `src/auth/msalConfig.ts`
-MSAL configuration for Azure AD authentication:
-- Client ID from Azure app registration
-- Tenant ID for Microsoft tenant
-- Redirect URI matching Azure Static Web Apps URL
-- Scopes: `User.Read` (basic profile)
-
-### New: `src/auth/AuthProvider.tsx`
-React context provider wrapping the app with MSAL authentication:
-- `useIsAuthenticated()` hook for conditional rendering
-- `useMsal()` hook for getting user info and tokens
-- Login redirect on unauthenticated access
-
-### Modified: `src/components/ContentReviewDashboard.tsx`
-- Replace `import reviewData from '../data/content-review.json'` with `useEffect` + `fetch` from API
-- Replace all `localStorage` calls with API calls to `/api/materials/:id/resolve` and `/api/materials/:id/history`
-- Add loading states while data fetches
-- Add user attribution ("Resolved by Tyler Nowlen" from MSAL token)
-- Keep all existing UI components (timeline, buttons, status badges) — only the data source changes
-
-### Modified: `src/main.tsx`
-- Wrap app in `<MsalProvider>` and `<AuthProvider>`
-- Keep existing `<BrowserRouter>` but update `basename` (Azure Static Web Apps serves from root `/`)
-
-### Modified: `vite.config.ts`
-- Change `base` from `'/campAIR-WFA/'` to `'/'` (Azure SWA serves from root)
-- Add proxy for `/api` during local development
-
-### New: `staticwebapp.config.json`
-Azure Static Web Apps configuration:
-- Route fallback to `index.html` (SPA routing)
-- Auth configuration (allowed routes, login provider)
-- API location pointing to `/api` folder
-
-## File Structure (New/Changed)
-
-```
-campAIR-WFA/
-├── api/                              ← NEW: Azure Functions backend
-│   ├── package.json                  ← Node.js dependencies (@azure/data-tables)
-│   ├── tsconfig.json
-│   ├── host.json                     ← Azure Functions host config
-│   ├── local.settings.json           ← Local dev settings (connection strings)
-│   ├── src/
-│   │   ├── functions/
-│   │   │   ├── getLatestScan.ts      ← GET /api/scans/latest
-│   │   │   ├── resolveMaterial.ts    ← POST /api/materials/:id/resolve
-│   │   │   ├── getMaterialHistory.ts ← GET /api/materials/:id/history
-│   │   │   └── ingestScan.ts         ← POST /api/scans (automation endpoint)
-│   │   └── shared/
-│   │       ├── tableClient.ts        ← Azure Table Storage client
-│   │       └── types.ts              ← Shared type definitions
-├── src/                              ← Existing frontend (modified)
-│   ├── auth/                         ← NEW: Authentication
-│   │   ├── msalConfig.ts
-│   │   └── AuthProvider.tsx
-│   ├── services/                     ← NEW: API client
-│   │   └── api.ts
-│   ├── components/
-│   │   └── ContentReviewDashboard.tsx ← MODIFIED: API calls replace localStorage
-│   ├── main.tsx                      ← MODIFIED: MSAL provider wrapper
-│   └── ...                           ← Everything else unchanged
-├── staticwebapp.config.json          ← NEW: Azure SWA routing/auth config
-└── vite.config.ts                    ← MODIFIED: base path + API proxy
-```
-
 ## Implementation Sequence
 
-### Phase 1: Azure Infrastructure Setup
-- Create Azure Static Web Apps resource (linked to GitHub repo)
+### Phase 1: Stakeholder Portal (Quick Win — No Backend Needed)
+- Create Azure Static Web App linked to `nowlents/campAIR-WFA` repo
+- Register Entra ID app (broad access scope)
+- Add MSAL.js authentication wrapper
+- Configure `staticwebapp.config.json` with SPA routing and auth
+- Deploy — stakeholder portal is live with SSO
+
+### Phase 2: Admin Infrastructure Setup
+- Create second Azure Static Web App linked to `nowlents/Camp-AIR-WFA-Admin-Content-Repository`
 - Create Azure Storage Account + Table Storage tables
-- Register Azure AD app for MSAL authentication
+- Register second Entra ID app (restricted admin access)
 - Configure environment variables (connection strings, client ID)
 
-### Phase 2: API Backend (Azure Functions)
+### Phase 3: Admin API Backend (Azure Functions)
 - Initialize `/api` folder with Azure Functions v4 (Node.js/TypeScript)
 - Implement table client utility with `@azure/data-tables`
 - Build `GET /api/scans/latest` endpoint
@@ -219,20 +168,14 @@ campAIR-WFA/
 - Build `POST /api/scans` ingestion endpoint
 - Seed initial data by converting current `content-review.json` into table rows
 
-### Phase 3: Frontend Auth Integration
+### Phase 4: Admin Frontend Migration
 - Install `@azure/msal-browser` and `@azure/msal-react`
 - Create MSAL config and AuthProvider
-- Wrap app in MsalProvider
-- Add login redirect for unauthenticated users
-- Test auth flow locally with Azure AD
-
-### Phase 4: Data Layer Migration
-- Create `src/services/api.ts` client
-- Refactor ContentReviewDashboard to use API instead of static JSON + localStorage
+- Create `src/services/api.ts` client replacing static JSON imports + localStorage
+- Refactor ContentReviewDashboard to use API calls
 - Add loading/error states
-- Add user attribution to resolutions
-- Update `vite.config.ts` (base path, dev proxy)
-- Remove `src/data/content-review.json` from frontend imports
+- Add user attribution to resolutions ("Resolved by Tyler Nowlen")
+- Update `vite.config.ts` (base path from `/Camp-AIR-WFA-Admin-Content-Repository/` to `/`)
 
 ### Phase 5: Automation Migration
 - Update weekly scan workflow to POST results to `/api/scans` instead of committing JSON
@@ -240,38 +183,105 @@ campAIR-WFA/
 - Test end-to-end: scan → API → dashboard reflects new data
 
 ### Phase 6: Deploy & Cutover
-- Add `staticwebapp.config.json` with SPA fallback routing
+- Add `staticwebapp.config.json` to both apps
 - Push to GitHub → auto-deploys to Azure Static Web Apps
 - Verify production: auth, data loading, resolve actions, history
-- Update stakeholder links from GitHub Pages URL → Azure SWA URL
-- (Optional) Configure custom domain
+- Update stakeholder links from GitHub Pages URLs → Azure SWA URLs
+- (Optional) Configure custom domains (e.g., `campair.microsoft.com`)
+- Decommission GitHub Pages deployments
+
+## Current File Structure
+
+```
+Source Repo: nowlentyler_microsoft/CampAIR_WFA
+├── src/                              ← Stakeholder Portal frontend
+│   ├── pages/
+│   │   ├── Home.tsx                  ← Overview + material submission CTA
+│   │   ├── NonEngineers.tsx          ← Non-engineering track (sessions + alt samples)
+│   │   └── Engineers.tsx             ← Engineering track
+│   ├── data/
+│   │   └── nonEngAgenda.ts           ← All session data with SharePoint links
+│   ├── components/
+│   │   └── Layout.tsx                ← Sidebar nav (3 tabs: Overview, Non-Eng, Eng)
+│   └── App.tsx                       ← Routes (/, /non-engineers, /engineers)
+├── admin-app/                        ← Admin Content Repository (separate git repo)
+│   ├── src/
+│   │   ├── pages/ContentRepository.tsx
+│   │   ├── components/ContentReviewDashboard.tsx
+│   │   └── data/content-review.json  ← Scan results (11 sessions, 24+ materials)
+│   └── vite.config.ts               ← base: '/Camp-AIR-WFA-Admin-Content-Repository/'
+├── docs/
+│   ├── azure-migration-plan.md       ← This document
+│   └── azure-resource-request.md     ← Leadership resource request
+└── vite.config.ts                    ← base: '/campAIR-WFA/'
+
+Deployed repos (GitHub Pages):
+• https://nowlents.github.io/campAIR-WFA/             ← Stakeholder Portal
+• https://nowlents.github.io/Camp-AIR-WFA-Admin-Content-Repository/ ← Admin
+```
+
+## Post-Migration File Structure
+
+```
+Stakeholder Portal (Azure SWA #1):
+├── src/                              ← Unchanged frontend
+│   ├── auth/                         ← NEW: MSAL authentication
+│   │   ├── msalConfig.ts
+│   │   └── AuthProvider.tsx
+│   └── ...                           ← Everything else unchanged
+├── staticwebapp.config.json          ← NEW: SPA routing + auth config
+└── vite.config.ts                    ← MODIFIED: base '/' instead of '/campAIR-WFA/'
+
+Admin Content Repository (Azure SWA #2):
+├── api/                              ← NEW: Azure Functions backend
+│   ├── package.json
+│   ├── host.json
+│   ├── src/functions/
+│   │   ├── getLatestScan.ts
+│   │   ├── resolveMaterial.ts
+│   │   ├── getMaterialHistory.ts
+│   │   └── ingestScan.ts
+│   └── src/shared/
+│       ├── tableClient.ts
+│       └── types.ts
+├── src/                              ← Modified frontend
+│   ├── auth/                         ← NEW: MSAL authentication
+│   ├── services/api.ts              ← NEW: API client replacing localStorage
+│   ├── components/
+│   │   └── ContentReviewDashboard.tsx ← MODIFIED: API calls, user attribution
+│   └── ...
+├── staticwebapp.config.json          ← NEW: routing + auth + API config
+└── vite.config.ts                    ← MODIFIED: base '/', dev proxy
+```
 
 ## Prerequisites & Decisions Needed
 
-1. **Azure subscription** — Do you have access to an Azure subscription where you can create resources? (Azure Static Web Apps free tier covers most of this)
-2. **Azure AD app registration** — Do you have permissions to register an app in your Microsoft tenant, or does IT need to do this?
-3. **Custom domain** — Do you want a custom URL (e.g., `campair.microsoft.com`) or is the default Azure SWA URL fine?
-4. **Access scope** — Should ALL Microsoft employees be able to access, or only specific groups/roles?
-5. **Automation API key** — The scan ingestion endpoint needs an API key. Should this be stored as a GitHub secret for the workflow?
+1. **Azure subscription** — Contributor access to create a resource group with Static Web Apps + Storage Account
+2. **Entra ID app registration permissions** — Two app registrations (or IT creates them)
+3. **Custom domain** — Custom URL (e.g., `campair.microsoft.com`) or default Azure SWA URLs?
+4. **Access scope** — Broad stakeholder access vs. restricted admin access (see resource request)
+5. **Automation API key** — Stored as GitHub secret for the weekly scan workflow
 
 ## What Stays the Same
 
-- All four pages (Overview, Non-Engineers, Engineers, Content Repository)
-- All session/agenda data (static TypeScript files — no reason to dynamicize these)
-- SharePoint material links
-- Microsoft Forms integrations
+- Stakeholder portal UI (all three pages: Overview, Non-Engineers, Engineers)
+- All session/agenda data (static TypeScript files)
+- SharePoint material links (24 materials across 11 sessions)
+- Microsoft Forms integration (material submission CTA)
 - All CSS/styling
-- The UI for the content review dashboard (timeline, buttons, status badges)
+- Admin content review dashboard UI (timeline, buttons, status badges, "Open" links)
 - The weekly scan automation logic (just the output target changes)
 
 ## What Changes
 
 | Layer | Before | After |
 |-------|--------|-------|
-| Hosting | GitHub Pages (static) | Azure Static Web Apps (static + API) |
-| Scan data | `content-review.json` committed to repo | Azure Table Storage via API |
-| User actions | localStorage (per-browser) | Azure Table Storage (shared, persistent) |
-| Auth | None | Azure AD via MSAL |
-| Deploy | `git push` to personal repo | Auto-deploy from GitHub repo |
-| Base URL | `/campAIR-WFA/` | `/` (root) |
+| Architecture | Single app with 4 tabs | Two separate apps (stakeholder + admin) |
+| Hosting | GitHub Pages (2 repos) | Azure Static Web Apps (2 apps) |
+| Scan data | `content-review.json` in git | Azure Table Storage via API |
+| User actions | localStorage (per-browser) | Azure Table Storage (shared, persistent, attributed) |
+| Auth | None (public URLs) | Azure AD via MSAL (role-based) |
+| Deploy | Manual `git push` → temp dir → force push gh-pages | Auto-deploy from GitHub push |
+| Base URLs | `/campAIR-WFA/` and `/Camp-AIR-WFA-Admin-Content-Repository/` | `/` (root) for both |
 | Automation output | Git commit JSON file | POST to `/api/scans` |
+| Audit trail | None | Full: who resolved what, when, from which scan |
