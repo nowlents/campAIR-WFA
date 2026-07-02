@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/campAIR-WFA/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camp AIR — Deliverables Portal</title>
+    <!-- SPA redirect handler for GitHub Pages 404 routing -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script type="module" crossorigin src="/campAIR-WFA/assets/index-DfL1pMG_.js"></script>
+    <link rel="stylesheet" crossorigin href="/campAIR-WFA/assets/index-CueL-Qde.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
