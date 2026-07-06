@@ -1,8 +1,8 @@
 {
-  "lastReviewDate": "2026-06-29T09:46:06-07:00",
-  "nextReviewDate": "2026-07-06T00:00:00-07:00",
+  "lastReviewDate": "2026-07-06T07:01:45-07:00",
+  "nextReviewDate": "2026-07-13T00:00:00-07:00",
   "overallStatus": "critical",
-  "summary": "Two deadlines now imminent: Copilot Studio classic agent creation retires June 30 (tomorrow) and Cowork usage-based billing via Copilot Credits begins July 1 with Cowork off by default — escalating Day 2 and Day 3 materials/labs; M365 Copilot's new chat-first UI, Claude model picker, Copilot Notebooks, and FLUX.2 keep Day 1 Session 2 materials outdated.",
+  "summary": "Deadlines flagged last week are now in effect and have escalated several materials to outdated: the M365 Copilot redesign (Work IQ toggle, Tasks tab) is GA, breaking Day 1 Session 2 decks/videos/labs; Cowork usage-based billing (Copilot Credits, off by default) went live July 1, blocking Day 2 labs without admin setup; and Copilot Studio classic agent creation in Teams retired June 30 with topics removed from the new builder, breaking Day 3 build materials.",
   "sessions": [
     {
       "sessionId": "w0-manager-orientation",
@@ -15,10 +15,12 @@
           "title": "Teaser Trailer",
           "status": "current",
           "severity": "info",
-          "finding": "Short promotional trailer; content is framing-level and unlikely to reference specific feature details that have changed.",
+          "finding": "Short framing-level promotional trailer with no specific product UI or pricing detail; unaffected by this week's changes.",
           "suggestedAction": null,
-          "sources": ["https://info.ttech.co.uk/blog/whats-new-in-microsoft-365-copilot-june-2026"],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+          ],
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w0-mgr-ppt",
@@ -26,13 +28,15 @@
           "title": "Manager Kickoff Presentation",
           "status": "review-suggested",
           "severity": "warning",
-          "finding": "With Cowork usage-based billing (Copilot Credits) going live July 1, managers now need to understand that Cowork is off by default and consumes credits per task — a budgeting consideration the deck likely omits. Work Trend Index 2026 also reframes Copilot from assistant to agent-first coworker.",
-          "suggestedAction": "Add a short slide on the Cowork Copilot Credits model (effective July 1) and what managers should know about enabling it and setting spend caps for their teams. Refresh the Copilot value framing to agent-first language.",
+          "finding": "Two commercial changes are now in effect that managers must budget for: Cowork usage-based billing (Copilot Credits) went live July 1 with Cowork off by default, and the Copilot Business promo rate ended June 30 (now a permanent SKU at $21/user/month, with Copilot bundled into Business Standard/Premium). The deck likely predates both.",
+          "suggestedAction": "Add a short slide covering the Cowork Copilot Credits model (off by default, per-task credit consumption, admin spend caps) and the finalized Copilot Business/bundle pricing so managers can set budget expectations. Refresh value framing toward the agent-first language of the 2026 Work Trend Index.",
           "sources": [
+            "https://www.stmicro.net/blog/microsoft-365-copilot-business-july-2026/",
+            "https://www.cyberduo.com/blog/microsoft-365-changes-july-2026/",
             "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
-            "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w0-mgr-guide",
@@ -40,26 +44,27 @@
           "title": "Facilitator Guide",
           "status": "review-suggested",
           "severity": "warning",
-          "finding": "Facilitator talking points may reference Copilot as an AI assistant rather than the current agent-first positioning, and likely do not prepare managers for the July 1 Cowork credits/billing conversation with their teams.",
-          "suggestedAction": "Add a talking point that Cowork must be admin-enabled and is usage-billed from July 1. Align capability framing with the agent-first messaging from Work Trend Index 2026.",
+          "finding": "Manager talking points should reflect that Cowork billing and the new Copilot pricing/SKU structure are now live rather than upcoming; guidance framed as 'coming soon' is now dated.",
+          "suggestedAction": "Update talking points to present Cowork Copilot Credits and Copilot Business pricing as in-effect (July 1), and add a manager FAQ on enabling Cowork and setting spend caps.",
           "sources": [
-            "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/",
-            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+            "https://www.stmicro.net/blog/microsoft-365-copilot-business-july-2026/",
+            "https://www.cyberduo.com/blog/microsoft-365-changes-july-2026/",
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w0-mgr-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "status": "review-suggested",
-          "severity": "warning",
-          "finding": "Video talk track may use outdated terminology (AI assistant vs. AI agent) and does not reference the Cowork usage-based billing model that managers need to understand for team budget planning ahead of the July 1 start.",
-          "suggestedAction": "Add supplemental notes covering the Copilot Credits billing model and agent-first framing if re-recording is not feasible.",
+          "status": "current",
+          "severity": "info",
+          "finding": "Talk track is orientation/framing focused; no product UI walkthrough that this week's changes would invalidate.",
+          "suggestedAction": null,
           "sources": [
-            "https://www.aguidetocloud.com/blog/microsoft-copilot-cowork-pricing-cost-management/"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -74,25 +79,26 @@
           "title": "Teaser Trailer",
           "status": "current",
           "severity": "info",
-          "finding": "Motivational/icebreaker content; not dependent on specific product features.",
+          "finding": "Framing-level trailer; no product specifics affected by recent updates.",
           "suggestedAction": null,
-          "sources": ["https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/"],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "sources": [
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
+          ],
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d1s1-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
+          "title": "Presentation",
           "status": "review-suggested",
           "severity": "warning",
-          "finding": "The AI-first mindset framing should reflect the Work Trend Index 2026 thesis that organizational redesign drives more value than individual AI use (67% vs 32%), the rise of 'Frontier Firms,' and 15x year-over-year growth in active M365 agents. The deck's framing may still position AI as an assistant rather than an agent-first operating model.",
-          "suggestedAction": "Refresh the AI-first mindset slides with Work Trend Index 2026 data points (Frontier Firms, organizational readiness, agent-first paradigm) to strengthen the opening narrative.",
+          "finding": "The 2026 Work Trend Index reframes the AI-first operating model around a 'new agency equation' and four human/agent collaboration modes (Author, Editor, Director, Orchestrator), with agents up ~15x year-over-year. The mindset deck should reflect this agent-first framing and refreshed data.",
+          "suggestedAction": "Incorporate the four collaboration modes (Author/Editor/Director/Orchestrator) and refresh AI-first framing and stats to the 2026 Work Trend Index.",
           "sources": [
-            "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/",
-            "https://www.forbes.com/sites/moorinsights/2026/05/19/microsoft-work-trend-index-2026-shows-ai-productivity-is-not-enough/",
-            "https://c5insight.com/microsoft-work-trend-index-2026-summary/"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+            "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d1s1-guide",
@@ -100,12 +106,13 @@
           "title": "Facilitator Guide",
           "status": "review-suggested",
           "severity": "warning",
-          "finding": "Guide talking points about the AI-first operating model may not yet reflect the agent-first shift and 'Frontier Firm' framing emphasized in the 2026 Work Trend Index. Discussion prompts and examples should reference current Microsoft positioning.",
-          "suggestedAction": "Update discussion prompts and facilitator notes to reference the agent-first paradigm and the organizational-redesign emphasis of Work Trend Index 2026.",
+          "finding": "Facilitator narrative for the AI-first mindset can be strengthened with the 2026 Work Trend Index agent-first framing and collaboration-mode vocabulary.",
+          "suggestedAction": "Add facilitator notes introducing the Author/Editor/Director/Orchestrator collaboration modes when discussing the AI-first operating model.",
           "sources": [
-            "https://www.forbes.com/sites/moorinsights/2026/05/19/microsoft-work-trend-index-2026-shows-ai-productivity-is-not-enough/"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+            "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d1s1-video",
@@ -113,12 +120,13 @@
           "title": "Video Talk Track Prep",
           "status": "review-suggested",
           "severity": "warning",
-          "finding": "Video talk track establishes AI-first mindset framing. May reference older AI positioning that predates the 2026 Work Trend Index and the agent-first / Frontier Firm shift.",
-          "suggestedAction": "Review video for alignment with current agent-first messaging. If it frames AI only as a productivity booster, add supplemental notes bridging to the agent-as-coworker framing.",
+          "finding": "Talk track references AI-first framing that the 2026 Work Trend Index has updated toward agent orchestration; wording may feel dated.",
+          "suggestedAction": "Refresh talk-track language to the agent-first 'new agency equation' framing.",
           "sources": [
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
             "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -133,39 +141,44 @@
           "title": "Teaser Trailer",
           "status": "current",
           "severity": "info",
-          "finding": "Short promotional teaser; general framing unlikely to be impacted by specific feature changes.",
+          "finding": "Short teaser; no detailed UI walkthrough that the redesign would invalidate.",
           "suggestedAction": null,
-          "sources": ["https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+          ],
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d1s2-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
+          "title": "Presentation",
           "status": "outdated",
           "severity": "critical",
-          "finding": "M365 Copilot's June 2026 redesign is now broadly rolled out: new chat-first unified UI (also in Edge), a model picker (GPT-5.5 Instant vs. Claude Opus 4.8) with Quick/Think Deep modes, Copilot Notebooks, infinite scroll in chat history, FLUX.2 image generation in PowerPoint, and federated connectors now GA. Screenshots and feature walkthroughs in this deck no longer match the live product.",
-          "suggestedAction": "Replace all UI screenshots with the new chat-first interface. Add slides on model selection (Claude vs GPT-5.5 Instant, Quick/Think Deep), Copilot Notebooks, and live/federated connectors. Note FLUX.2 image generation where image creation is shown.",
+          "finding": "The redesigned Microsoft 365 Copilot app is now GA: a new Tasks tab, a single 'Work IQ' toggle that replaces the old Work/Web toggle, a chat-centered layout, and a pinned-agents flyout. Any screenshots or navigation walkthroughs in the deck showing the previous UI are now inaccurate.",
+          "suggestedAction": "Recapture all Copilot app screenshots against the new chat-centered UI; replace references to the Work/Web toggle with the Work IQ toggle and cover the new Tasks tab and pinned-agents flyout.",
           "sources": [
-            "https://info.ttech.co.uk/blog/whats-new-in-microsoft-365-copilot-june-2026",
             "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
-            "https://www.aguidetocloud.com/blog/microsoft-365-copilot-june-2026-updates/"
+            "https://supersimple365.com/microsoft-365-copilot-app-simplified-chat-centered-experience/",
+            "https://chrismenardtraining.com/post/microsoft-365-copilot-chat-work-iq-new-interface/",
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d1s2-guide",
           "type": "guide",
           "title": "Facilitator Guide",
-          "status": "outdated",
-          "severity": "critical",
-          "finding": "Facilitator demo instructions reference the pre-June 2026 Copilot UI and feature set. The new chat-first interface, model picker, and Copilot Notebooks change how facilitators should demonstrate the tool, and the talk-through sequence will not match what participants see on screen.",
-          "suggestedAction": "Rewrite demo steps for the chat-first UI. Add facilitator guidance on when to recommend Claude vs GPT-5.5 Instant and how to use Quick/Think Deep. Insert a Copilot Notebooks walkthrough into the feature sequence.",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Facilitator navigation instructions likely describe the pre-redesign Copilot layout (e.g., Work/Web toggle, old nav), which participants will no longer see.",
+          "suggestedAction": "Update step-by-step navigation references to match the new Work IQ toggle, Tasks tab, and agent flyout.",
           "sources": [
-            "https://info.ttech.co.uk/blog/whats-new-in-microsoft-365-copilot-june-2026",
-            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+            "https://supersimple365.com/microsoft-365-copilot-app-simplified-chat-centered-experience/",
+            "https://chrismenardtraining.com/post/microsoft-365-copilot-chat-work-iq-new-interface/",
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d1s2-video",
@@ -173,13 +186,15 @@
           "title": "Video Talk Track Prep",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Video shows the pre-June 2026 Copilot UI and demo flow. The new chat-first interface, model picker, and Copilot Notebooks are not represented, so facilitators following this video will demonstrate an interface participants won't see.",
-          "suggestedAction": "Re-record the talk track on the current chat-first Copilot UI, including a model-selection demo and a Copilot Notebooks walkthrough, or produce a short supplemental clip covering only the changed UI elements.",
+          "finding": "The recorded talk track demonstrates the previous Copilot interface (Work/Web toggle, prior navigation) that has been replaced by the GA redesign, so on-screen demo no longer matches the live product.",
+          "suggestedAction": "Re-record or annotate the demo segments to reflect the new chat-centered UI, Work IQ toggle, and Tasks tab.",
           "sources": [
-            "https://info.ttech.co.uk/blog/whats-new-in-microsoft-365-copilot-june-2026",
-            "https://www.aguidetocloud.com/blog/microsoft-365-copilot-june-2026-updates/"
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+            "https://supersimple365.com/microsoft-365-copilot-app-simplified-chat-centered-experience/",
+            "https://chrismenardtraining.com/post/microsoft-365-copilot-chat-work-iq-new-interface/",
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -190,17 +205,19 @@
       "materials": [
         {
           "id": "w1-d1pm-lab",
-          "type": "guide",
+          "type": "lab",
           "title": "Lab Practice Guide",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Lab exercises that walk participants through M365 Copilot use outdated navigation steps. The chat-first interface changes how Copilot features are accessed, model selection (Claude/GPT-5.5 Instant) is now an explicit step, and Copilot Notebooks may better fit information-organization exercises.",
-          "suggestedAction": "Update all step-by-step instructions to the chat-first UI. Add guidance on choosing a model for each lab task and consider incorporating Copilot Notebooks where participants organize information.",
+          "finding": "The lab has participants experiment in the M365 Copilot app, but the GA redesign changed the entry points and toggles (Work IQ replacing Work/Web, new Tasks tab, chat-centered layout). Click-path steps referencing the old UI will not match what participants see.",
+          "suggestedAction": "Rewrite lab click-paths against the new Copilot UI (Work IQ toggle, Tasks tab, updated navigation) and refresh any embedded screenshots.",
           "sources": [
-            "https://info.ttech.co.uk/blog/whats-new-in-microsoft-365-copilot-june-2026",
-            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+            "https://supersimple365.com/microsoft-365-copilot-app-simplified-chat-centered-experience/",
+            "https://chrismenardtraining.com/post/microsoft-365-copilot-chat-work-iq-new-interface/",
+            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -215,25 +232,28 @@
           "title": "Teaser Trailer",
           "status": "current",
           "severity": "info",
-          "finding": "Teaser promotes the concept of delegation; the Cowork GA reinforces this message rather than contradicting it.",
+          "finding": "Framing-level teaser for Cowork; does not depend on the billing/preview status that changed.",
           "suggestedAction": null,
-          "sources": ["https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/"],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "sources": [
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits"
+          ],
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d2am-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
+          "title": "Presentation",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Cowork GA (June 16) capabilities now apply, and usage-based billing via Copilot Credits begins July 1 (2 days out) with Cowork off by default. The deck likely lacks the credits/billing model and the GA feature set: browser automation in Edge, model choice (GPT-5.5, Claude Opus/Sonnet), Imagen 2 image generation, brand templates, and the single Customize page for plugins/skills.",
-          "suggestedAction": "Add slides on the Copilot Credits billing model and cost management (effective July 1) and the fact that Cowork is admin-enabled/off by default. Update feature demos to show browser automation, model selection, image generation, and brand templates; replace any preview disclaimers with GA positioning.",
+          "finding": "Cowork is now GA and, as of July 1, requires usage-based billing (Copilot Credits) and is OFF BY DEFAULT — each task consumes credits based on model, context, tools, and runtime. A deck produced during the free Frontier preview misrepresents both availability and cost.",
+          "suggestedAction": "Add/replace slides to explain the Copilot Credits usage-based model, that Cowork is off by default and must be enabled by an admin, and set expectations that tasks consume credits. Remove any 'free preview' framing.",
           "sources": [
-            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
             "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
-            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new"
+            "https://abouttmc.com/blog/copilot-cowork-pricing/",
+            "https://quisitive.com/copilot-cowork-pricing-2026-how-usage-based-billing-works/",
+            "https://www.hbs.net/blog/copilot-cowork-available-now"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d2am-guide",
@@ -241,28 +261,31 @@
           "title": "Facilitator Guide",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Demo scripts were likely written for the Frontier preview. GA changes the setup (Cowork off by default, admin-enabled), introduces the Copilot Credits billing model effective July 1, and adds browser automation and an expanded plugin catalog. Critically, if a tenant hasn't enabled usage-based billing by July 1, Cowork stops working — a prerequisite facilitators must verify before any live demo.",
-          "suggestedAction": "Rewrite the demo flow for GA. Add a prerequisite check that the tenant has Cowork enabled and billing configured before July 1. Add talking points on Copilot Credits, spend caps, and cost visibility, plus a browser-automation demo sequence.",
+          "finding": "Facilitator delivery is impacted: unless the tenant admin has enabled Cowork and configured usage-based billing, participants cannot use Cowork at all as of July 1. The guide likely assumes always-on preview access.",
+          "suggestedAction": "Add a pre-session prerequisite that admins enable Cowork and usage-based billing, plus a fallback plan if credits/billing are not provisioned; update talking points to the credits model.",
           "sources": [
-            "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-manage-copilot-credits",
-            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
-            "https://supersimple365.com/copilot-cowork-is-now-generally-available-arrives-with-billing-news-and-an-interface-update/"
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
+            "https://abouttmc.com/blog/copilot-cowork-pricing/",
+            "https://quisitive.com/copilot-cowork-pricing-2026-how-usage-based-billing-works/",
+            "https://www.hbs.net/blog/copilot-cowork-available-now"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d2am-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "status": "outdated",
-          "severity": "critical",
-          "finding": "Video demonstrates the preview-era Cowork interface and capabilities. The GA version has a new UI, model picker, browser automation, and a usage-based pricing model, so facilitators following this video will show flows that no longer match production.",
-          "suggestedAction": "Re-record the video on the GA Cowork interface, demonstrating model selection, browser automation, brand templates, and the Copilot Credits cost indicators, and show the admin enablement flow relevant to facilitator prep.",
+          "status": "review-suggested",
+          "severity": "warning",
+          "finding": "Talk track may present Cowork as freely available; it should acknowledge the credits-based, off-by-default model now in effect.",
+          "suggestedAction": "Add a note (or re-record) clarifying Cowork now runs on Copilot Credits and must be enabled.",
           "sources": [
-            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
-            "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new"
+            "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
+            "https://abouttmc.com/blog/copilot-cowork-pricing/",
+            "https://quisitive.com/copilot-cowork-pricing-2026-how-usage-based-billing-works/",
+            "https://www.hbs.net/blog/copilot-cowork-available-now"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -273,18 +296,19 @@
       "materials": [
         {
           "id": "w1-d2pm-lab",
-          "type": "guide",
+          "type": "lab",
           "title": "Lab Practice Guide",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Cowork lab exercises reference preview-era capabilities and UI. With usage-based billing starting July 1 and Cowork off by default, participants will be unable to run lab tasks unless the tenant has Cowork enabled and credits provisioned — and they will now see credit consumption. GA also adds a model-selection step and browser-automation tasks.",
-          "suggestedAction": "Add a setup prerequisite confirming Cowork is enabled with credits before the lab. Rewrite navigation for the GA UI, add model-selection and browser-automation exercises, and include a short section on monitoring Copilot Credits usage.",
+          "finding": "This Cowork hands-on lab now depends on the tenant having Cowork enabled and usage-based billing configured (off by default since July 1), and each lab task will consume Copilot Credits. Without admin setup participants are blocked, and there is no cost caveat.",
+          "suggestedAction": "Add explicit prerequisites (admin-enabled Cowork + billing/credits), warn that lab tasks consume credits, and provide a no-billing fallback exercise.",
           "sources": [
             "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
-            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
-            "https://supersimple365.com/copilot-cowork-is-now-generally-available-arrives-with-billing-news-and-an-interface-update/"
+            "https://abouttmc.com/blog/copilot-cowork-pricing/",
+            "https://quisitive.com/copilot-cowork-pricing-2026-how-usage-based-billing-works/",
+            "https://www.hbs.net/blog/copilot-cowork-available-now"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -299,25 +323,28 @@
           "title": "Teaser Trailer",
           "status": "current",
           "severity": "info",
-          "finding": "Promotional teaser focused on empowerment messaging; the no-code concept remains valid even with UI changes.",
+          "finding": "Conceptual teaser; not tied to the specific builder UI that changed.",
           "suggestedAction": null,
-          "sources": ["https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/"],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "sources": [
+            "https://mc.merill.net/message/MC1315217"
+          ],
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d3am-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
+          "title": "Presentation",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Copilot Studio's classic agent creation in Teams retires June 30 — tomorrow — after which all creation must occur in the web app via the new Unified Workflows Canvas. The deck's screenshots and creation walkthrough show the old separate authoring experience and any Teams-based creation path, and miss Computer-Using Agents (GA), agent memory, modular skills, and real-time voice.",
-          "suggestedAction": "Urgent: remove all Teams-based agent-creation references before Day 3 delivery. Replace screenshots with the Unified Workflows Canvas and update the no-code walkthrough to the merged canvas. Add Computer-Using Agents, agent memory, and modular skills as new capabilities.",
+          "finding": "Copilot Studio changed materially: classic agent creation from within Teams retired June 30 (web app only now), and the new agent builder is natural-language-first with topics removed and a unified Build/Preview/Evaluate/Monitor layout — with no migration path from classic. Screenshots and step flows built on the classic topic-tree experience are outdated.",
+          "suggestedAction": "Rebuild the walkthrough on the new Copilot Studio agent builder (natural-language authoring, skills/tools/workflows instead of topics, Build/Preview/Evaluate/Monitor tabs) and remove the Teams-based classic creation path.",
           "sources": [
-            "https://pupuweb.com/mc1315217-microsoft-copilot-studio-classic-agent-creation-moves-from-teams-to-web-experience-retiring-june-30-2026/",
+            "https://mc.merill.net/message/MC1315217",
+            "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/classic-vs-new",
             "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
-            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/"
+            "https://powergi.net/blog/copilot-studio-update-june-2026/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d3am-guide",
@@ -325,14 +352,15 @@
           "title": "Facilitator Guide",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Demo instructions reference the old Copilot Studio authoring experience. The Unified Workflows Canvas changes navigation and creation flow, and any instructions pointing participants to Teams-based creation will fail starting June 30.",
-          "suggestedAction": "Rewrite all demo steps for the Unified Workflows Canvas and remove Teams-based creation references entirely. Update prerequisites to specify web-app access and add facilitator notes on Computer-Using Agents and agent memory.",
+          "finding": "Facilitator steps that instruct creating a classic agent in Teams or building topic flows no longer work — Teams classic creation is retired and topics are gone from the new builder.",
+          "suggestedAction": "Revise facilitator steps to the web-based new agent builder and its natural-language/skills model; drop topic-tree and Teams-creation instructions.",
           "sources": [
-            "https://pupuweb.com/mc1315217-microsoft-copilot-studio-classic-agent-creation-moves-from-teams-to-web-experience-retiring-june-30-2026/",
+            "https://mc.merill.net/message/MC1315217",
+            "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/classic-vs-new",
             "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
-            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/"
+            "https://powergi.net/blog/copilot-studio-update-june-2026/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d3am-video",
@@ -340,13 +368,15 @@
           "title": "Video Talk Track Prep",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Video shows the pre-Unified-Canvas Copilot Studio interface. The agent-creation workflow has changed to the merged drag-and-drop canvas, and the Teams creation path retires June 30, so facilitators following this video will demonstrate an interface that no longer exists.",
-          "suggestedAction": "Re-record the video on the Unified Workflows Canvas in the web app, demonstrating the merged authoring experience and Computer-Using Agents as an advanced no-code example.",
+          "finding": "The demo walks through the classic Copilot Studio builder (topics, Teams creation), which has been retired/replaced, so the on-screen product no longer matches.",
+          "suggestedAction": "Re-record the build demo using the new agent builder experience.",
           "sources": [
-            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/",
-            "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+            "https://mc.merill.net/message/MC1315217",
+            "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/classic-vs-new",
+            "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+            "https://powergi.net/blog/copilot-studio-update-june-2026/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -357,24 +387,25 @@
       "materials": [
         {
           "id": "w1-d3pm-lab",
-          "type": "guide",
+          "type": "lab",
           "title": "Lab Practice Guide",
           "status": "outdated",
           "severity": "critical",
-          "finding": "Lab exercises that build agents in Copilot Studio use the old creation flow. The Unified Workflows Canvas changes all step-by-step instructions, and any lab steps that use Teams-based creation will break starting June 30 — a hard blocker for Day 3 labs delivered on or after that date.",
-          "suggestedAction": "Rewrite all lab steps for the Unified Workflows Canvas in the web app (no Teams path). Verify every navigation path and button label against the current GA interface and add an optional Computer-Using Agents exercise.",
+          "finding": "The lab has participants build an agent in Copilot Studio, but classic agent creation in Teams retired June 30 and the new builder removes topics in favor of natural-language authoring, skills, and workflows. Existing lab steps will not match the current product and cannot be completed as written.",
+          "suggestedAction": "Rewrite the lab against the new agent builder (natural-language setup, skills/tools/workflows, web app) and remove classic topic/Teams-creation steps.",
           "sources": [
-            "https://pupuweb.com/mc1315217-microsoft-copilot-studio-classic-agent-creation-moves-from-teams-to-web-experience-retiring-june-30-2026/",
+            "https://mc.merill.net/message/MC1315217",
+            "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/classic-vs-new",
             "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
-            "https://www.superhub.com.hk/blog/microsoft-copilot-studio-updates-june-2026/"
+            "https://powergi.net/blog/copilot-studio-update-june-2026/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
     {
       "sessionId": "w1-day4-am",
-      "sessionTitle": "Day 4 — Work Redesign: Rethinking the Work Itself",
+      "sessionTitle": "Day 4 — Work Redesign: Rethinking the Work Itself — Not Just Making It Faster",
       "track": "non-engineering",
       "materials": [
         {
@@ -383,25 +414,26 @@
           "title": "Teaser Trailer",
           "status": "current",
           "severity": "info",
-          "finding": "Conceptual teaser about work redesign; the theme is reinforced by current Microsoft messaging.",
+          "finding": "Conceptual teaser; not affected by product changes.",
           "suggestedAction": null,
-          "sources": ["https://www.forbes.com/sites/moorinsights/2026/05/19/microsoft-work-trend-index-2026-shows-ai-productivity-is-not-enough/"],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "sources": [
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
+          ],
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d4am-ppt",
           "type": "deck",
-          "title": "Presentation Deck",
+          "title": "Presentation",
           "status": "review-suggested",
           "severity": "warning",
-          "finding": "Work Trend Index 2026 strongly supports this session's thesis: organizational redesign drives ~2x more AI value than individual use, and 66% of AI users report spending more time on high-value work. The deck's argument aligns with current direction but could be reinforced with these data points and the 'Frontier Firm' framing.",
-          "suggestedAction": "Add Work Trend Index 2026 data points to strengthen the work-redesign argument and reference the shift from 'making work faster' to redesigning work around AI agents.",
+          "finding": "The 2026 Work Trend Index strongly reinforces this session's thesis (Frontier Firms reinvent work rather than bolt AI on; organizational readiness outweighs individual effort ~67% vs 32%). The deck can be refreshed with this framing and current data but is not factually broken.",
+          "suggestedAction": "Fold in the 2026 Work Trend Index 'Frontier Firm' reinvention framing and refreshed stats to reinforce the work-redesign argument.",
           "sources": [
-            "https://www.forbes.com/sites/moorinsights/2026/05/19/microsoft-work-trend-index-2026-shows-ai-productivity-is-not-enough/",
-            "https://c5insight.com/microsoft-work-trend-index-2026-summary/",
-            "https://www.technologyrecord.com/article/microsofts-2026-work-trend-index-annual-report-highlights-rise-of-ai-powered-frontier-firms"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+            "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d4am-guide",
@@ -409,26 +441,26 @@
           "title": "Facilitator Guide",
           "status": "review-suggested",
           "severity": "warning",
-          "finding": "Facilitator discussion prompts and examples could benefit from Work Trend Index 2026 data. The session's core thesis about rethinking work (not just speeding it up) is strongly validated by current Microsoft research.",
-          "suggestedAction": "Add facilitator talking points referencing Work Trend Index 2026 findings and update discussion examples to reference agent-first work patterns and Frontier Firm transformation cases.",
+          "finding": "Facilitator talking points can cite the latest Work Trend Index evidence on reinventing work vs. accelerating existing tasks.",
+          "suggestedAction": "Add current Work Trend Index talking points on organizational readiness and work reinvention.",
           "sources": [
-            "https://www.forbes.com/sites/moorinsights/2026/05/19/microsoft-work-trend-index-2026-shows-ai-productivity-is-not-enough/",
-            "https://c5insight.com/microsoft-work-trend-index-2026-summary/"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+            "https://www.theneuron.ai/explainer-articles/microsofts-2026-work-trend-index-your-employees-figured-out-ai-your-company-didnt/"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         },
         {
           "id": "w1-d4am-video",
           "type": "video",
           "title": "Video Talk Track Prep",
-          "status": "review-suggested",
-          "severity": "warning",
-          "finding": "Video talk track covers work-redesign concepts that remain directionally correct but may miss the latest Work Trend Index 2026 data and the acceleration of agent-first thinking since Build 2026.",
-          "suggestedAction": "Review the video for opportunities to add supplemental notes about Work Trend Index 2026 data as discussion enrichment.",
+          "status": "current",
+          "severity": "info",
+          "finding": "Conceptual talk track on work redesign; no product UI or data that recent changes invalidate.",
+          "suggestedAction": null,
           "sources": [
-            "https://www.forbes.com/sites/moorinsights/2026/05/19/microsoft-work-trend-index-2026-shows-ai-productivity-is-not-enough/"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     },
@@ -439,17 +471,16 @@
       "materials": [
         {
           "id": "w1-d4pm-lab",
-          "type": "guide",
+          "type": "lab",
           "title": "Lab Practice Guide",
-          "status": "review-suggested",
-          "severity": "warning",
-          "finding": "Work-redesign lab exercises are conceptual/strategic and less dependent on specific UI. However, if exercises reference Copilot capabilities for task automation, they should reflect the current tool landscape (Cowork GA with credits-based usage from July 1, Copilot Notebooks, agent-first patterns).",
-          "suggestedAction": "Review lab scenarios so any hands-on Copilot steps reference current capabilities (Cowork for delegation, Notebooks for organization) and note the July 1 Cowork billing change if exercises rely on Cowork.",
+          "status": "current",
+          "severity": "info",
+          "finding": "Work-redesign exercise is conceptual (rethinking workflows) and not tied to any specific tool UI or feature that changed this week.",
+          "suggestedAction": null,
           "sources": [
-            "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
-            "https://info.ttech.co.uk/blog/whats-new-in-microsoft-365-copilot-june-2026"
+            "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
           ],
-          "detectedDate": "2026-06-29T09:46:06-07:00"
+          "detectedDate": "2026-07-06T07:01:45-07:00"
         }
       ]
     }
