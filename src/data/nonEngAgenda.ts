@@ -56,10 +56,10 @@ export const nonEngAgenda: Week[] = [
         description: 'Opening session establishing the AI-first operating model, program structure, and cohort norms.',
         day: 1,
         resources: [
-          { id: 'w1-d1s1-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%201%2FIcebreaker%5FTeaser%2Emp4' },
+          { id: 'w1-d1s1-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%201%2FIcebreaker%5FTeaser%2Emp4&share=cQphqAg3embwSqKHWF8SO0E0EgUCWB69fucXBravMBVcOLIwQg' },
           { id: 'w1-d1s1-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQowprbeYuvBS7v7Ll_VN8mvEgUCGU_L4Xc9DiJC-9klDF7n6Q' },
           { id: 'w1-d1s1-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpyFVxUHQnOS7MLj8Xq9fAKEgUCy7WS1JY7HUPpIC9Omve1_w' },
-          { id: 'w1-d1s1-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%201%2FIcebreakerAndAI%2DFirstMindset%2Emp4' },
+          { id: 'w1-d1s1-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%201%2FIcebreakerAndAI%2DFirstMindset%2Emp4&share=cQqkL82ITmRcRa7ci7SpXUEWEgUCc72BvwT6C0OYdAsqv3Zz4A' },
         ],
       },
       {
@@ -68,10 +68,10 @@ export const nonEngAgenda: Week[] = [
         description: 'Second morning session building on orientation foundations.',
         day: 1,
         resources: [
-          { id: 'w1-d1s2-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%201%2FM365%5FTeaser%2Emp4' },
+          { id: 'w1-d1s2-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%201%2FM365%5FTeaser%2Emp4&share=cQqXp8wsOKKRRYyXk3khGkDdEgUC%5FRvnHscaRIe2qAmugK5Qhw' },
           { id: 'w1-d1s2-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQpuBeJhstixRKw8yt17vdmaEgUCX3ZRORRVmf1UYAmzx1umqg' },
           { id: 'w1-d1s2-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQoDw8_63Au-Q4NaonzjOXA4EgUCvnua5yFEN15HVxKahhU_Gg' },
-          { id: 'w1-d1s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%201%2FM365%2DCopilot%2DWorkshop%2DDeck%2Emp4' },
+          { id: 'w1-d1s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%201%2FM365%2DCopilot%2DWorkshop%2DDeck%2Emp4&share=cQpRBudxSt0mRoB4bwzTLzmFEgUC9x5W26POESYo3NsRaFLZ0A' },
         ],
       },
       {
@@ -89,10 +89,10 @@ export const nonEngAgenda: Week[] = [
         description: 'Morning session content.',
         day: 2,
         resources: [
-          { id: 'w1-d2am-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%202%2FCowork%5FTeaser%2Emp4' },
+          { id: 'w1-d2am-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%202%2FCowork%5FTeaser%2Emp4&share=cQo5%5FM8bqQvlTqByj4TvddwBEgUCH8W%2DYkFkd%5FzHVLezP1kAug' },
           { id: 'w1-d2am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQr4aWHBYnx8Q4_6Zbmb6yoAEgUC_G9Jb3M5QdgL-2Te9gAsjg' },
           { id: 'w1-d2am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpsF88ZxluHQILq0gAmcFRPEgUCAUkUVa7iYv3yyALl6VQKZg' },
-          { id: 'w1-d2am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%202%2FCowork%2DDeck%2Emp4' },
+          { id: 'w1-d2am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%202%2FCowork%2DDeck%2Emp4&share=cQo3QioJvx9rRoUgdvSHgTWcEgUC%5FLA3Em1hq1KGpyZtf%2DIpOw' },
         ],
       },
       {
@@ -101,10 +101,10 @@ export const nonEngAgenda: Week[] = [
         description: 'Second morning session introducing Microsoft Scout for autonomous task delegation and agentic workflows.',
         day: 2,
         resources: [
-          { id: 'w1-d2s2-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%202%2FScout%5FTeaser%2Emp4' },
+          { id: 'w1-d2s2-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%202%2FScout%5FTeaser%2Emp4&share=cQp%5F5RU8c8wxSpqD33tue6LYEgUC6V3sIfrzzyBStM%5FEe387AA' },
           { id: 'w1-d2s2-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQq8YAe1cdd3TqktT5_WgYhGEgUC2cRu8sc0ZVRfdUjVfzQmOQ' },
           { id: 'w1-d2s2-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQphcPeVBV1BQZ5kgIVefjqnEgUCc98BwH7FO7iHeDzYJA84PQ' },
-          { id: 'w1-d2s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%202%2FScout%2DDeck%2Emp4' },
+          { id: 'w1-d2s2-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%202%2FScout%2DDeck%2Emp4&share=cQpRei8Lh3zjToFXGh8TCmh5EgUCk3BekPTq%5F0P3iDc54zoh5g' },
         ],
       },
       {
@@ -123,10 +123,10 @@ export const nonEngAgenda: Week[] = [
         description: 'Morning session content.',
         day: 3,
         resources: [
-          { id: 'w1-d3am-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%203%2FBuildYourOwnCopilot%5FTeaser%2Emp4' },
+          { id: 'w1-d3am-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%203%2FBuildYourOwnCopilot%5FTeaser%2Emp4&share=cQrB%5FpeBNYWKSJBI4haJJRBQEgUCaiv%2DcBajba2hhl7cVRTtLA' },
           { id: 'w1-d3am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQqK83F_XpnITZbJN59AfadtEgUCCp2eKNLNQ2Uv9qacYbJ5hQ' },
           { id: 'w1-d3am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQpPBuQt6kBgRL98IIrjYWgzEgUCQgrAcpKQLS40AmYMb-3XSQ' },
-          { id: 'w1-d3am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%203%2FBuildYourOwnCopilot%2DDeck%2Emp4' },
+          { id: 'w1-d3am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%203%2FBuildYourOwnCopilot%2DDeck%2Emp4&share=cQq%2Dqzm4al6xQ6nTnBDxVxJKEgUCNMFnoEgH6pWqkaxjEfHVqw' },
         ],
       },
       {
@@ -144,10 +144,10 @@ export const nonEngAgenda: Week[] = [
         description: 'Morning session content.',
         day: 4,
         resources: [
-          { id: 'w1-d4am-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%204%2FWorkRedesign%5FTeaser%2Emp4' },
+          { id: 'w1-d4am-teaser', title: 'Teaser Trailer', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%204%2FWorkRedesign%5FTeaser%2Emp4&share=cQoIMywyVXdyQZNQjtcHrYfEEgUCo%5FrIs%5FFvpLDczJKnaugK9Q' },
           { id: 'w1-d4am-ppt', title: 'Presentation', type: 'deck', url: 'https://microsoft.sharepoint.com/:p:/t/WorkforceAccelerationWFATeam/cQrlJlsG_oVuRp7fKYxh_4OdEgUCIS-5b1NOxrKFbe5fwruQIg' },
           { id: 'w1-d4am-guide', title: 'Facilitator Guide', type: 'guide', url: 'https://microsoft.sharepoint.com/:w:/t/WorkforceAccelerationWFATeam/cQo3tXDguXFdQLyssDAuFkMLEgUCnoA1rKzOBHbBMnE9aaKNaA' },
-          { id: 'w1-d4am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon-Engineering%20Week%201%20Materials%2FDay%204%2FWorkRedesign%2DDeck%2Emp4' },
+          { id: 'w1-d4am-video', title: 'Video Talk Track Prep', type: 'video', url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FNon%2DEngineering%20Week%201%20Materials%2FDay%204%2FWorkRedesign%2DDeck%2Emp4&share=cQohKlgkYPalTJ2ECHTfRuPfEgUCZMCz4I46XMLuitJTCoI9Ww' },
         ],
       },
       {
