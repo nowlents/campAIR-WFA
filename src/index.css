@@ -1996,34 +1996,41 @@ a:hover {
   border-top: 2px solid var(--color-border);
 }
 
-.session-library__head {
+.session-library__callout {
+  border: 1px solid var(--color-primary);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-light);
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+
+.session-library__badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  padding: 4px 12px;
   margin-bottom: 12px;
 }
 
-.session-library__eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  margin-bottom: 6px;
-}
-
 .session-library__title {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--color-text);
-  margin: 0;
-  padding-left: 14px;
-  border-left: 4px solid var(--color-primary);
+  margin: 0 0 8px;
   line-height: 1.2;
 }
 
 .session-library__prompt {
   font-size: 15px;
   color: var(--color-text-secondary);
-  margin: 0 0 16px;
+  margin: 0;
   line-height: 1.5;
 }
 

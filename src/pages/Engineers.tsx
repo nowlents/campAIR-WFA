@@ -48,14 +48,15 @@ export function Engineers() {
       </section>
 
       <section className="session-library">
-        <div className="session-library__head">
-          <span className="session-library__eyebrow">On-Demand Resources</span>
+        <div className="session-library__callout">
+          <span className="session-library__badge">✦ Optional Add-On</span>
           <h2 className="session-library__title">Curriculum Library</h2>
+          <p className="session-library__prompt">
+            This section is supplemental—it's not part of the core 4-week experience above. Want to
+            review any of the session materials on their own? Expand the window below to freely
+            explore each recording, deck, or practice lab.
+          </p>
         </div>
-        <p className="session-library__prompt">
-          Want to review any of the session materials? Expand the window below to freely explore
-          each recording, deck, or practice lab.
-        </p>
         <div className="agenda__weeks">
           <div className={`week-block ${libraryOpen ? 'week-block--open' : ''}`}>
             <button
