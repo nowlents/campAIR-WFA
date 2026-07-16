@@ -121,6 +121,7 @@ export function AgendaBuilder() {
   const dropOnSlot = (e: React.DragEvent, targetSlot: string) => {
     e.preventDefault();
     setDragOver(null);
+    setDragging(null);
     const payload = readPayload(e);
     if (!payload) return;
     const { sessionId, origin } = payload;
@@ -140,6 +141,7 @@ export function AgendaBuilder() {
   const dropOnPool = (e: React.DragEvent) => {
     e.preventDefault();
     setDragOver(null);
+    setDragging(null);
     const payload = readPayload(e);
     if (!payload) return;
     if (payload.origin === 'pool') return;
