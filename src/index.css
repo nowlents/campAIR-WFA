@@ -1990,6 +1990,17 @@ a:hover {
   margin-top: 32px;
 }
 
+.session-library {
+  margin-top: 40px;
+}
+
+.session-library__prompt {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
 .agenda-builder__header {
   display: flex;
   align-items: flex-start;
