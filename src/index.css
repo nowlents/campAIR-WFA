@@ -1991,7 +1991,33 @@ a:hover {
 }
 
 .session-library {
-  margin-top: 40px;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 2px solid var(--color-border);
+}
+
+.session-library__head {
+  margin-bottom: 12px;
+}
+
+.session-library__eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.session-library__title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  padding-left: 14px;
+  border-left: 4px solid var(--color-primary);
+  line-height: 1.2;
 }
 
 .session-library__prompt {
