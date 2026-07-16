@@ -1722,6 +1722,12 @@ a:hover {
   gap: 12px;
 }
 
+.agenda__sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* === Week Block === */
 .week-block {
   background: var(--color-surface);
