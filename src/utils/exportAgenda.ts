@@ -114,7 +114,7 @@ function buildDoc(data: ExportData): Document {
           children: [new TextRun({ text: 'Morning (AM)', bold: true })],
         })
       );
-      for (const s of day.sessions) {
+      for (const [i, s] of day.sessions.entries()) {
         body.push(
           new Paragraph({
             bullet: { level: 0 },
@@ -123,6 +123,17 @@ function buildDoc(data: ExportData): Document {
           })
         );
         body.push(sessionLinkParagraph(s));
+        if (i === 0 && day.sessions.length > 1) {
+          body.push(
+            new Paragraph({
+              spacing: { before: 20, after: 20 },
+              children: [
+                new TextRun({ text: '☕ 15-Minute Break', bold: true, color: '8661C5' }),
+                new TextRun({ text: ' — short break between sessions', italics: true, color: '7A6BA0' }),
+              ],
+            })
+          );
+        }
       }
 
       // Lunch

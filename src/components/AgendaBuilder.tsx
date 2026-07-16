@@ -388,15 +388,19 @@ export function AgendaBuilder() {
                   : null}
               </div>
 
-              {AM_SLOTS.map((p) => {
-                const slotId = `${day.key}-${p}`;
-                return (
-                  <div key={slotId} className="agenda-builder__period">
-                    <span className="agenda-builder__period-label">AM</span>
-                    {renderSlot(slotId)}
-                  </div>
-                );
-              })}
+              <div className="agenda-builder__period">
+                <span className="agenda-builder__period-label">AM</span>
+                {renderSlot(`${day.key}-am1`)}
+              </div>
+
+              <div className="agenda-builder__marker-slot">
+                {renderMarker('☕', '15-Minute Break', 'Between sessions')}
+              </div>
+
+              <div className="agenda-builder__period">
+                <span className="agenda-builder__period-label">AM</span>
+                {renderSlot(`${day.key}-am2`)}
+              </div>
 
               <div className="agenda-builder__lunch">
                 <span className="agenda-builder__lunch-icon">🍽️</span> Lunch
