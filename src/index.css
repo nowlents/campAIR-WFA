@@ -2124,12 +2124,15 @@ a:hover {
 .agenda-builder__grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto auto auto auto;
   gap: 10px;
+  align-items: start;
 }
 
 .agenda-builder__day {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-row: 1 / span 5;
+  grid-template-rows: subgrid;
   gap: 8px;
 }
 
@@ -2158,6 +2161,7 @@ a:hover {
 
 .agenda-builder__slot {
   min-height: 58px;
+  flex: 1;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: stretch;
@@ -2378,6 +2382,9 @@ a:hover {
     grid-template-columns: 1fr;
   }
   .agenda-builder__day {
+    display: flex;
+    grid-row: auto;
+    grid-template-rows: none;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
