@@ -96,8 +96,8 @@ export function NonEngineers() {
       <section className="agenda">
         <h3 className="agenda__title">4-Week Agenda</h3>
         <div className="agenda__weeks">
-          {nonEngAgenda.map((week, i) => (
-            <WeekBlock key={week.id} week={week} defaultOpen={i === 0} />
+          {nonEngAgenda.map((week) => (
+            <WeekBlock key={week.id} week={week} defaultOpen={true} />
           ))}
         </div>
       </section>
