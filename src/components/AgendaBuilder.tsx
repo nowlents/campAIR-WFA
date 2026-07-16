@@ -267,7 +267,9 @@ export function AgendaBuilder() {
         {sessionId ? (
           renderCard(sessionId, slotId)
         ) : (
-          <span className="agenda-builder__slot-hint">Drop a session</span>
+          <span className="agenda-builder__slot-hint">
+            <span className="agenda-builder__slot-hint-icon">＋</span> Drop a session here
+          </span>
         )}
       </div>
     );
@@ -398,7 +400,6 @@ export function AgendaBuilder() {
               </div>
 
               <div className="agenda-builder__period">
-                <span className="agenda-builder__period-label">AM</span>
                 {renderSlot(`${day.key}-am2`)}
               </div>
 

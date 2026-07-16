@@ -2180,15 +2180,21 @@ a:hover {
 }
 
 .agenda-builder__slot--empty {
-  border: 1.5px dashed var(--color-border);
-  background: var(--color-surface);
+  border: 1.5px dashed rgba(0, 120, 212, 0.55);
+  background: rgba(0, 120, 212, 0.04);
   align-items: center;
   justify-content: center;
 }
 
-.agenda-builder__slot--dragover {
+.agenda-builder__slot--empty:hover {
   border-color: var(--color-primary);
+  background: rgba(0, 120, 212, 0.09);
+}
+
+.agenda-builder__slot--dragover {
+  border: 1.5px solid var(--color-primary);
   background: var(--color-primary-light);
+  box-shadow: inset 0 0 0 2px rgba(0, 120, 212, 0.3);
 }
 
 .agenda-builder__slot--locked {
@@ -2196,8 +2202,25 @@ a:hover {
 }
 
 .agenda-builder__slot-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-size: 11px;
-  color: var(--color-text-light);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.agenda-builder__slot-hint-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .agenda-builder__card {
