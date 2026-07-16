@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { engSessions } from '../data/engAgenda';
 
-const STORAGE_KEY = 'campair-eng-agenda-v1';
+const STORAGE_KEY = 'campair-eng-agenda-v2';
 
 const DAYS = [
   { key: 'mon', label: 'Monday' },
@@ -11,19 +11,28 @@ const DAYS = [
   { key: 'fri', label: 'Friday' },
 ] as const;
 
-const PERIODS = [
-  { key: 'am', label: 'AM' },
-  { key: 'pm', label: 'PM' },
-] as const;
+// Two morning session slots per day.
+const AM_SLOTS = ['am1', 'am2'] as const;
 
 // Locked, non-configurable sessions and where they sit.
 const FIXED: Record<string, string> = {
-  'mon-am': 'eng-1-kickoff',
-  'fri-pm': 'eng-11-gemba-walk',
+  'mon-am1': 'eng-1-kickoff',
+  'fri-am2': 'eng-11-gemba-walk',
 };
 
-const ALL_SLOTS = DAYS.flatMap((d) => PERIODS.map((p) => `${d.key}-${p.key}`));
+const ALL_SLOTS = DAYS.flatMap((d) => AM_SLOTS.map((p) => `${d.key}-${p}`));
 const OPEN_SLOTS = ALL_SLOTS.filter((s) => !(s in FIXED));
+
+const configurableSessions = engSessions.filter(
+  (s) => !Object.values(FIXED).includes(s.id)
+);
+
+const sessionsById = new Map(engSessions.map((s) => [s.id, s]));
+
+// The Practice Labs resource for a session (consistently titled "Practice Labs").
+const labBySession = new Map(
+  engSessions.map((s) => [s.id, s.resources.find((r) => r.title === 'Practice Labs')])
+);
 
 type Assignments = Record<string, string | null>;
 
@@ -38,7 +47,6 @@ function loadAssignments(): Assignments {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return emptyAssignments();
     const parsed = JSON.parse(raw) as Assignments;
-    // Rebuild against current open slots so schema changes can't corrupt state.
     const base = emptyAssignments();
     const validIds = new Set(configurableSessions.map((s) => s.id));
     const seen = new Set<string>();
@@ -54,12 +62,6 @@ function loadAssignments(): Assignments {
     return emptyAssignments();
   }
 }
-
-const configurableSessions = engSessions.filter(
-  (s) => !Object.values(FIXED).includes(s.id)
-);
-
-const sessionsById = new Map(engSessions.map((s) => [s.id, s]));
 
 interface DragPayload {
   sessionId: string;
@@ -84,6 +86,9 @@ export function AgendaBuilder() {
     const placed = new Set(Object.values(assignments).filter(Boolean) as string[]);
     return configurableSessions.filter((s) => !placed.has(s.id));
   }, [assignments]);
+
+  const sessionAt = (slotId: string): string | null =>
+    FIXED[slotId] ?? assignments[slotId] ?? null;
 
   const handleDragStart = (e: React.DragEvent, sessionId: string, origin: string) => {
     const payload: DragPayload = { sessionId, origin };
@@ -121,8 +126,7 @@ export function AgendaBuilder() {
       const displaced = next[targetSlot] ?? null;
       next[targetSlot] = sessionId;
       if (origin !== 'pool') {
-        // Swap: whatever was in the target moves to the source slot (may be null).
-        next[origin] = displaced;
+        next[origin] = displaced; // swap (may be null)
       }
       return next;
     });
@@ -137,9 +141,7 @@ export function AgendaBuilder() {
     setAssignments((prev) => ({ ...prev, [payload.origin]: null }));
   };
 
-  const handleReset = () => {
-    setAssignments(emptyAssignments());
-  };
+  const handleReset = () => setAssignments(emptyAssignments());
 
   const renderCard = (sessionId: string, origin: string, locked = false) => {
     const session = sessionsById.get(sessionId);
@@ -195,14 +197,58 @@ export function AgendaBuilder() {
     );
   };
 
+  const renderLab = (dayKey: string) => {
+    const morning = AM_SLOTS.map((p) => sessionAt(`${dayKey}-${p}`)).filter(Boolean) as string[];
+    if (morning.length === 0) {
+      return <span className="agenda-builder__lab-hint">Labs appear here</span>;
+    }
+    return morning.map((sessionId, i) => {
+      const session = sessionsById.get(sessionId);
+      const lab = labBySession.get(sessionId);
+      const label = session ? session.title : 'Session';
+      if (lab?.url) {
+        return (
+          <a
+            key={`${dayKey}-lab-${i}`}
+            className="agenda-builder__lab-card"
+            href={lab.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`${label} — Practice Labs`}
+          >
+            <span className="agenda-builder__lab-icon">🧪</span>
+            <span className="agenda-builder__lab-text">
+              <span className="agenda-builder__lab-session">{label}</span>
+              <span className="agenda-builder__lab-name">Practice Labs</span>
+            </span>
+          </a>
+        );
+      }
+      return (
+        <div
+          key={`${dayKey}-lab-${i}`}
+          className="agenda-builder__lab-card agenda-builder__lab-card--none"
+          title={`${label} — no lab packet`}
+        >
+          <span className="agenda-builder__lab-icon">—</span>
+          <span className="agenda-builder__lab-text">
+            <span className="agenda-builder__lab-session">{label}</span>
+            <span className="agenda-builder__lab-name">No lab packet</span>
+          </span>
+        </div>
+      );
+    });
+  };
+
   return (
     <section className="agenda-builder">
       <div className="agenda-builder__header">
         <div>
           <h3 className="agenda-builder__title">Build Your Weeklong Agenda</h3>
           <p className="agenda-builder__subtitle">
-            Drag sessions into the week to design a delivery sequence. Kickoff opens Monday
-            and the Gemba Walk closes Friday—both are fixed. Each day holds up to two sessions.
+            Drag sessions into the two morning (AM) slots for each day. After lunch, the
+            afternoon (PM) automatically fills with the matching Practice Labs for each
+            morning session. Kickoff opens Monday and the Gemba Walk closes Friday—both fixed.
           </p>
         </div>
         <button type="button" className="agenda-builder__reset" onClick={handleReset}>
@@ -239,15 +285,25 @@ export function AgendaBuilder() {
           {DAYS.map((day) => (
             <div key={day.key} className="agenda-builder__day">
               <div className="agenda-builder__day-label">{day.label}</div>
-              {PERIODS.map((p) => {
-                const slotId = `${day.key}-${p.key}`;
+
+              {AM_SLOTS.map((p) => {
+                const slotId = `${day.key}-${p}`;
                 return (
                   <div key={slotId} className="agenda-builder__period">
-                    <span className="agenda-builder__period-label">{p.label}</span>
+                    <span className="agenda-builder__period-label">AM</span>
                     {renderSlot(slotId)}
                   </div>
                 );
               })}
+
+              <div className="agenda-builder__lunch">
+                <span className="agenda-builder__lunch-icon">🍽️</span> Lunch
+              </div>
+
+              <div className="agenda-builder__pm">
+                <span className="agenda-builder__period-label">PM · Practice Labs</span>
+                <div className="agenda-builder__lab-list">{renderLab(day.key)}</div>
+              </div>
             </div>
           ))}
         </div>

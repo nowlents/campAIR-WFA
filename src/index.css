@@ -2201,6 +2201,109 @@ a:hover {
   line-height: 1.3;
 }
 
+/* Lunch divider */
+.agenda-builder__lunch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 4px 0;
+  padding: 5px 0;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--color-text-secondary);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-surface-alt),
+    var(--color-surface-alt) 6px,
+    var(--color-surface) 6px,
+    var(--color-surface) 12px
+  );
+  border-radius: var(--radius-sm);
+}
+
+.agenda-builder__lunch-icon {
+  font-size: 12px;
+}
+
+/* PM / Practice Labs */
+.agenda-builder__pm {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.agenda-builder__lab-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.agenda-builder__lab-hint {
+  font-size: 11px;
+  color: var(--color-text-light);
+  font-style: italic;
+  padding: 6px 2px;
+}
+
+.agenda-builder__lab-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: rgba(0, 120, 212, 0.05);
+  border: 1px solid var(--color-primary-light);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.agenda-builder__lab-card:hover {
+  background: var(--color-primary-light);
+  box-shadow: var(--shadow-card);
+}
+
+.agenda-builder__lab-card--none {
+  background: var(--color-surface-alt);
+  border-color: var(--color-border);
+  border-left-color: var(--color-text-light);
+  cursor: default;
+}
+
+.agenda-builder__lab-icon {
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.agenda-builder__lab-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  min-width: 0;
+}
+
+.agenda-builder__lab-session {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.agenda-builder__lab-name {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+}
+
+.agenda-builder__lab-card--none .agenda-builder__lab-name {
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
 @media (max-width: 860px) {
   .agenda-builder__layout {
     grid-template-columns: 1fr;
