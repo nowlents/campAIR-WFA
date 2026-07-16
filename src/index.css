@@ -2006,17 +2006,7 @@ a:hover {
 }
 
 .session-library__badge {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-primary-dark);
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--color-primary);
-  border-radius: 999px;
-  padding: 4px 12px;
-  margin-bottom: 12px;
+  display: none;
 }
 
 .session-library__title {
@@ -2030,7 +2020,7 @@ a:hover {
 .session-library__prompt {
   font-size: 15px;
   color: var(--color-text-secondary);
-  margin: 0;
+  margin: 0 0 16px;
   line-height: 1.5;
 }
 

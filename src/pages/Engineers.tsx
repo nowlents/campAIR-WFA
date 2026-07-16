@@ -49,47 +49,46 @@ export function Engineers() {
 
       <section className="session-library">
         <div className="session-library__callout">
-          <span className="session-library__badge">✦ Optional Add-On</span>
           <h2 className="session-library__title">Curriculum Library</h2>
           <p className="session-library__prompt">
             This section is supplemental—it's not part of the core 4-week experience above. Want to
             review any of the session materials on their own? Expand the window below to freely
             explore each recording, deck, or practice lab.
           </p>
-        </div>
-        <div className="agenda__weeks">
-          <div className={`week-block ${libraryOpen ? 'week-block--open' : ''}`}>
-            <button
-              className="week-block__header"
-              onClick={() => setLibraryOpen((o) => !o)}
-              aria-expanded={libraryOpen}
-            >
-              <div className="week-block__label">Library</div>
-              <div className="week-block__info">
-                <h3 className="week-block__title">Engineering Session Materials</h3>
-                {!libraryOpen && (
-                  <p className="week-block__preview">
-                    11 expert-led sessions with recordings, presentations, and practice labs...
-                  </p>
-                )}
-              </div>
-              <span className="week-block__chevron">{libraryOpen ? '▾' : '▸'}</span>
-            </button>
-
-            {libraryOpen && (
-              <div className="week-block__content">
-                <div className="week-block__sessions">
-                  {engSessions.map((session) => (
-                    <SessionItem
-                      key={session.id}
-                      title={session.title}
-                      description={session.description}
-                      resources={session.resources}
-                    />
-                  ))}
+          <div className="agenda__weeks">
+            <div className={`week-block ${libraryOpen ? 'week-block--open' : ''}`}>
+              <button
+                className="week-block__header"
+                onClick={() => setLibraryOpen((o) => !o)}
+                aria-expanded={libraryOpen}
+              >
+                <div className="week-block__label">Library</div>
+                <div className="week-block__info">
+                  <h3 className="week-block__title">Engineering Session Materials</h3>
+                  {!libraryOpen && (
+                    <p className="week-block__preview">
+                      11 expert-led sessions with recordings, presentations, and practice labs...
+                    </p>
+                  )}
                 </div>
-              </div>
-            )}
+                <span className="week-block__chevron">{libraryOpen ? '▾' : '▸'}</span>
+              </button>
+
+              {libraryOpen && (
+                <div className="week-block__content">
+                  <div className="week-block__sessions">
+                    {engSessions.map((session) => (
+                      <SessionItem
+                        key={session.id}
+                        title={session.title}
+                        description={session.description}
+                        resources={session.resources}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
