@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { engSessions } from '../data/engAgenda';
+import type { ExportData } from '../utils/exportAgenda';
 
 const STORAGE_KEY = 'campair-eng-agenda-v2';
 
@@ -33,6 +34,9 @@ const sessionsById = new Map(engSessions.map((s) => [s.id, s]));
 const labBySession = new Map(
   engSessions.map((s) => [s.id, s.resources.find((r) => r.title === 'Practice Labs')])
 );
+
+const resourceUrl = (sessionId: string, title: string): string | undefined =>
+  sessionsById.get(sessionId)?.resources.find((r) => r.title === title)?.url;
 
 type Assignments = Record<string, string | null>;
 
@@ -72,6 +76,7 @@ export function AgendaBuilder() {
   const [assignments, setAssignments] = useState<Assignments>(loadAssignments);
   const [dragging, setDragging] = useState<string | null>(null);
   const [dragOver, setDragOver] = useState<string | null>(null);
+  const [exporting, setExporting] = useState(false);
   const dragData = useRef<DragPayload | null>(null);
 
   useEffect(() => {
@@ -143,6 +148,74 @@ export function AgendaBuilder() {
 
   const handleReset = () => setAssignments(emptyAssignments());
 
+  const buildExportData = (): ExportData => {
+    const days = DAYS.map((d) => {
+      const sessions = AM_SLOTS.map((p) => sessionAt(`${d.key}-${p}`))
+        .filter(Boolean)
+        .map((id) => {
+          const s = sessionsById.get(id as string)!;
+          return {
+            title: s.title,
+            recording: resourceUrl(s.id, 'Session Recording'),
+            presentation: resourceUrl(s.id, 'Presentation'),
+            labs: labBySession.get(s.id)?.url,
+          };
+        });
+      return { label: d.label, sessions };
+    });
+    return { days, unscheduled: pool.map((s) => s.title) };
+  };
+
+  const handleExport = async () => {
+    setExporting(true);
+    try {
+      const { exportAgendaDocx } = await import('../utils/exportAgenda');
+      await exportAgendaDocx(buildExportData());
+    } catch (err) {
+      console.error('Agenda export failed', err);
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  const stopDrag = (e: React.MouseEvent | React.DragEvent) => e.stopPropagation();
+
+  const renderCardLinks = (sessionId: string) => {
+    const recording = resourceUrl(sessionId, 'Session Recording');
+    const presentation = resourceUrl(sessionId, 'Presentation');
+    if (!recording && !presentation) return null;
+    return (
+      <div className="agenda-builder__card-links">
+        {recording && (
+          <a
+            className="agenda-builder__card-link"
+            href={recording}
+            target="_blank"
+            rel="noopener noreferrer"
+            draggable={false}
+            onClick={stopDrag}
+            onDragStart={stopDrag}
+          >
+            🎬 Recording
+          </a>
+        )}
+        {presentation && (
+          <a
+            className="agenda-builder__card-link"
+            href={presentation}
+            target="_blank"
+            rel="noopener noreferrer"
+            draggable={false}
+            onClick={stopDrag}
+            onDragStart={stopDrag}
+          >
+            📊 Presentation
+          </a>
+        )}
+      </div>
+    );
+  };
+
   const renderCard = (sessionId: string, origin: string, locked = false) => {
     const session = sessionsById.get(sessionId);
     if (!session) return null;
@@ -158,8 +231,11 @@ export function AgendaBuilder() {
         onDragEnd={locked ? undefined : handleDragEnd}
         title={locked ? 'This session is fixed and cannot be moved' : 'Drag to rearrange'}
       >
-        <span className="agenda-builder__card-icon">{locked ? '🔒' : '⠿'}</span>
-        <span className="agenda-builder__card-title">{session.title}</span>
+        <div className="agenda-builder__card-head">
+          <span className="agenda-builder__card-icon">{locked ? '🔒' : '⠿'}</span>
+          <span className="agenda-builder__card-title">{session.title}</span>
+        </div>
+        {renderCardLinks(sessionId)}
       </div>
     );
   };
@@ -251,9 +327,19 @@ export function AgendaBuilder() {
             morning session. Kickoff opens Monday and the Gemba Walk closes Friday—both fixed.
           </p>
         </div>
-        <button type="button" className="agenda-builder__reset" onClick={handleReset}>
-          Reset
-        </button>
+        <div className="agenda-builder__actions">
+          <button
+            type="button"
+            className="agenda-builder__export"
+            onClick={handleExport}
+            disabled={exporting}
+          >
+            {exporting ? 'Exporting…' : '⬇ Export & Save'}
+          </button>
+          <button type="button" className="agenda-builder__reset" onClick={handleReset}>
+            Reset
+          </button>
+        </div>
       </div>
 
       <div className="agenda-builder__layout">

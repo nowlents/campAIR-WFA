@@ -25,3 +25,14 @@ dist-ssr
 
 # Large video files served locally
 public/videos/
+
+# Local build/deploy artifacts (should live in dist/, not source root)
+.vite/
+/assets/
+/videos/
+/images/
+/404.html
+/.nojekyll
+/favicon.svg
+/icons.svg
+/staticwebapp.config.json

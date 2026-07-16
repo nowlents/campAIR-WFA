@@ -2032,6 +2032,36 @@ a:hover {
   border-color: var(--color-text-light);
 }
 
+.agenda-builder__actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.agenda-builder__export {
+  background: var(--color-primary);
+  color: #fff;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.agenda-builder__export:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-card);
+}
+
+.agenda-builder__export:disabled {
+  opacity: 0.65;
+  cursor: default;
+  box-shadow: none;
+}
+
 .agenda-builder__layout {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -2157,8 +2187,8 @@ a:hover {
 
 .agenda-builder__card {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 6px;
   width: 100%;
   padding: 10px 12px;
   background: var(--color-surface);
@@ -2188,6 +2218,12 @@ a:hover {
   background: var(--color-surface-alt);
 }
 
+.agenda-builder__card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .agenda-builder__card-icon {
   font-size: 13px;
   color: var(--color-text-light);
@@ -2199,6 +2235,32 @@ a:hover {
   font-weight: 500;
   color: var(--color-text);
   line-height: 1.3;
+}
+
+.agenda-builder__card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-left: 21px;
+}
+
+.agenda-builder__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.agenda-builder__card-link:hover {
+  background: #cfe4fa;
 }
 
 /* Lunch divider */
