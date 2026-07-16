@@ -1,5 +1,6 @@
 import { engSessions } from '../data/engAgenda';
 import { SessionItem } from '../components/SessionItem';
+import { AgendaBuilder } from '../components/AgendaBuilder';
 
 export function Engineers() {
   return (
@@ -26,6 +27,8 @@ export function Engineers() {
           ))}
         </div>
       </section>
+
+      <AgendaBuilder />
     </div>
   );
 }
