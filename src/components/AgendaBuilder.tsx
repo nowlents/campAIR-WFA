@@ -273,12 +273,12 @@ export function AgendaBuilder() {
     );
   };
 
-  const renderMarker = (icon: string, title: string, sub: string) => (
-    <div className="agenda-builder__marker">
+  const renderMarker = (icon: string, title: string, sub: string, compact = false) => (
+    <div className={'agenda-builder__marker' + (compact ? ' agenda-builder__marker--compact' : '')}>
       <span className="agenda-builder__marker-icon">{icon}</span>
       <span className="agenda-builder__marker-text">
         <span className="agenda-builder__marker-title">{title}</span>
-        <span className="agenda-builder__marker-sub">{sub}</span>
+        {!compact && <span className="agenda-builder__marker-sub">{sub}</span>}
       </span>
     </div>
   );
@@ -394,7 +394,7 @@ export function AgendaBuilder() {
               </div>
 
               <div className="agenda-builder__marker-slot">
-                {renderMarker('☕', '15-Minute Break', 'Between sessions')}
+                {renderMarker('☕', '15-Minute Break', 'Between sessions', true)}
               </div>
 
               <div className="agenda-builder__period">

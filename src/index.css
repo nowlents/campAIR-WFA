@@ -2344,6 +2344,18 @@ a:hover {
   color: #7A6BA0;
 }
 
+.agenda-builder__marker--compact {
+  padding: 3px 10px;
+}
+
+.agenda-builder__marker--compact .agenda-builder__marker-icon {
+  font-size: 12px;
+}
+
+.agenda-builder__marker--compact .agenda-builder__marker-title {
+  font-size: 11px;
+}
+
 /* PM / Practice Labs */
 .agenda-builder__pm {
   display: flex;
