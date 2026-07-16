@@ -273,6 +273,16 @@ export function AgendaBuilder() {
     );
   };
 
+  const renderMarker = (icon: string, title: string, sub: string) => (
+    <div className="agenda-builder__marker">
+      <span className="agenda-builder__marker-icon">{icon}</span>
+      <span className="agenda-builder__marker-text">
+        <span className="agenda-builder__marker-title">{title}</span>
+        <span className="agenda-builder__marker-sub">{sub}</span>
+      </span>
+    </div>
+  );
+
   const renderLab = (dayKey: string) => {
     const morning = AM_SLOTS.map((p) => sessionAt(`${dayKey}-${p}`)).filter(Boolean) as string[];
     if (morning.length === 0) {
@@ -372,6 +382,12 @@ export function AgendaBuilder() {
             <div key={day.key} className="agenda-builder__day">
               <div className="agenda-builder__day-label">{day.label}</div>
 
+              <div className="agenda-builder__marker-slot">
+                {day.key !== 'mon'
+                  ? renderMarker('🔁', 'Recap of Previous Day', 'Discuss yesterday first')
+                  : null}
+              </div>
+
               {AM_SLOTS.map((p) => {
                 const slotId = `${day.key}-${p}`;
                 return (
@@ -389,6 +405,10 @@ export function AgendaBuilder() {
               <div className="agenda-builder__pm">
                 <span className="agenda-builder__period-label">PM · Practice Labs</span>
                 <div className="agenda-builder__lab-list">{renderLab(day.key)}</div>
+              </div>
+
+              <div className="agenda-builder__marker-slot">
+                {renderMarker('📣', 'Practice Shareout', 'Share lab outputs')}
               </div>
             </div>
           ))}

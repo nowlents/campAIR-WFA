@@ -76,7 +76,7 @@ function buildDoc(data: ExportData): Document {
     })
   );
 
-  for (const day of data.days) {
+  data.days.forEach((day, idx) => {
     body.push(
       new Paragraph({
         heading: HeadingLevel.HEADING_1,
@@ -86,6 +86,19 @@ function buildDoc(data: ExportData): Document {
       })
     );
 
+    // Recap marker (every day except the first)
+    if (idx > 0) {
+      body.push(
+        new Paragraph({
+          spacing: { after: 80 },
+          children: [
+            new TextRun({ text: '🔁 Recap of Previous Day', bold: true, color: '8661C5' }),
+            new TextRun({ text: ' — discuss yesterday before starting', italics: true, color: '7A6BA0' }),
+          ],
+        })
+      );
+    }
+
     if (day.sessions.length === 0) {
       body.push(
         new Paragraph({
@@ -93,53 +106,63 @@ function buildDoc(data: ExportData): Document {
           children: [new TextRun({ text: 'No sessions scheduled', italics: true, color: '999999' })],
         })
       );
-      continue;
-    }
-
-    // Morning
-    body.push(
-      new Paragraph({
-        spacing: { before: 60, after: 60 },
-        children: [new TextRun({ text: 'Morning (AM)', bold: true })],
-      })
-    );
-    for (const s of day.sessions) {
+    } else {
+      // Morning
       body.push(
         new Paragraph({
-          bullet: { level: 0 },
-          spacing: { after: 20 },
-          children: [new TextRun({ text: s.title, bold: true })],
+          spacing: { before: 60, after: 60 },
+          children: [new TextRun({ text: 'Morning (AM)', bold: true })],
         })
       );
-      body.push(sessionLinkParagraph(s));
-    }
-
-    // Lunch
-    body.push(
-      new Paragraph({
-        alignment: AlignmentType.CENTER,
-        spacing: { before: 40, after: 40 },
-        children: [new TextRun({ text: '—  🍽  Lunch  —', color: '888888' })],
-      })
-    );
-
-    // Afternoon — Practice Labs
-    body.push(
-      new Paragraph({
-        spacing: { before: 60, after: 60 },
-        children: [new TextRun({ text: 'Afternoon (PM) — Practice Labs', bold: true })],
-      })
-    );
-    for (const s of day.sessions) {
-      const children: (TextRun | ExternalHyperlink)[] = [new TextRun({ text: `${s.title} — `, bold: true })];
-      if (s.labs) {
-        children.push(link('Practice Labs', s.labs));
-      } else {
-        children.push(new TextRun({ text: 'No lab packet', italics: true, color: '999999' }));
+      for (const s of day.sessions) {
+        body.push(
+          new Paragraph({
+            bullet: { level: 0 },
+            spacing: { after: 20 },
+            children: [new TextRun({ text: s.title, bold: true })],
+          })
+        );
+        body.push(sessionLinkParagraph(s));
       }
-      body.push(new Paragraph({ bullet: { level: 0 }, spacing: { after: 40 }, children }));
+
+      // Lunch
+      body.push(
+        new Paragraph({
+          alignment: AlignmentType.CENTER,
+          spacing: { before: 40, after: 40 },
+          children: [new TextRun({ text: '—  🍽  Lunch  —', color: '888888' })],
+        })
+      );
+
+      // Afternoon — Practice Labs
+      body.push(
+        new Paragraph({
+          spacing: { before: 60, after: 60 },
+          children: [new TextRun({ text: 'Afternoon (PM) — Practice Labs', bold: true })],
+        })
+      );
+      for (const s of day.sessions) {
+        const children: (TextRun | ExternalHyperlink)[] = [new TextRun({ text: `${s.title} — `, bold: true })];
+        if (s.labs) {
+          children.push(link('Practice Labs', s.labs));
+        } else {
+          children.push(new TextRun({ text: 'No lab packet', italics: true, color: '999999' }));
+        }
+        body.push(new Paragraph({ bullet: { level: 0 }, spacing: { after: 40 }, children }));
+      }
     }
-  }
+
+    // Practice Shareout marker (end of every day)
+    body.push(
+      new Paragraph({
+        spacing: { before: 80, after: 80 },
+        children: [
+          new TextRun({ text: '📣 Practice Shareout', bold: true, color: '8661C5' }),
+          new TextRun({ text: ' — share the outputs of your practice labs', italics: true, color: '7A6BA0' }),
+        ],
+      })
+    );
+  });
 
   if (data.unscheduled.length > 0) {
     body.push(
