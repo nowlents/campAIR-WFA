@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { type Week } from '../data/nonEngAgenda';
 import { SessionItem } from './SessionItem';
 
@@ -6,9 +6,10 @@ interface WeekBlockProps {
   week: Week;
   defaultOpen?: boolean;
   showDayThemes?: boolean;
+  children?: ReactNode;
 }
 
-export function WeekBlock({ week, defaultOpen = false, showDayThemes = true }: WeekBlockProps) {
+export function WeekBlock({ week, defaultOpen = false, showDayThemes = true, children }: WeekBlockProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const hasSessions = week.sessions && week.sessions.length > 0;
 
@@ -58,7 +59,9 @@ export function WeekBlock({ week, defaultOpen = false, showDayThemes = true }: W
       {isOpen && (
         <div className="week-block__content">
           <p className="week-block__description">{week.description}</p>
-          {hasSessions && dayNumbers.length > 1 ? (
+          {children ? (
+            children
+          ) : hasSessions && dayNumbers.length > 1 ? (
             <div className="week-block__days">
               {dayNumbers.map((dayNum) => (
                 <div key={dayNum} className="day-group">
