@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const phases = [
   {
     num: '01',
@@ -82,24 +80,6 @@ const roles = [
       'Set up security groups',
       'Manage general program logistics',
     ],
-  },
-];
-
-const weeks = [
-  {
-    label: 'Week 1',
-    title: 'Immersive Learning',
-    desc: 'Introduce Camp AIR, build core skills, explore practical use cases, and begin project work.',
-  },
-  {
-    label: 'Week 2',
-    title: 'Hackathon & Application',
-    desc: 'Apply learning to real business challenges through team-based experimentation and iteration.',
-  },
-  {
-    label: 'Week 3',
-    title: 'Demo & Showcase',
-    desc: 'Present outcomes, share lessons, and demonstrate AI-enabled gains to sponsors and leadership.',
   },
 ];
 
@@ -235,30 +215,6 @@ export function RunYourOwn() {
             </article>
           ))}
         </div>
-      </section>
-
-      {/* 3-Week Framework */}
-      <section className="ryo-section">
-        <h3 className="ryo-section__title">The 3-Week Framework</h3>
-        <p className="ryo-section__intro">
-          One recommended agenda keeps the experience consistent and easy to run. Alongside the
-          three weeks, plan for manager preparation sessions and two Gemba Walk meetings.
-        </p>
-        <div className="ryo-weeks">
-          {weeks.map((week) => (
-            <article className="ryo-week" key={week.label}>
-              <span className="ryo-week__label">{week.label}</span>
-              <h4 className="ryo-week__title">{week.title}</h4>
-              <p className="ryo-week__desc">{week.desc}</p>
-            </article>
-          ))}
-        </div>
-        <p className="ryo-week__note">
-          Want the full week-by-week detail? See the{' '}
-          <Link to="/" className="ryo-link">Journey at a Glance</Link> on the Overview, or explore the{' '}
-          <Link to="/engineers" className="ryo-link">Engineering</Link> and{' '}
-          <Link to="/non-engineers" className="ryo-link">Non-Engineering</Link> tracks.
-        </p>
       </section>
 
       {/* Measure & Improve */}
