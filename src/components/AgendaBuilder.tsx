@@ -386,14 +386,14 @@ export function AgendaBuilder() {
             <div key={day.key} className="agenda-builder__day">
               <div className="agenda-builder__day-label">{day.label}</div>
 
-              <div className="agenda-builder__marker-slot">
+              <div className="agenda-builder__marker-slot agenda-builder__marker-slot--am">
+                <span className="agenda-builder__period-label">AM</span>
                 {day.key !== 'mon'
                   ? renderMarker('🔁', 'Recap of Previous Day', 'Discuss yesterday first')
                   : null}
               </div>
 
               <div className="agenda-builder__period">
-                <span className="agenda-builder__period-label">AM</span>
                 {renderSlot(`${day.key}-am1`)}
               </div>
 

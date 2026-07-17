@@ -2356,6 +2356,12 @@ a:hover {
   display: flex;
 }
 
+.agenda-builder__marker-slot--am {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
 .agenda-builder__marker {
   display: flex;
   align-items: center;
