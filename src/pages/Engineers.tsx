@@ -4,6 +4,7 @@ import { engSessions } from '../data/engAgenda';
 import { WeekBlock } from '../components/WeekBlock';
 import { SessionItem } from '../components/SessionItem';
 import { AgendaBuilder } from '../components/AgendaBuilder';
+import { SubmissionCTA } from '../components/SubmissionCTA';
 
 const weekById = (id: string): Week | undefined => nonEngAgenda.find((w) => w.id === id);
 
@@ -91,6 +92,8 @@ export function Engineers() {
           </div>
         </div>
       </section>
+
+      <SubmissionCTA />
     </div>
   );
 }

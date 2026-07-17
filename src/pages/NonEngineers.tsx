@@ -1,5 +1,6 @@
 import { nonEngAgenda } from '../data/nonEngAgenda';
 import { WeekBlock } from '../components/WeekBlock';
+import { SubmissionCTA } from '../components/SubmissionCTA';
 
 interface NonEngExample {
   id: string;
@@ -159,6 +160,8 @@ export function NonEngineers() {
           ))}
         </div>
       </section>
+
+      <SubmissionCTA />
     </div>
   );
 }
