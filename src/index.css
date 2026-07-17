@@ -1518,6 +1518,8 @@ a:hover {
   margin: 0 0 32px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
   gap: 10px 24px;
 }
 
@@ -1556,6 +1558,8 @@ a:hover {
 @media (max-width: 640px) {
   .formula__principles {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
   }
 }
 
