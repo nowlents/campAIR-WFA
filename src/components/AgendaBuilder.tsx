@@ -348,7 +348,7 @@ export function AgendaBuilder() {
             onClick={handleExport}
             disabled={exporting}
           >
-            {exporting ? 'Exporting…' : '⬇ Export and Download'}
+            {exporting ? 'Exporting…' : '⬇ Export & Download'}
           </button>
           <button type="button" className="agenda-builder__reset" onClick={handleReset}>
             Reset
