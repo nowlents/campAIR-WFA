@@ -17,6 +17,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <NavLink to="/" end className="sidebar__link">
             🏠 Overview
           </NavLink>
+          <NavLink to="/run-your-own" className="sidebar__link">
+            🚀 Run Your Own
+          </NavLink>
           <NavLink to="/engineers" className="sidebar__link">
             ⚙️ Camp AIR for Engineers
           </NavLink>
