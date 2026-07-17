@@ -140,13 +140,6 @@ export function RunYourOwn() {
     <div className="ryo-page">
       <section className="page-intro">
         <h2 className="page-intro__title">Run Your Own Camp AIR</h2>
-        <div className="page-intro__body">
-          <p>
-            Everything a leader needs to plan, deliver, measure, and scale their own Camp AIR—an
-            organizational AI adoption program that builds practical skills through hands-on work,
-            experimentation, and demonstrated outcomes. Think of this as your "Camp AIR in a Box."
-          </p>
-        </div>
 
         <div className="ryo-audience">
           <div className="ryo-audience__col">
