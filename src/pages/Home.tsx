@@ -70,89 +70,197 @@ export function Home() {
       <section className="formula">
         <div className="formula__head">
           <h3 className="formula__title">The Camp AIR Formula</h3>
-          <p className="formula__intro">
-            Every Camp AIR experience is built on a simple equation: five core ingredients,
-            delivered through seven guiding principles, to drive lasting AI-first cultural change.
+          <p className="formula__equation-line">
+            5 Ingredients <span className="formula__op-inline">+</span> 7 Principles{' '}
+            <span className="formula__op-inline">=</span> Behavioral Shifts (Culture)
           </p>
         </div>
 
-        <h4 className="formula__subhead">5 Core Ingredients</h4>
-        <div className="formula__ingredients">
-          <div className="ingredient-card">
-            <span className="ingredient-card__icon">🧠</span>
-            <h5 className="ingredient-card__name">Mindset</h5>
-            <p className="ingredient-card__desc">
-              Build the habit of experimentation and defaulting to AI. "AI is not cheating."
-            </p>
+        <div className="formula__columns">
+          <div className="formula-col">
+            <h4 className="formula-col__head">5 Ingredients — What Teams Practice</h4>
+            <ul className="formula-col__list">
+              <li className="formula-item">
+                <span className="formula-item__icon">🧠</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Mindset</span>
+                  <span className="formula-item__desc">
+                    Continuous experimentation. AI is not cheating — it's an advantage.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">🔍</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Assess Team Workflow</span>
+                  <span className="formula-item__desc">
+                    Gemba walks + workflow mapping. You can't improve work you can't see.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">🛠️</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">AI Tool Fluency</span>
+                  <span className="formula-item__desc">
+                    Hands-on real work, not sandboxed demos. Learn how to learn.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">🚀</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Expanding Skills</span>
+                  <span className="formula-item__desc">
+                    Cross-skilling and role expansion. PMs build. Designers prototype. Engineers
+                    design systems.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">🎉</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Celebrate &amp; Share</span>
+                  <span className="formula-item__desc">
+                    Demo days, retros, playbook contributions. Codify what you learn for others.
+                  </span>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div className="ingredient-card">
-            <span className="ingredient-card__icon">🔍</span>
-            <h5 className="ingredient-card__name">Workflow</h5>
-            <p className="ingredient-card__desc">
-              Use Gemba Walks to surface friction. "You can't improve the work you can't see."
-            </p>
-          </div>
-          <div className="ingredient-card">
-            <span className="ingredient-card__icon">🛠️</span>
-            <h5 className="ingredient-card__name">Tools</h5>
-            <p className="ingredient-card__desc">
-              Grow fluency across Copilot, GitHub Copilot, Copilot Studio, and more.
-            </p>
-          </div>
-          <div className="ingredient-card">
-            <span className="ingredient-card__icon">🚀</span>
-            <h5 className="ingredient-card__name">Expanded Skills</h5>
-            <p className="ingredient-card__desc">
-              Cross-skill so PMs, engineers, and designers can work beyond their discipline.
-            </p>
-          </div>
-          <div className="ingredient-card">
-            <span className="ingredient-card__icon">🎉</span>
-            <h5 className="ingredient-card__name">Celebrate &amp; Share</h5>
-            <p className="ingredient-card__desc">
-              Document learnings and celebrate AI-first wins to fuel continuous learning.
-            </p>
-          </div>
-        </div>
 
-        <h4 className="formula__subhead">7 Guiding Principles</h4>
-        <ol className="formula__principles">
-          <li className="principle-row">
-            <span className="principle-row__num">1</span>
-            <span className="principle-row__text">Immersion &amp; protected time</span>
-          </li>
-          <li className="principle-row">
-            <span className="principle-row__num">2</span>
-            <span className="principle-row__text">Learn by doing and from others</span>
-          </li>
-          <li className="principle-row">
-            <span className="principle-row__num">3</span>
-            <span className="principle-row__text">Change comes from within</span>
-          </li>
-          <li className="principle-row">
-            <span className="principle-row__num">4</span>
-            <span className="principle-row__text">Whole, multi-discipline teams together</span>
-          </li>
-          <li className="principle-row">
-            <span className="principle-row__num">5</span>
-            <span className="principle-row__text">Coaches &amp; visible leadership throughout</span>
-          </li>
-          <li className="principle-row">
-            <span className="principle-row__num">6</span>
-            <span className="principle-row__text">One size does not fit all</span>
-          </li>
-          <li className="principle-row">
-            <span className="principle-row__num">7</span>
-            <span className="principle-row__text">Redesigning work using AI</span>
-          </li>
-        </ol>
+          <div className="formula__op-col" aria-hidden="true">+</div>
 
-        <div className="formula__equation">
-          <span className="formula__term">5 Ingredients</span>
-          <span className="formula__op">+</span>
-          <span className="formula__term">7 Principles</span>
-          <span className="formula__op">=</span>
-          <span className="formula__term formula__term--result">AI-First Cultural Change</span>
+          <div className="formula-col">
+            <h4 className="formula-col__head">7 Principles — How It's Delivered</h4>
+            <ul className="formula-col__list">
+              <li className="formula-item formula-item--num">
+                <span className="formula-item__num">1</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Protect Immersion Time</span>
+                  <span className="formula-item__desc">
+                    3 weeks dedicated, away from BAU. You can't transform in a lunch-and-learn.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item formula-item--num">
+                <span className="formula-item__num">2</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Learn by Doing</span>
+                  <span className="formula-item__desc">
+                    Hands-on building with real work, not passive consumption.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item formula-item--num">
+                <span className="formula-item__num">3</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Change Comes from Within</span>
+                  <span className="formula-item__desc">
+                    Coaches + pioneers from the team. Zero FTEs, 100% volunteer-run.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item formula-item--num">
+                <span className="formula-item__num">4</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Whole Teams Together</span>
+                  <span className="formula-item__desc">
+                    PMs, SWEs, designers, data scientists transform as one — not in silos.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item formula-item--num">
+                <span className="formula-item__num">5</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Leadership Visible Throughout</span>
+                  <span className="formula-item__desc">
+                    Leaders don't sponsor and disappear. Daily stand-ups, office hours, coaching.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item formula-item--num">
+                <span className="formula-item__num">6</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">One Size Does Not Fit All</span>
+                  <span className="formula-item__desc">
+                    Golden Arches stay, local menu adapts. Core brand + local customization.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item formula-item--num">
+                <span className="formula-item__num">7</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Redesigning Work Using AI</span>
+                  <span className="formula-item__desc">
+                    The goal isn't tool adoption — it's workflow transformation.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div className="formula__op-col" aria-hidden="true">=</div>
+
+          <div className="formula-col formula-col--result">
+            <h4 className="formula-col__head">Behavioral Shifts (Culture)</h4>
+            <ul className="formula-col__list">
+              <li className="formula-item">
+                <span className="formula-item__icon">🎯</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">AI-First Default</span>
+                  <span className="formula-item__desc">
+                    Before starting any task, the team asks "how can AI help?"
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">🔀</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Blurred Role Boundaries</span>
+                  <span className="formula-item__desc">
+                    PMs prototype. Engineers design systems. Designers write prompts.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">🗺️</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Workflows Mapped &amp; Questioned</span>
+                  <span className="formula-item__desc">
+                    Processes treated as things to redesign, not follow.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">🏆</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Coaches &amp; Pioneers from Within</span>
+                  <span className="formula-item__desc">
+                    Zero FTEs. Volunteer force multipliers driving change.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">📣</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Shared Learning Culture</span>
+                  <span className="formula-item__desc">
+                    Demos, retros, office hours. Learning is a team activity.
+                  </span>
+                </div>
+              </li>
+              <li className="formula-item">
+                <span className="formula-item__icon">⚖️</span>
+                <div className="formula-item__body">
+                  <span className="formula-item__name">Human vs. AI Judgment</span>
+                  <span className="formula-item__desc">
+                    Teams decide what stays human-led vs. AI-assisted vs. fully delegated.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
