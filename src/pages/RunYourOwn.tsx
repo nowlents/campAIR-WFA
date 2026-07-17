@@ -115,6 +115,60 @@ const resourceGroups = [
   },
 ];
 
+const faqs: { q: string; a: string; list?: string[] }[] = [
+  {
+    q: 'What is Camp AIR in a Box?',
+    a: 'Camp AIR in a Box is a self-service kit that enables managers, teams, and organizations to run Camp AIR on their own schedule using curated content, recordings, practice materials, agendas, and facilitation guidance.',
+  },
+  {
+    q: 'Who is Camp AIR in a Box designed for?',
+    a: 'The kit is designed for:',
+    list: [
+      'Managers running Camp AIR for their team',
+      'Organizational leads coordinating larger cohorts',
+      'Teams looking to scale AI adoption using a repeatable learning model',
+    ],
+  },
+  {
+    q: 'How much experience with AI is required?',
+    a: 'None. Camp AIR is intended for mixed-experience groups. Teams are encouraged to learn together, share knowledge, and support one another during activities and practice sessions.',
+  },
+  {
+    q: 'Can I customize the agenda?',
+    a: "Yes. The agenda can be adapted based on your team's goals, schedule, and learning priorities.",
+  },
+  {
+    q: 'How do I get help if I have questions?',
+    a: 'Support is available through:',
+    list: [
+      'Tool-specific support channels',
+      'Office Hours',
+      'Camp AIR documentation and FAQs',
+      'SME guidance where available',
+    ],
+  },
+  {
+    q: 'How often is content updated?',
+    a: 'Camp AIR content is intended to be refreshed regularly to reflect changes in AI tools and experiences.',
+  },
+  {
+    q: 'Can my organization run multiple cohorts?',
+    a: 'Yes. Organizations can run Camp AIR on their own timeline and scale participation based on their needs.',
+  },
+  {
+    q: 'What is the recommended cohort size?',
+    a: 'Smaller pilot cohorts can help organizations learn the process before scaling to larger groups, though the model is designed to support a range of cohort sizes.',
+  },
+  {
+    q: 'What happens after Camp AIR?',
+    a: 'Teams are encouraged to apply what they learned to real workflows, identify opportunities for improvement, and continue practicing with AI tools as part of their regular work.',
+  },
+  {
+    q: 'What support does the Camp AIR team provide?',
+    a: 'The Camp AIR team provides learning assets, guidance, documentation, FAQs, office hours, and support resources. Teams remain responsible for running their own cohorts and facilitating local participation.',
+  },
+];
+
 export function RunYourOwn() {
   return (
     <div className="ryo-page">
@@ -284,19 +338,26 @@ export function RunYourOwn() {
 
         <div className="ryo-faq">
           <h4 className="ryo-faq__title">Frequently asked questions</h4>
-          <p className="ryo-faq__text">
-            A curated FAQ will cover the most common questions before, during, and after a camp:
-          </p>
-          <div className="ryo-faq__tags">
-            {['Planning', 'Logistics', 'Roles', 'Delivery', 'Measurement', 'Scaling', 'Technology'].map(
-              (tag) => (
-                <span className="ryo-faq__tag" key={tag}>
-                  {tag}
-                </span>
-              ),
-            )}
+          <div className="ryo-faq__list">
+            {faqs.map((faq) => (
+              <details className="ryo-faq-item" key={faq.q}>
+                <summary className="ryo-faq-item__q">
+                  <span>{faq.q}</span>
+                  <span className="ryo-faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+                <div className="ryo-faq-item__a">
+                  <p>{faq.a}</p>
+                  {faq.list && (
+                    <ul>
+                      {faq.list.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </details>
+            ))}
           </div>
-          <span className="ryo-link ryo-link--muted">Full FAQ — coming soon</span>
         </div>
 
         <div className="ryo-resources">
