@@ -257,6 +257,59 @@ export function Home() {
         </div>
       </section>
 
+      <section className="journey">
+        <div className="journey__head">
+          <h3 className="journey__title">The Journey at a Glance</h3>
+          <p className="journey__intro">
+            Camp AIR is a focused three-week experience. It opens with a manager alignment
+            touchpoint to set expectations and clear the runway, then moves teams from mindset,
+            to building, to showcasing what they've made.
+          </p>
+        </div>
+
+        <div className="journey__timeline">
+          <div className="journey-kickoff">
+            <span className="journey-kickoff__badge">Before we begin</span>
+            <div className="journey-kickoff__body">
+              <h4 className="journey-kickoff__title">Manager Alignment</h4>
+              <p className="journey-kickoff__desc">
+                A short touchpoint with leaders to align on goals, protect the team's time, and
+                set the team up to get the most out of the weeks ahead.
+              </p>
+            </div>
+          </div>
+
+          <div className="journey__weeks">
+            <article className="journey-week">
+              <span className="journey-week__num">Week 1</span>
+              <h4 className="journey-week__title">Immersion</h4>
+              <p className="journey-week__desc">
+                Teams start with the mindset and workflow shifts at the heart of working
+                AI-first, spend the week getting hands-on with the latest AI tools, and close by
+                learning how to break down their own work and match repeatable tasks to the right
+                tools.
+              </p>
+            </article>
+            <article className="journey-week">
+              <span className="journey-week__num">Week 2</span>
+              <h4 className="journey-week__title">Hack Week</h4>
+              <p className="journey-week__desc">
+                Teams put it into practice—building real solutions and weaving what they learned
+                directly into how they work.
+              </p>
+            </article>
+            <article className="journey-week">
+              <span className="journey-week__num">Week 3</span>
+              <h4 className="journey-week__title">Demo Showcase</h4>
+              <p className="journey-week__desc">
+                Each team shares what they built and shows how Immersion Week learnings reshaped
+                their day-to-day workflow.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

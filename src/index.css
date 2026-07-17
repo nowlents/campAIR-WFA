@@ -1575,6 +1575,127 @@ a:hover {
   }
 }
 
+/* === Journey at a Glance === */
+.journey {
+  margin-top: 8px;
+}
+
+.journey__head {
+  margin-bottom: 24px;
+}
+
+.journey__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.journey__intro {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0;
+}
+
+.journey__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.journey-kickoff {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 22px;
+  border: 1px dashed var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: rgba(0, 120, 212, 0.04);
+}
+
+.journey-kickoff__badge {
+  flex-shrink: 0;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.journey-kickoff__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 4px;
+}
+
+.journey-kickoff__desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.journey__weeks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.journey-week {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.journey-week__num {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
+}
+
+.journey-week__title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 10px;
+}
+
+.journey-week__desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .journey-kickoff {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .journey__weeks {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* === Submission CTA === */
 .submission-cta {
   border: 1px solid var(--color-primary);
