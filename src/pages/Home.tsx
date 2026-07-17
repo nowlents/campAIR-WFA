@@ -24,16 +24,6 @@ export function Home() {
             <li><strong>Build real solutions</strong> — teams tackle their own workflow challenges, measure impact, and iterate toward meaningful outcomes</li>
             <li><strong>Work as a cohort</strong> — participants collaborate, challenge, and learn alongside peers, creating shared momentum and accountability</li>
           </ul>
-
-          <p>
-            Camp AIR also introduces a new operating model for work. AI-first is not about using AI more—it is about redesigning how work gets done. Participants shift from executing tasks to orchestrating intelligent systems, from planning extensively to experimenting rapidly, and from working in silos to operating across hybrid human–agent teams.
-          </p>
-          <p>
-            This shift is urgent. AI is evolving faster than teams can naturally build new habits, creating a widening gap between organizations that adapt and those that do not. Camp AIR exists to close that gap—equipping teams with the mindset, skills, and muscle memory required to operate effectively in this new reality.
-          </p>
-          <p>
-            Ultimately, Camp AIR is designed to <strong>make AI a default instinct.</strong> By the end of the experience, participants are not just capable of using AI—they are thinking with it, building with it, and continuously evolving how their work gets done.
-          </p>
         </div>
       </section>
 
