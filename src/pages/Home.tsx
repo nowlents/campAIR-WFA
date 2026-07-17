@@ -67,6 +67,74 @@ export function Home() {
         </div>
       </section>
 
+      <section className="formula">
+        <div className="formula__head">
+          <h3 className="formula__title">The Camp AIR Formula</h3>
+          <p className="formula__intro">
+            Every Camp AIR experience is built on a simple equation: five core ingredients,
+            delivered through seven guiding principles, to drive lasting AI-first cultural change.
+          </p>
+        </div>
+
+        <h4 className="formula__subhead">5 Core Ingredients</h4>
+        <div className="formula__ingredients">
+          <div className="ingredient-card">
+            <span className="ingredient-card__icon">🧠</span>
+            <h5 className="ingredient-card__name">Mindset</h5>
+            <p className="ingredient-card__desc">
+              Build the habit of experimentation and defaulting to AI. "AI is not cheating."
+            </p>
+          </div>
+          <div className="ingredient-card">
+            <span className="ingredient-card__icon">🔍</span>
+            <h5 className="ingredient-card__name">Workflow</h5>
+            <p className="ingredient-card__desc">
+              Use Gemba Walks to surface friction. "You can't improve the work you can't see."
+            </p>
+          </div>
+          <div className="ingredient-card">
+            <span className="ingredient-card__icon">🛠️</span>
+            <h5 className="ingredient-card__name">Tools</h5>
+            <p className="ingredient-card__desc">
+              Grow fluency across Copilot, GitHub Copilot, Copilot Studio, and more.
+            </p>
+          </div>
+          <div className="ingredient-card">
+            <span className="ingredient-card__icon">🚀</span>
+            <h5 className="ingredient-card__name">Expanded Skills</h5>
+            <p className="ingredient-card__desc">
+              Cross-skill so PMs, engineers, and designers can work beyond their discipline.
+            </p>
+          </div>
+          <div className="ingredient-card">
+            <span className="ingredient-card__icon">🎉</span>
+            <h5 className="ingredient-card__name">Celebrate &amp; Share</h5>
+            <p className="ingredient-card__desc">
+              Document learnings and celebrate AI-first wins to fuel continuous learning.
+            </p>
+          </div>
+        </div>
+
+        <h4 className="formula__subhead">7 Guiding Principles</h4>
+        <div className="formula__principles">
+          <span className="principle-chip">Immersion &amp; protected time</span>
+          <span className="principle-chip">Learn by doing and from others</span>
+          <span className="principle-chip">Change comes from within</span>
+          <span className="principle-chip">Whole, multi-discipline teams together</span>
+          <span className="principle-chip">Coaches &amp; visible leadership throughout</span>
+          <span className="principle-chip">One size does not fit all</span>
+          <span className="principle-chip">Redesigning work using AI</span>
+        </div>
+
+        <div className="formula__equation">
+          <span className="formula__term">5 Ingredients</span>
+          <span className="formula__op">+</span>
+          <span className="formula__term">7 Principles</span>
+          <span className="formula__op">=</span>
+          <span className="formula__term formula__term--result">AI-First Cultural Change</span>
+        </div>
+      </section>
+
       <section className="repo-section">
         <div className="submission-cta">
           <div className="submission-cta__content">
