@@ -217,46 +217,6 @@ export function Home() {
         </div>
       </section>
 
-      <section className="tracks">
-        <div className="tracks__head">
-          <h3 className="tracks__title">Two Tracks, One Experience</h3>
-          <p className="tracks__intro">
-            Camp AIR meets every audience where they are. Both tracks share the same three-week
-            arc and outcomes—but they're delivered in the way that fits each audience best.
-          </p>
-        </div>
-        <div className="tracks__grid">
-          <article className="track-card track-card--eng">
-            <span className="track-card__tag">Engineering Track</span>
-            <h4 className="track-card__title">Async &amp; self-directed</h4>
-            <p className="track-card__desc">
-              Delivered asynchronously through recordings straight from subject matter experts. Use
-              the Agenda Builder to tailor and sequence sessions into a weeklong plan that fits your
-              team's needs and pace.
-            </p>
-            <ul className="track-card__points">
-              <li>SME-led session recordings</li>
-              <li>Flexible, self-paced delivery</li>
-              <li>Build-your-own agenda with matched practice labs</li>
-            </ul>
-          </article>
-          <article className="track-card track-card--noneng">
-            <span className="track-card__tag">Non-Engineering Track</span>
-            <h4 className="track-card__title">Live, standard curriculum</h4>
-            <p className="track-card__desc">
-              A set, standardized curriculum designed to be delivered live or virtually. It gives
-              managers, leaders, and coaches everything they need to facilitate the experience
-              effectively and consistently.
-            </p>
-            <ul className="track-card__points">
-              <li>Fixed, repeatable curriculum</li>
-              <li>Live or virtual facilitation</li>
-              <li>Full facilitator lesson plans and materials</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
       <section className="journey">
         <div className="journey__head">
           <h3 className="journey__title">The Journey at a Glance</h3>
@@ -307,6 +267,46 @@ export function Home() {
               </p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section className="tracks">
+        <div className="tracks__head">
+          <h3 className="tracks__title">Two Tracks, One Experience</h3>
+          <p className="tracks__intro">
+            Camp AIR meets every audience where they are. Both tracks share the same three-week
+            arc and outcomes—but they're delivered in the way that fits each audience best.
+          </p>
+        </div>
+        <div className="tracks__grid">
+          <article className="track-card track-card--eng">
+            <span className="track-card__tag">Engineering Track</span>
+            <h4 className="track-card__title">Async &amp; self-directed</h4>
+            <p className="track-card__desc">
+              Delivered asynchronously through recordings straight from subject matter experts. Use
+              the Agenda Builder to tailor and sequence sessions into a weeklong plan that fits your
+              team's needs and pace.
+            </p>
+            <ul className="track-card__points">
+              <li>SME-led session recordings</li>
+              <li>Flexible, self-paced delivery</li>
+              <li>Build-your-own agenda with matched practice labs</li>
+            </ul>
+          </article>
+          <article className="track-card track-card--noneng">
+            <span className="track-card__tag">Non-Engineering Track</span>
+            <h4 className="track-card__title">Live, standard curriculum</h4>
+            <p className="track-card__desc">
+              A set, standardized curriculum designed to be delivered live or virtually. It gives
+              managers, leaders, and coaches everything they need to facilitate the experience
+              effectively and consistently.
+            </p>
+            <ul className="track-card__points">
+              <li>Fixed, repeatable curriculum</li>
+              <li>Live or virtual facilitation</li>
+              <li>Full facilitator lesson plans and materials</li>
+            </ul>
+          </article>
         </div>
       </section>
 
