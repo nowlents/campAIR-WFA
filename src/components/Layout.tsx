@@ -17,11 +17,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <NavLink to="/" end className="sidebar__link">
             🏠 Overview
           </NavLink>
-          <NavLink to="/non-engineers" className="sidebar__link">
-            💡 Camp AIR for Non-Engineers
-          </NavLink>
           <NavLink to="/engineers" className="sidebar__link">
             ⚙️ Camp AIR for Engineers
+          </NavLink>
+          <NavLink to="/non-engineers" className="sidebar__link">
+            💡 Camp AIR for Non-Engineers
           </NavLink>
         </nav>
         <main className="main-content">{children}</main>
