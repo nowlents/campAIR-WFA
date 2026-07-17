@@ -120,26 +120,28 @@ export function RunYourOwn() {
     <div className="ryo-page">
       <section className="page-intro">
         <h2 className="page-intro__title">Run Your Own Camp AIR</h2>
+      </section>
 
-        <div className="ryo-audience">
-          <div className="ryo-audience__col">
-            <h4 className="ryo-audience__label">Who it's for</h4>
-            <ul className="ryo-audience__list">
-              <li>VP / CVP organizations</li>
-              <li>Chiefs of Staff &amp; Business Managers</li>
-              <li>Learning &amp; enablement delegates</li>
-              <li>Managers running a camp for a single team</li>
-            </ul>
-          </div>
-          <div className="ryo-audience__col">
-            <h4 className="ryo-audience__label">What participants gain</h4>
-            <ul className="ryo-audience__list">
-              <li>Greater AI fluency through real application</li>
-              <li>AI applied to actual work, not theory</li>
-              <li>Business value shown through projects &amp; demos</li>
-              <li>Momentum for broader AI adoption</li>
-            </ul>
-          </div>
+      {/* Operating Model */}
+      <section className="ryo-section">
+        <h3 className="ryo-section__title">The Camp AIR Operating Model</h3>
+        <p className="ryo-section__intro">
+          Plan → Deliver → Showcase → Measure &amp; Iterate is the operational backbone for every
+          Camp AIR, regardless of scale.
+        </p>
+        <div className="ryo-phases">
+          {phases.map((phase) => (
+            <article className="ryo-phase" key={phase.num}>
+              <span className="ryo-phase__num">{phase.num}</span>
+              <h4 className="ryo-phase__name">{phase.name}</h4>
+              <p className="ryo-phase__objective">{phase.objective}</p>
+              <ul className="ryo-phase__list">
+                {phase.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -173,29 +175,6 @@ export function RunYourOwn() {
               <li>Set up required collaboration resources</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      {/* Operating Model */}
-      <section className="ryo-section">
-        <h3 className="ryo-section__title">The Camp AIR Operating Model</h3>
-        <p className="ryo-section__intro">
-          Plan → Deliver → Showcase → Measure &amp; Iterate is the operational backbone for every
-          Camp AIR, regardless of scale.
-        </p>
-        <div className="ryo-phases">
-          {phases.map((phase) => (
-            <article className="ryo-phase" key={phase.num}>
-              <span className="ryo-phase__num">{phase.num}</span>
-              <h4 className="ryo-phase__name">{phase.name}</h4>
-              <p className="ryo-phase__objective">{phase.objective}</p>
-              <ul className="ryo-phase__list">
-                {phase.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
         </div>
       </section>
 
