@@ -116,15 +116,36 @@ export function Home() {
         </div>
 
         <h4 className="formula__subhead">7 Guiding Principles</h4>
-        <div className="formula__principles">
-          <span className="principle-chip">Immersion &amp; protected time</span>
-          <span className="principle-chip">Learn by doing and from others</span>
-          <span className="principle-chip">Change comes from within</span>
-          <span className="principle-chip">Whole, multi-discipline teams together</span>
-          <span className="principle-chip">Coaches &amp; visible leadership throughout</span>
-          <span className="principle-chip">One size does not fit all</span>
-          <span className="principle-chip">Redesigning work using AI</span>
-        </div>
+        <ol className="formula__principles">
+          <li className="principle-row">
+            <span className="principle-row__num">1</span>
+            <span className="principle-row__text">Immersion &amp; protected time</span>
+          </li>
+          <li className="principle-row">
+            <span className="principle-row__num">2</span>
+            <span className="principle-row__text">Learn by doing and from others</span>
+          </li>
+          <li className="principle-row">
+            <span className="principle-row__num">3</span>
+            <span className="principle-row__text">Change comes from within</span>
+          </li>
+          <li className="principle-row">
+            <span className="principle-row__num">4</span>
+            <span className="principle-row__text">Whole, multi-discipline teams together</span>
+          </li>
+          <li className="principle-row">
+            <span className="principle-row__num">5</span>
+            <span className="principle-row__text">Coaches &amp; visible leadership throughout</span>
+          </li>
+          <li className="principle-row">
+            <span className="principle-row__num">6</span>
+            <span className="principle-row__text">One size does not fit all</span>
+          </li>
+          <li className="principle-row">
+            <span className="principle-row__num">7</span>
+            <span className="principle-row__text">Redesigning work using AI</span>
+          </li>
+        </ol>
 
         <div className="formula__equation">
           <span className="formula__term">5 Ingredients</span>
