@@ -1,3 +1,24 @@
+const spotlightVideos = [
+  {
+    id: 'exec-video',
+    title: 'Executive Overview',
+    description: 'A leadership-level look at the vision behind Camp AIR and the impact it drives.',
+    url: 'https://microsoft.sharepoint.com/:v:/r/sites/CampAIRguide/_layouts/15/stream.aspx?id=%2Fsites%2FCampAIRguide%2FShared%20Documents%2FContent%2FVideos%2FCamp%20AIR%20-%20Exec%20Video.mp4&share=cQrB_WVXWvETQqFqNfs6yZQkEgUCzZaBkWhBahe8ew72pGkaCw&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTaGFyZVBvaW50IiwicmVmZXJyYWxNb2RlIjoibWlzIiwicmVmZXJyYWxWaWV3IjoidmlkZW9hY3Rpb25zLXNoYXJlIiwicmVmZXJyYWxQbGF5YmFja1Nlc3Npb25JZCI6IjY4ZmFjMTFkLTY5NmUtNGYwYy05NmM3LWJkMzRmNDA0YjI4NSJ9fQ%3D%3D',
+  },
+  {
+    id: 'testimonial-video',
+    title: 'Participant Testimonial',
+    description: 'Hear directly from participants about what the Camp AIR experience meant to them.',
+    url: 'https://microsoft.sharepoint.com/:v:/r/sites/CampAIRguide/_layouts/15/stream.aspx?id=%2Fsites%2FCampAIRguide%2FShared%20Documents%2FContent%2FVideos%2FCamp%20AIR%20-%20Testimonial.mp4&share=cQqsETLocikZSLh6OCnTr2vEEgUCbIh9nnPkhVrT9WEkbvi2CQ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTaGFyZVBvaW50IiwicmVmZXJyYWxNb2RlIjoibWlzIiwicmVmZXJyYWxWaWV3IjoidmlkZW9hY3Rpb25zLXNoYXJlIiwicmVmZXJyYWxQbGF5YmFja1Nlc3Npb25JZCI6ImY4YjViZGMwLTgwNGEtNDVkNy1hZDgyLWFjZGVlNTE2ODZmYSJ9fQ%3D%3D',
+  },
+  {
+    id: 'jay-talk-video',
+    title: "Jay's Camp AIR Talk",
+    description: 'An in-depth talk on the Camp AIR journey and the thinking behind the experience.',
+    url: "https://onedrive.cloud.microsoft/:v:/a@ag39ca3l/r/_layouts/15/stream.aspx?id=%2Fa%40ag39ca3l%2FDocuments%2FDesktop%2FVideos%20-%20Demos%2FJay's%20Camp%20AIR%20Talk%2FJay's%20Camp%20AIR%20Talk%20-%20Final.mp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&share=cQqA70XutH9CSII0b-ZoMhIIEgUCKgzpBhwxu_RUizwFKhLnVA",
+  },
+];
+
 export function Home() {
   return (
     <div className="home">
@@ -309,6 +330,35 @@ export function Home() {
               <li>Full facilitator lesson plans and materials</li>
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section className="examples-section">
+        <h3 className="examples-section__title">Camp AIR in Action</h3>
+        <p className="examples-section__intro">
+          Watch a few short videos to see the vision, hear from participants, and go deeper on the
+          Camp AIR experience.
+        </p>
+        <div className="examples-section__grid" style={{ marginTop: '24px' }}>
+          {spotlightVideos.map((video) => (
+            <div key={video.id} className="example-card">
+              <div className="example-card__video">
+                <a
+                  href={video.url}
+                  className="example-card__sharepoint-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="example-card__play-icon">▶</span>
+                  <span className="example-card__play-label">Watch on SharePoint</span>
+                </a>
+              </div>
+              <div className="example-card__info">
+                <h4 className="example-card__title">{video.title}</h4>
+                <p className="example-card__description">{video.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
