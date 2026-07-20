@@ -181,7 +181,14 @@ export function RunYourOwn() {
                 Camp AIR community. You'll leave with an approach selected and a clear picture of the
                 phases, resources, and support ahead.
               </p>
-              <span className="ryo-link ryo-link--muted">🗓️ Onboarding signup — link coming soon</span>
+              <a
+                className="ryo-link"
+                href="https://teams.microsoft.com/l/channel/19%3AH_cLj6ozUE51pflZEOSCzulJkYJs5af5GfV1bSVlpiQ1%40thread.tacv2/tab%3A%3Aedc5a160-9a36-450b-9c51-5278dc3fee37?context=%7B%22channelId%22%3A%2219%3AH_cLj6ozUE51pflZEOSCzulJkYJs5af5GfV1bSVlpiQ1%40thread.tacv2%22%7D"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🗓️ Join the onboarding office hours →
+              </a>
             </div>
           </div>
 
