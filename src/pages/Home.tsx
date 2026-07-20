@@ -217,6 +217,8 @@ export function Home() {
         </div>
       </section>
 
+      <hr className="section-divider" />
+
       <section className="journey">
         <div className="journey__head">
           <h3 className="journey__title">The Journey at a Glance</h3>

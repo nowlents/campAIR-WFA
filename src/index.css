@@ -1443,6 +1443,12 @@ a:hover {
 }
 
 /* === Camp AIR Formula === */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 44px 0;
+}
+
 .formula {
   margin-top: 40px;
 }
