@@ -309,6 +309,21 @@ export function RunYourOwn() {
               Join the Teams channel →
             </a>
           </div>
+          <div className="ryo-support__card">
+            <h4 className="ryo-support__title">✅ Camp AIR Cohort Coach Checklist</h4>
+            <p className="ryo-support__text">
+              A step-by-step checklist that guides Cohort Coaches through everything needed to
+              prepare for and run their Camp AIR.
+            </p>
+            <a
+              className="ryo-link"
+              href="https://microsoft-my.sharepoint.com/:w:/p/jillet/cQrce9rI_A-4RJo2B1rfUInKEgUCWPEJKtENVgKEMxUXS7RFpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open the checklist →
+            </a>
+          </div>
         </div>
 
         <div className="ryo-faq">
