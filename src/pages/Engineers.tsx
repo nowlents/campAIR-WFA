@@ -25,7 +25,7 @@ export function Engineers() {
   return (
     <div className="engineers-page">
       <section className="page-intro">
-        <h2 className="page-intro__title">Camp AIR for Engineers</h2>
+        <h2 className="page-intro__title">Engineering Track</h2>
         <div className="page-intro__body">
           <p>
             The engineering track follows the same 4-week structure as the non-engineering

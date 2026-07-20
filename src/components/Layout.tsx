@@ -21,10 +21,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
             🚀 Run Your Own
           </NavLink>
           <NavLink to="/engineers" className="sidebar__link">
-            ⚙️ Camp AIR for Engineers
+            ⚙️ Engineering Track
           </NavLink>
           <NavLink to="/non-engineers" className="sidebar__link">
-            💡 Camp AIR for Non-Engineers
+            💡 Non-Engineering Track
           </NavLink>
           <NavLink to="/support-resources" className="sidebar__link">
             📚 Support &amp; Resources

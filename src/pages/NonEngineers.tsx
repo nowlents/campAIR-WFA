@@ -31,7 +31,7 @@ export function NonEngineers() {
   return (
     <div className="non-engineers-page">
       <section className="page-intro">
-        <h2 className="page-intro__title">Camp AIR for Non-Engineers</h2>
+        <h2 className="page-intro__title">Non-Engineering Track</h2>
 
         <div className="fluency-baseline" style={{ marginTop: 0, marginBottom: '24px' }}>
           <h3 className="fluency-baseline__title">Baseline AI Fluency</h3>
