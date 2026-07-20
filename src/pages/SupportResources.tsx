@@ -32,7 +32,7 @@ const faqs: { q: string; a: string; list?: string[] }[] = [
   },
   {
     q: 'How often is content updated?',
-    a: 'Camp AIR content is intended to be refreshed regularly to reflect changes in AI tools and experiences.',
+    a: 'Camp AIR content is refreshed up to every 8 weeks based on product updates and curriculum needs.',
   },
   {
     q: 'Can my organization run multiple cohorts?',
