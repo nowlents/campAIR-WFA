@@ -274,7 +274,7 @@ export function Home() {
 
       <section className="tracks">
         <div className="tracks__head">
-          <h3 className="tracks__title">Two Tracks, One Experience</h3>
+          <h3 className="tracks__title">Immersion Week: Two Tracks, One Experience</h3>
           <p className="tracks__intro">
             Camp AIR meets every audience where they are. Both tracks share the same three-week
             arc and outcomes—but they're delivered in the way that fits each audience best.
