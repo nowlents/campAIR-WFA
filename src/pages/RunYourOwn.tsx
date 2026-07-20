@@ -332,7 +332,14 @@ export function RunYourOwn() {
               Recurring help once execution begins: delivery, facilitation, tool issues,
               measurement, and scaling.
             </p>
-            <span className="ryo-link ryo-link--muted">Link coming soon</span>
+            <a
+              className="ryo-link"
+              href="https://teams.microsoft.com/l/channel/19%3AH_cLj6ozUE51pflZEOSCzulJkYJs5af5GfV1bSVlpiQ1%40thread.tacv2/tab%3A%3Aedc5a160-9a36-450b-9c51-5278dc3fee37?context=%7B%22channelId%22%3A%2219%3AH_cLj6ozUE51pflZEOSCzulJkYJs5af5GfV1bSVlpiQ1%40thread.tacv2%22%7D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join the Teams channel →
+            </a>
           </div>
         </div>
 
