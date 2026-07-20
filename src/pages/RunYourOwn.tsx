@@ -312,13 +312,6 @@ export function RunYourOwn() {
 
         <div className="ryo-support">
           <div className="ryo-support__card">
-            <h4 className="ryo-support__title">🧑‍🏫 Expert support</h4>
-            <p className="ryo-support__text">
-              Access subject matter experts for tool- and program-related questions—to unblock
-              participants and share best practices from previous camps.
-            </p>
-          </div>
-          <div className="ryo-support__card">
             <h4 className="ryo-support__title">🗓️ Onboarding office hours</h4>
             <p className="ryo-support__text">
               For organizations getting started: delivery models, launch planning, resource
