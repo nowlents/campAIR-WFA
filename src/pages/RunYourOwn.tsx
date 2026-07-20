@@ -6,7 +6,7 @@ const phases = [
     items: [
       'Define the business goal and what success looks like',
       'Secure a sponsor and confirm leadership commitment',
-      'Assign a Lead Coach and administrative support',
+      'Assign a Cohort Coach and administrative support',
       'Select teams and confirm cohort composition',
       'Finalize the three-week calendar and communications',
       'Stand up security groups and collaboration spaces',
@@ -60,7 +60,7 @@ const roles = [
     ],
   },
   {
-    name: 'Lead Coach',
+    name: 'Cohort Coach',
     profile: 'Primary owner of the experience (often the manager for a single team)',
     points: [
       'Lead planning and oversee delivery across all phases',
@@ -89,7 +89,7 @@ const resourceGroups = [
     items: [
       'Camp AIR overview materials',
       'Camp content and agendas',
-      'Lead Coach guidance',
+      'Cohort Coach guidance',
       'Delivery models',
       'FAQ resources',
     ],
