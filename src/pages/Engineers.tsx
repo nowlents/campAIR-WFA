@@ -11,7 +11,7 @@ const weekById = (id: string): Week | undefined => nonEngAgenda.find((w) => w.id
 const week1: Week = {
   id: 'eng-week-1',
   label: 'Week 1',
-  title: 'Foundations & First Labs',
+  title: 'Immersion Week',
   description:
     'The core immersion week. Use the Agenda Builder to sequence the engineering sessions into a Monday–Friday plan—morning sessions, a daily recap, matching afternoon practice labs, and an end-of-day practice shareout. Kickoff opens Monday and the Gemba Walk closes Friday.',
 };

@@ -46,7 +46,7 @@ export const nonEngAgenda: Week[] = [
   {
     id: 'week-1',
     label: 'Week 1',
-    title: 'Foundations & First Labs',
+    title: 'Immersion Week',
     description:
       'The core immersion week. Participants are introduced to AI-first principles, engage in morning presentations, and apply concepts through structured afternoon practice labs.',
     sessions: [
@@ -164,14 +164,14 @@ export const nonEngAgenda: Week[] = [
   {
     id: 'week-2',
     label: 'Week 2',
-    title: 'Applied Practice & Team Building',
+    title: 'Hack Week',
     description:
       'Teams continue building on Week 1 foundations, applying AI-first approaches to their real work. This week focuses on deepening practice, refining solutions, and building team muscle memory around new ways of working. No formal sessions—teams work semi-autonomously with facilitator check-ins.',
   },
   {
     id: 'week-3',
     label: 'Week 3',
-    title: 'Showcase & Sustaining Momentum',
+    title: 'Demo Showcase',
     description:
       'The culmination of Camp AIR. Teams prepare and deliver a live showcase of the AI-powered solutions they\'ve built. The week closes with a focus on sustaining momentum—embedding new habits, establishing ongoing practice rituals, and connecting to continued learning resources.',
   },
