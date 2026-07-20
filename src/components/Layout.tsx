@@ -27,7 +27,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             💡 Non-Engineering Track
           </NavLink>
           <NavLink to="/support-resources" className="sidebar__link">
-            📚 Support &amp; Resources
+            📚 Resources &amp; FAQ
           </NavLink>
         </nav>
         <main className="main-content">{children}</main>

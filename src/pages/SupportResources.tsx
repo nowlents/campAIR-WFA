@@ -56,7 +56,7 @@ export function SupportResources() {
   return (
     <div className="ryo-page">
       <section className="page-intro">
-        <h2 className="page-intro__title">Support &amp; Resources</h2>
+        <h2 className="page-intro__title">Resources &amp; FAQ</h2>
       </section>
 
       <section className="ryo-section">
