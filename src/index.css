@@ -1346,14 +1346,14 @@ a:hover {
 }
 
 .tracks__title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   color: var(--color-text);
-  margin: 0 0 8px;
+  margin: 0 0 6px;
 }
 
 .tracks__intro {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--color-text-secondary);
   line-height: 1.6;
   max-width: 760px;
