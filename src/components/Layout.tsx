@@ -26,6 +26,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <NavLink to="/non-engineers" className="sidebar__link">
             💡 Camp AIR for Non-Engineers
           </NavLink>
+          <NavLink to="/support-resources" className="sidebar__link">
+            📚 Support &amp; Resources
+          </NavLink>
         </nav>
         <main className="main-content">{children}</main>
       </div>
