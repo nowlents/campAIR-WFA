@@ -2308,6 +2308,7 @@ a:hover {
 
 .submission-cta__button:hover {
   background: var(--color-primary-dark);
+  color: #fff;
   transform: translateY(-1px);
 }
 
