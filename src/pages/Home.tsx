@@ -18,7 +18,7 @@ const spotlightVideos = [
     title: "Jay's Camp AIR Talk",
     description: 'An in-depth talk on the Camp AIR journey and the thinking behind the experience.',
     thumbnail: `${import.meta.env.BASE_URL}images/video-jay-talk.png`,
-    url: "https://onedrive.cloud.microsoft/:v:/a@ag39ca3l/r/_layouts/15/stream.aspx?id=%2Fa%40ag39ca3l%2FDocuments%2FDesktop%2FVideos%20-%20Demos%2FJay's%20Camp%20AIR%20Talk%2FJay's%20Camp%20AIR%20Talk%20-%20Final.mp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&share=cQqA70XutH9CSII0b-ZoMhIIEgUCKgzpBhwxu_RUizwFKhLnVA",
+    url: 'https://microsoft.sharepoint.com/:v:/r/teams/WorkforceAccelerationWFATeam/_layouts/15/stream.aspx?id=%2Fteams%2FWorkforceAccelerationWFATeam%2FShared%20Documents%2FCamp%20AIR%20Source%20of%20Truth%2FCoreAI%20Resources%2FJay%20Testimonial%2FJayTestimonial%2Emp4&share=cQolmiwhYZKETom9Y94%5F4FooEgUC1osV%5FSBOwnSlL39HDa3jkQ',
   },
 ];
 
