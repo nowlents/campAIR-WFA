@@ -83,38 +83,6 @@ const roles = [
   },
 ];
 
-const resourceGroups = [
-  {
-    title: 'Core Camp AIR Assets',
-    items: [
-      'Camp AIR overview materials',
-      'Camp content and agendas',
-      'Cohort Coach guidance',
-      'Delivery models',
-      'FAQ resources',
-    ],
-  },
-  {
-    title: 'Operational Assets',
-    items: [
-      'Planning artifacts',
-      'Checklists',
-      'Measurement materials',
-      'Administrative guidance',
-      'Security group instructions',
-    ],
-  },
-  {
-    title: 'Scaling Assets',
-    items: [
-      'Scale-from-Within materials',
-      'Train-the-trainer content',
-      'Internal facilitator resources',
-      'Community & collaboration spaces',
-    ],
-  },
-];
-
 const faqs: { q: string; a: string; list?: string[] }[] = [
   {
     q: 'What is Camp AIR in a Box?',
@@ -365,23 +333,6 @@ export function RunYourOwn() {
               </details>
             ))}
           </div>
-        </div>
-
-        <div className="ryo-resources">
-          <h4 className="ryo-resources__title">Resource center</h4>
-          <div className="ryo-resources__grid">
-            {resourceGroups.map((group) => (
-              <div className="ryo-resources__group" key={group.title}>
-                <h5 className="ryo-resources__group-title">{group.title}</h5>
-                <ul className="ryo-resources__list">
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <p className="ryo-resources__note">Downloadable assets and links coming soon.</p>
         </div>
       </section>
     </div>
