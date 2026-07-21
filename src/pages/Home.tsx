@@ -285,7 +285,7 @@ export function Home() {
 
         <div className="combined-journey__rows">
           <div className="cj-row">
-            <span className="cj-row__label">What participants experience</span>
+            <span className="cj-row__label">The Camp AIR 3-Week Journey</span>
             <div className="cj-row__track">
               <span className="cj-node cj-node--kickoff">Manager Alignment</span>
               <span className="cj-arrow" aria-hidden="true">→</span>
@@ -298,7 +298,7 @@ export function Home() {
           </div>
 
           <div className="cj-row cj-row--organizer">
-            <span className="cj-row__label">What you run (organizer)</span>
+            <span className="cj-row__label">How You Run Your Camp</span>
             <div className="cj-row__track">
               <span className="cj-node">Plan</span>
               <span className="cj-arrow" aria-hidden="true">→</span>
