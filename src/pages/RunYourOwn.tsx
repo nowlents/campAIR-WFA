@@ -668,7 +668,7 @@ export function RunYourOwn() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            See the Cohort Coach Checklist →
+                            See the Lead Coach Checklist →
                           </a>
                         )}
                       </article>
