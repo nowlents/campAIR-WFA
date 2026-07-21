@@ -48,7 +48,7 @@ interface Role {
 
 const checklistLink = (
   <a className="ryo-link ryo-link--inline" href={LEAD_COACH_CHECKLIST} target="_blank" rel="noopener noreferrer">
-    Cohort Coach Checklist
+    Lead Coach Checklist
   </a>
 );
 
