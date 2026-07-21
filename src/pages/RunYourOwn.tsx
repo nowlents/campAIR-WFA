@@ -447,13 +447,7 @@ export function RunYourOwn() {
           Everything a leader needs to launch, deliver, and scale a cohort. Work top to bottom and check each box as
           you go.
         </p>
-        <div className="ryo-chips">
-          <span className="ryo-chip">~3-week program</span>
-          <span className="ryo-chip">Manager-led or Org-led</span>
-          <span className="ryo-chip">Self-serve toolkit</span>
-        </div>
       </section>
-
       {/* B. Start Here */}
       <section className="ryo-section">
         <h3 className="ryo-section__title">Start Here</h3>
