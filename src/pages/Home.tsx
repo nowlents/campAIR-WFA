@@ -281,15 +281,11 @@ export function Home() {
       <section className="combined-journey">
         <div className="combined-journey__head">
           <h3 className="combined-journey__title">The Camp AIR Journey</h3>
-          <p className="combined-journey__intro">
-            Two aligned views of the same three-week experience—what your participants live, and
-            what you run as the organizer. The organizer checklist lives in Run Your Own.
-          </p>
         </div>
 
         <div className="combined-journey__rows">
           <div className="cj-row">
-            <span className="cj-row__label">What participants live</span>
+            <span className="cj-row__label">What participants experience</span>
             <div className="cj-row__track">
               <span className="cj-node cj-node--kickoff">Manager Alignment</span>
               <span className="cj-arrow" aria-hidden="true">→</span>
