@@ -382,7 +382,7 @@ function useLocalStorage<T>(key: string, initial: T): [T, (v: T) => void] {
 
 export function RunYourOwn() {
   const [path, setPath] = useLocalStorage<Path>('campair-ryo-path', 'small');
-  const [showAll, setShowAll] = useLocalStorage<boolean>('campair-ryo-showall', false);
+  const showAll = false;
   const [checks, setChecks] = useLocalStorage<Record<string, boolean>>('campair-ryo-checks', {});
 
   const itemVisible = (tag: Tag) => showAll || !tag || tag === path;
@@ -393,7 +393,6 @@ export function RunYourOwn() {
 
   const selectPath = (p: Path) => {
     setPath(p);
-    setShowAll(false);
   };
 
   // Progress across all currently-visible checklist items.
@@ -593,13 +592,6 @@ export function RunYourOwn() {
               onClick={() => selectPath('org')}
             >
               Org-wide
-            </button>
-            <button
-              type="button"
-              className={`ryo-seg__btn${activeSeg === 'both' ? ' is-active' : ''}`}
-              onClick={() => setShowAll(true)}
-            >
-              Show both
             </button>
           </div>
           <span className="ryo-progress">
