@@ -558,7 +558,7 @@ export function RunYourOwn() {
               blocked and protected.
             </li>
             <li>
-              <strong>Central participant tracking + EngThrive measurement</strong> — every cohort is tracked and rolls
+              <strong>EngThrive measurement</strong> — every cohort is tracked and rolls
               up to the impact dashboard.
             </li>
             <li>
