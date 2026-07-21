@@ -33,7 +33,7 @@ export function Home() {
 
         <div className="hero__body">
           <p className="hero__lead">
-            Everything a leader needs to launch, deliver, and scale an AI-upskilling cohort — no central team required.
+            Everything you need to launch, deliver, and scale an AI-upskilling in your team or organization.
           </p>
           <p>
             Camp AIR is a structured, cohort-based immersion that transforms how teams work in an AI-first world. Its core premise is simple: <strong>the challenge of AI is not technology—it is behavioral change.</strong> This site gives you everything you need to run one yourself.
