@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const TEAMS_OFFICE_HOURS =
   'https://teams.microsoft.com/l/channel/19%3AH_cLj6ozUE51pflZEOSCzulJkYJs5af5GfV1bSVlpiQ1%40thread.tacv2/tab%3A%3Aedc5a160-9a36-450b-9c51-5278dc3fee37?context=%7B%22channelId%22%3A%2219%3AH_cLj6ozUE51pflZEOSCzulJkYJs5af5GfV1bSVlpiQ1%40thread.tacv2%22%7D';
+const ONBOARDING_OFFICE_HOURS = 'https://jillethelbah.github.io/camp-air-getting-started/';
 const LEAD_COACH_CHECKLIST =
   'https://microsoft-my.sharepoint.com/:w:/p/jillet/cQrce9rI_A-4RJo2B1rfUInKEgUCWPEJKtENVgKEMxUXS7RFpg';
 
@@ -202,7 +203,7 @@ const phases: Phase[] = [
     help: (
       <>
         🙋 Not sure how to size, staff, or scope your camp? Bring it to the{' '}
-        <a className="ryo-link ryo-link--inline" href={TEAMS_OFFICE_HOURS} target="_blank" rel="noopener noreferrer">
+        <a className="ryo-link ryo-link--inline" href={ONBOARDING_OFFICE_HOURS} target="_blank" rel="noopener noreferrer">
           onboarding office hours
         </a>{' '}
         before Week 1.
@@ -460,7 +461,7 @@ export function RunYourOwn() {
                 Before launching, join an onboarding session to choose a delivery model, learn best practices,
                 understand required resources, and connect with the Camp AIR community.
               </p>
-              <a className="ryo-link" href={TEAMS_OFFICE_HOURS} target="_blank" rel="noopener noreferrer">
+              <a className="ryo-link" href={ONBOARDING_OFFICE_HOURS} target="_blank" rel="noopener noreferrer">
                 📅 Join the onboarding office hours →
               </a>
             </div>
