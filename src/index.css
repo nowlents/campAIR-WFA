@@ -139,6 +139,36 @@ a:hover {
   font-weight: 600;
 }
 
+.sidebar__subnav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 2px 0 6px;
+}
+
+.sidebar__sublink {
+  display: block;
+  padding: 6px 12px 6px 30px;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.sidebar__sublink:hover {
+  background: var(--color-surface-alt);
+  color: var(--color-primary-dark);
+}
+
+.sidebar__sublink.is-active {
+  border-left-color: var(--color-primary);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
 /* === Main Content === */
 .main-content {
   flex: 1;
