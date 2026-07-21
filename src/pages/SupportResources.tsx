@@ -92,9 +92,9 @@ export function SupportResources() {
             </a>
           </div>
           <div className="ryo-support__card">
-            <h4 className="ryo-support__title">✅ Camp AIR Cohort Coach Checklist</h4>
+            <h4 className="ryo-support__title">✅ Camp AIR Lead Coach Checklist</h4>
             <p className="ryo-support__text">
-              A step-by-step checklist that guides Cohort Coaches through everything needed to
+              A step-by-step checklist that guides Lead Coaches through everything needed to
               prepare for and run their Camp AIR.
             </p>
             <a
