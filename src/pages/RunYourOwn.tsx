@@ -278,7 +278,7 @@ const phases: Phase[] = [
           {
             id: 'measure-feedback',
             label: 'Collect participant feedback',
-            note: <>EngThrive measurement kit — on the <Link className="ryo-link ryo-link--inline" to="/support-resources">Resources &amp; FAQ</Link> tab.</>,
+            note: <>EngThrive measurement kit — coming soon on the <Link className="ryo-link ryo-link--inline" to="/support-resources">Resources &amp; FAQ</Link> tab.</>,
           },
           { id: 'measure-outcomes', label: 'Evaluate outcomes and business impact against the Step-01 goal' },
           { id: 'measure-readout', label: 'Share a readout with the Sponsor and leadership' },
