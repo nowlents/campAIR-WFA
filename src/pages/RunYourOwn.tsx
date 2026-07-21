@@ -506,7 +506,7 @@ export function RunYourOwn() {
               </div>
               <div>
                 <dt>Run by</dt>
-                <dd>The manager (or a coach they assign), acting as the Lead Coach</dd>
+                <dd>The manager (or a coach they assign), acting as the Cohort Coach</dd>
               </div>
               <div>
                 <dt>Typical delivery</dt>
