@@ -73,7 +73,7 @@ export function SupportResources() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Join the Teams channel →
+              Join an Office Hours →
             </a>
           </div>
           <div className="ryo-support__card">
