@@ -49,7 +49,7 @@ interface Role {
 
 const checklistLink = (
   <a className="ryo-link ryo-link--inline" href={LEAD_COACH_CHECKLIST} target="_blank" rel="noopener noreferrer">
-    Lead Coach Checklist
+    Camp Coach Checklist
   </a>
 );
 
@@ -78,25 +78,25 @@ const phases: Phase[] = [
             id: 'plan-org-size',
             label: 'Size it into cohorts of ~20–25.',
             tag: 'org',
-            note: 'Divide your headcount by ~20 → that\'s how many cohorts and Lead Coaches you need. (e.g., 400 people ≈ 16–20 cohorts, each with its own Lead Coach, all overseen by one Cohort Coach.)',
+            note: 'Divide your headcount by ~20 → that\'s how many cohorts and Camp Coaches you need. (e.g., 400 people ≈ 16–20 cohorts, each with its own Camp Coach, all overseen by one Cohort Coach.)',
           },
           {
             id: 'plan-org-shape',
             label: 'Choose your rollout shape: waves or parallel.',
             tag: 'org',
-            note: 'Waves (recommended for a first org-wide run) — run cohorts in sequence over several weeks/months; fewer coaches/rooms at once, each wave gets better, and early-wave coaches help the next. Parallel — many cohorts in the same immersion week; fastest, but you need all the Lead Coaches, rooms, and support ready at once.',
+            note: 'Waves (recommended for a first org-wide run) — run cohorts in sequence over several weeks/months; fewer coaches/rooms at once, each wave gets better, and early-wave coaches help the next. Parallel — many cohorts in the same immersion week; fastest, but you need all the Camp Coaches, rooms, and support ready at once.',
           },
           {
             id: 'plan-org-agenda',
             label: 'One shared agenda; pick a delivery mode per topic.',
             tag: 'org',
-            note: 'All cohorts run the same agenda. For each topic, choose how it\'s delivered across the org — recordings (self-paced → works with waves) or one central AI Pioneer delivering live to all cohorts at once. One Pioneer per topic, delivered centrally — not one per cohort. Practice always happens locally in each cohort with its Lead Coach.',
+            note: 'All cohorts run the same agenda. For each topic, choose how it\'s delivered across the org — recordings (self-paced → works with waves) or one central AI Pioneer delivering live to all cohorts at once. One Pioneer per topic, delivered centrally — not one per cohort. Practice always happens locally in each cohort with its Camp Coach.',
           },
           {
             id: 'plan-org-bench',
             label: 'Build your coach bench first — via train-the-trainer.',
             tag: 'org',
-            note: 'Nominate a Lead Coach candidate per ~20 (Pioneers from the teams) and get them certified before Week 1. This is a prerequisite and adds lead time — start early.',
+            note: 'Nominate a Camp Coach candidate per ~20 (Pioneers from the teams) and get them certified before Week 1. This is a prerequisite and adds lead time — start early.',
           },
           {
             id: 'plan-org-coordinator',
@@ -124,12 +124,12 @@ const phases: Phase[] = [
           { id: 'plan-goal', label: 'Define the business goal and what success looks like' },
           {
             id: 'plan-leadcoach',
-            label: 'Assign a Lead Coach for every ~20 participants — runs the sessions and gives in-week support (a small team of ~20–25 needs just one)',
+            label: 'Assign a Camp Coach for every ~20 participants — runs the sessions and gives in-week support (a small team of ~20–25 needs just one)',
             note: <>📄 Every coach works from the Camp AIR {checklistLink} (also on the Resources &amp; FAQ tab)</>,
           },
           {
             id: 'plan-cohortcoach',
-            label: 'Assign a Cohort Coach to own the overall camp and oversee all the Lead Coaches',
+            label: 'Assign a Cohort Coach to own the overall camp and oversee all the Camp Coaches',
             tag: 'org',
           },
           { id: 'plan-sponsor', label: 'Secure a Sponsor (VP/CVP) and confirm visible leadership commitment', tag: 'org' },
@@ -325,7 +325,7 @@ const phases: Phase[] = [
 const rolesByPath: Record<Path, Role[]> = {
   small: [
     {
-      name: 'Lead Coach',
+      name: 'Camp Coach',
       qualifier: 'Required — just one',
       desc: 'The single coach for your ~20-person team. The manager can be this coach, or assign someone else to run the cohort — either way, only one coach. Runs the sessions, gives in-week support, and coordinates demos + measurement. No separate second coach and no pioneers needed for a small team.',
       link: true,
@@ -335,10 +335,10 @@ const rolesByPath: Record<Path, Role[]> = {
     {
       name: 'Cohort Coach',
       qualifier: 'Required',
-      desc: 'Owns the overall camp; oversees all the Lead Coaches; coordinates across teams, demos, and measurement.',
+      desc: 'Owns the overall camp; oversees all the Camp Coaches; coordinates across teams, demos, and measurement.',
     },
     {
-      name: 'Lead Coach',
+      name: 'Camp Coach',
       qualifier: 'One per ~20 participants · required',
       desc: 'Runs the sessions and gives in-week (L1) support for their group of ~20. Give each one the checklist.',
       link: true,
@@ -651,7 +651,7 @@ export function RunYourOwn() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            See the Lead Coach Checklist →
+                            See the Camp Coach Checklist →
                           </a>
                         )}
                       </article>
