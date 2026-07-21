@@ -530,7 +530,7 @@ export function RunYourOwn() {
               </div>
               <div>
                 <dt>Run by</dt>
-                <dd>A Cohort Coach overseeing a Lead Coach per ~20, plus Sponsor + Admin</dd>
+                <dd>A Cohort Coach overseeing a Camp Coach per ~20, plus Sponsor + Admin</dd>
               </div>
               <div>
                 <dt>Typical delivery</dt>
