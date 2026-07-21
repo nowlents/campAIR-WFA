@@ -551,10 +551,6 @@ export function RunYourOwn() {
           <h4 className="ryo-nonneg__title">Non-negotiables (apply to every camp, either path)</h4>
           <ul className="ryo-nonneg__list">
             <li>
-              <strong>Train the trainer, not the camper</strong> — build local facilitation capability; don't create a
-              dependency on a central team.
-            </li>
-            <li>
               <strong>Sessions are always recorded</strong> — this is what lets you mix-and-match and scale.
             </li>
             <li>
