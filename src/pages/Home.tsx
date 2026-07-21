@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const spotlightVideos = [
   {
     id: 'exec-video',
@@ -386,7 +388,7 @@ export function Home() {
       </section>
 
       <p className="overview-nudge">
-        Ready to run one? Open <strong>Run Your Own</strong> in the left nav →
+        Ready to run one? Open <Link className="ryo-link ryo-link--inline" to="/run-your-own"><strong>Run Your Own</strong></Link> in the left nav →
       </p>
 
     </div>
