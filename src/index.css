@@ -3421,3 +3421,166 @@ a:hover {
     min-width: 160px;
   }
 }
+
+/* === Overview: Why run Camp AIR === */
+.why-run {
+  margin: 8px 0 40px;
+}
+
+.why-run__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 20px;
+}
+
+.why-run__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.why-run__card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.why-run__icon {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.why-run__name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.why-run__desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* === Overview: Combined journey strip === */
+.combined-journey {
+  margin-top: 8px;
+}
+
+.combined-journey__head {
+  margin-bottom: 24px;
+}
+
+.combined-journey__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.combined-journey__intro {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0;
+}
+
+.combined-journey__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cj-row {
+  padding: 18px 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.cj-row--organizer {
+  border-left: 4px solid var(--color-primary);
+  background: rgba(0, 120, 212, 0.04);
+}
+
+.cj-row__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  margin-bottom: 14px;
+}
+
+.cj-row__track {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.cj-node {
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.cj-row--organizer .cj-node {
+  border-color: var(--color-primary-light);
+}
+
+.cj-node--kickoff {
+  border-style: dashed;
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+}
+
+.cj-arrow {
+  color: var(--color-text-light);
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* === Overview: closing nudge === */
+.overview-nudge {
+  margin: 32px 0 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.overview-nudge strong {
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 900px) {
+  .why-run__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .why-run__grid {
+    grid-template-columns: 1fr;
+  }
+}

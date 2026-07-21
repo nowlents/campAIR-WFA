@@ -29,18 +29,53 @@ export function Home() {
         <div className="hero__banner">
           <img src={`${import.meta.env.BASE_URL}images/hero-meeting.jpg`} alt="Team collaborating in a modern meeting space" className="hero__banner-img" />
         </div>
-        <h2 className="hero__title">Camp AIR</h2>
+        <h2 className="hero__title">Run your own Camp AIR</h2>
 
         <div className="hero__body">
           <p className="hero__lead">
-            Camp AIR is not a training program—it is a structured immersion designed to transform how teams work in an AI-first world.
+            Everything a leader needs to launch, deliver, and scale an AI-upskilling cohort — no central team required.
           </p>
           <p>
-            Participants move beyond learning about AI to actively building with it. Through a cohort-based, hands-on experience, teams redesign real workflows, experiment in real time, and deliver tangible outcomes—culminating in a live showcase of AI-powered solutions they've built themselves.
+            Camp AIR is a structured, cohort-based immersion that transforms how teams work in an AI-first world. Its core premise is simple: <strong>the challenge of AI is not technology—it is behavioral change.</strong> This site gives you everything you need to run one yourself.
           </p>
-          <p>
-            At its core, Camp AIR is grounded in a simple premise: <strong>the challenge of AI is not technology—it is behavioral change.</strong> Success comes from shifting habits, not just adopting tools. The program creates the conditions for that shift by giving teams space to step out of business-as-usual and practice a new way of working—what we call "slowing down to speed up."
-          </p>
+        </div>
+      </section>
+
+      <section className="why-run">
+        <h3 className="why-run__title">Why run Camp AIR</h3>
+        <div className="why-run__grid">
+          <div className="why-run__card">
+            <span className="why-run__icon">🚀</span>
+            <h4 className="why-run__name">Real solutions in three weeks</h4>
+            <p className="why-run__desc">
+              Teams don't just learn about AI—they ship real, AI-powered solutions to their own work
+              by the end of the experience.
+            </p>
+          </div>
+          <div className="why-run__card">
+            <span className="why-run__icon">🌱</span>
+            <h4 className="why-run__name">Lasting internal capability</h4>
+            <p className="why-run__desc">
+              Coaches and pioneers grow from within your teams, building AI fluency that stays long
+              after the camp ends.
+            </p>
+          </div>
+          <div className="why-run__card">
+            <span className="why-run__icon">🔁</span>
+            <h4 className="why-run__name">Repeatable and self-serve</h4>
+            <p className="why-run__desc">
+              One clear path, one reusable kit. Follow it top to bottom and run a high-quality camp
+              without a central team.
+            </p>
+          </div>
+          <div className="why-run__card">
+            <span className="why-run__icon">📈</span>
+            <h4 className="why-run__name">Scales with you</h4>
+            <p className="why-run__desc">
+              The same kit powers a single team or a whole org—start small, learn, then grow to as
+              many cohorts as you need.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -243,55 +278,42 @@ export function Home() {
 
       <hr className="section-divider" />
 
-      <section className="journey">
-        <div className="journey__head">
-          <h3 className="journey__title">The Journey at a Glance</h3>
-          <p className="journey__intro">
-            Camp AIR is a focused three-week experience. It opens with a manager alignment
-            touchpoint to set expectations and clear the runway, then moves teams from mindset,
-            to building, to showcasing what they've made.
+      <section className="combined-journey">
+        <div className="combined-journey__head">
+          <h3 className="combined-journey__title">The Camp AIR Journey</h3>
+          <p className="combined-journey__intro">
+            Two aligned views of the same three-week experience—what your participants live, and
+            what you run as the organizer. The organizer checklist lives in Run Your Own.
           </p>
         </div>
 
-        <div className="journey__timeline">
-          <div className="journey-kickoff">
-            <span className="journey-kickoff__badge">Before we begin</span>
-            <div className="journey-kickoff__body">
-              <h4 className="journey-kickoff__title">Manager Alignment</h4>
-              <p className="journey-kickoff__desc">
-                A short touchpoint with leaders to align on goals, protect the team's time, and
-                set the team up to get the most out of the weeks ahead.
-              </p>
+        <div className="combined-journey__rows">
+          <div className="cj-row">
+            <span className="cj-row__label">What participants live</span>
+            <div className="cj-row__track">
+              <span className="cj-node cj-node--kickoff">Manager Alignment</span>
+              <span className="cj-arrow" aria-hidden="true">→</span>
+              <span className="cj-node">Week 1 · Immersion</span>
+              <span className="cj-arrow" aria-hidden="true">→</span>
+              <span className="cj-node">Week 2 · Hack Week</span>
+              <span className="cj-arrow" aria-hidden="true">→</span>
+              <span className="cj-node">Week 3 · Demo Showcase</span>
             </div>
           </div>
 
-          <div className="journey__weeks">
-            <article className="journey-week">
-              <span className="journey-week__num">Week 1</span>
-              <h4 className="journey-week__title">Immersion</h4>
-              <p className="journey-week__desc">
-                Teams start with the mindset and workflow shifts at the heart of working
-                AI-first, spend the week getting hands-on with the latest AI tools, and close by
-                learning how to break down their own work and match repeatable tasks to the right
-                tools.
-              </p>
-            </article>
-            <article className="journey-week">
-              <span className="journey-week__num">Week 2</span>
-              <h4 className="journey-week__title">Hack Week</h4>
-              <p className="journey-week__desc">
-                Teams put it into practice—building real solutions and weaving what they learned
-                directly into how they work.
-              </p>
-            </article>
-            <article className="journey-week">
-              <span className="journey-week__num">Week 3</span>
-              <h4 className="journey-week__title">Demo Showcase</h4>
-              <p className="journey-week__desc">
-                Each team shares what they built and shows how Immersion Week learnings reshaped
-                their day-to-day workflow.
-              </p>
-            </article>
+          <div className="cj-row cj-row--organizer">
+            <span className="cj-row__label">What you run (organizer)</span>
+            <div className="cj-row__track">
+              <span className="cj-node">Plan</span>
+              <span className="cj-arrow" aria-hidden="true">→</span>
+              <span className="cj-node">Deliver</span>
+              <span className="cj-arrow" aria-hidden="true">→</span>
+              <span className="cj-node">Showcase</span>
+              <span className="cj-arrow" aria-hidden="true">→</span>
+              <span className="cj-node">Measure &amp; Iterate</span>
+              <span className="cj-arrow" aria-hidden="true">→</span>
+              <span className="cj-node">Communicate &amp; Scale</span>
+            </div>
           </div>
         </div>
       </section>
@@ -366,6 +388,10 @@ export function Home() {
           ))}
         </div>
       </section>
+
+      <p className="overview-nudge">
+        Ready to run one? Open <strong>Run Your Own</strong> in the left nav →
+      </p>
 
     </div>
   );
