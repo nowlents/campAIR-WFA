@@ -554,7 +554,7 @@ export function RunYourOwn() {
               <strong>Sessions are always recorded</strong> — this is what lets you mix-and-match and scale.
             </li>
             <li>
-              <strong>Protected / immersion time</strong> — no cherry-picking a few videos; the immersion week is
+              <strong>Protected / immersion time</strong> — the immersion week is
               blocked and protected.
             </li>
             <li>
