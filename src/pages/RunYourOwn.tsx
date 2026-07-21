@@ -562,7 +562,7 @@ export function RunYourOwn() {
               up to the impact dashboard.
             </li>
             <li>
-              <strong>Give back at close</strong> — uploading your demos + coach deck + resources to the central library
+              <strong>Give back at close</strong> — upload your demos to the central library
               is a required exit step (see Showcase).
             </li>
           </ul>
